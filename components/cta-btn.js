@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 import PropTypes from 'prop-types'
 
@@ -6,9 +7,9 @@ const CtaBtn = (props) => {
   return (
     <>
       <div className="cta-btn-container">
-        <button className="cta-btn-cta-btn anchor button">
-          {props.cta_btn}
-        </button>
+        <Link href="/about">
+          <a className="cta-btn-link anchor button">{props.cta_btn}</a>
+        </Link>
       </div>
       <style jsx>
         {`
@@ -16,7 +17,7 @@ const CtaBtn = (props) => {
             display: flex;
             position: relative;
           }
-          .cta-btn-cta-btn {
+          .cta-btn-link {
             color: var(--dl-color-gray-black);
             text-align: center;
             padding-top: var(--dl-space-space-doubleunit);
@@ -24,10 +25,11 @@ const CtaBtn = (props) => {
             border-radius: var(--dl-radius-radius-radius8);
             padding-right: var(--dl-space-space-tenunits);
             padding-bottom: var(--dl-space-space-doubleunit);
+            text-decoration: none;
             background-color: var(--dl-color-gray-white);
           }
           @media (max-width: 767px) {
-            .cta-btn-cta-btn {
+            .cta-btn-link {
               padding-left: var(--dl-space-space-fourunits);
               padding-right: var(--dl-space-space-fourunits);
             }

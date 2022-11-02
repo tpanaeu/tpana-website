@@ -18,13 +18,17 @@ const NavbarContainer = (props) => {
           />
           <div className="navbar-container-links-container">
             <Link href="/about">
-              <a className="navbar-container-link1 navbar-Link">{props.link}</a>
+              <a className="navbar-container-link01 navbar-Link">
+                {props.link}
+              </a>
             </Link>
-            <span className="navbar-container-link2 navbar-Link">
-              {props.link1}
-            </span>
+            <Link href="/experience">
+              <a className="navbar-container-link03 navbar-Link">
+                {props.link1}
+              </a>
+            </Link>
             <Link href="/contact">
-              <a className="navbar-container-link4 navbar-Link">
+              <a className="navbar-container-link05 navbar-Link">
                 {props.link2}
               </a>
             </Link>
@@ -49,13 +53,13 @@ const NavbarContainer = (props) => {
               </div>
             </div>
             <div className="navbar-container-links-container1">
-              <span className="navbar-container-link5 navbar-Link">
+              <span className="navbar-container-link06 navbar-Link">
                 {props.link3}
               </span>
-              <span className="navbar-container-link6 navbar-Link">
+              <span className="navbar-container-link07 navbar-Link">
                 {props.link4}
               </span>
-              <span className="navbar-container-link7 navbar-Link">
+              <span className="navbar-container-link08 navbar-Link">
                 {props.link5}
               </span>
               <span className="navbar-Link">{props.link6}</span>
@@ -98,14 +102,15 @@ const NavbarContainer = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .navbar-container-link1 {
+          .navbar-container-link01 {
             margin-right: var(--dl-space-space-tripleunit);
             text-decoration: none;
           }
-          .navbar-container-link2 {
+          .navbar-container-link03 {
             margin-right: var(--dl-space-space-tripleunit);
+            text-decoration: none;
           }
-          .navbar-container-link4 {
+          .navbar-container-link05 {
             text-decoration: none;
           }
           .navbar-container-burger-menu {
@@ -153,19 +158,19 @@ const NavbarContainer = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .navbar-container-link5 {
+          .navbar-container-link06 {
             margin-bottom: var(--dl-space-space-unit);
           }
-          .navbar-container-link6 {
+          .navbar-container-link07 {
             margin-bottom: var(--dl-space-space-unit);
           }
-          .navbar-container-link7 {
+          .navbar-container-link08 {
             margin-bottom: var(--dl-space-space-unit);
           }
           .navbar-container-root-class-name {
             top: 0px;
             right: 0px;
-            background-color: #d9d9d9;
+            background-color: var(--dl-color-gray-white);
           }
           .navbar-container-root-class-name1 {
             top: -22px;
