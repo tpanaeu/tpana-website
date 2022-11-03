@@ -40,7 +40,7 @@ const About = (props) => {
             </div>
             <img
               alt="image"
-              src="/playground_assets/818-1500w.jpg"
+              src="/playground_assets/tpana_animation-1500w.gif"
               className="about-image"
             />
           </div>

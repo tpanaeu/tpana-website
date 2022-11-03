@@ -221,7 +221,7 @@ NavbarContainer.defaultProps = {
   link5: 'Portofolio',
   link: 'About',
   link6: 'Contact',
-  image_src: '/playground_assets/tpana%20%5B2%5D-200h.png',
+  image_src: '/playground_assets/1_dark-200h.png',
   Heading: 'Logo',
   image_alt: 'image',
   link2: 'Contact',
