@@ -124,33 +124,36 @@ const NavbarContainer = (props)=>{
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 "data-role": "Header",
-                className: "jsx-772c1d5a708b2277" + " " + `navbar-container-navbar-container ${props.rootClassName} `,
+                className: "jsx-80e3684cc2023d79" + " " + `navbar-container-navbar-container ${props.rootClassName} `,
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                    className: "jsx-772c1d5a708b2277" + " " + "navbar-container-navbar",
+                    className: "jsx-80e3684cc2023d79" + " " + "navbar-container-navbar",
                     children: [
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
                             alt: props.image_alt,
                             src: props.image_src,
-                            className: "jsx-772c1d5a708b2277" + " " + "navbar-container-image"
+                            className: "jsx-80e3684cc2023d79" + " " + "navbar-container-image"
                         }),
                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            className: "jsx-772c1d5a708b2277" + " " + "navbar-container-links-container",
+                            className: "jsx-80e3684cc2023d79" + " " + "navbar-container-links-container",
                             children: [
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
                                     href: "/about",
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                                        className: "jsx-772c1d5a708b2277" + " " + "navbar-container-link1 navbar-Link",
+                                        className: "jsx-80e3684cc2023d79" + " " + "navbar-container-link01 navbar-Link",
                                         children: props.link
                                     })
                                 }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                    className: "jsx-772c1d5a708b2277" + " " + "navbar-container-link2 navbar-Link",
-                                    children: props.link1
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                    href: "/experience",
+                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
+                                        className: "jsx-80e3684cc2023d79" + " " + "navbar-container-link03 navbar-Link",
+                                        children: props.link1
+                                    })
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
                                     href: "/contact",
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                                        className: "jsx-772c1d5a708b2277" + " " + "navbar-container-link4 navbar-Link",
+                                        className: "jsx-80e3684cc2023d79" + " " + "navbar-container-link05 navbar-Link",
                                         children: props.link2
                                     })
                                 })
@@ -158,58 +161,58 @@ const NavbarContainer = (props)=>{
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                             "data-type": "BurgerMenu",
-                            className: "jsx-772c1d5a708b2277" + " " + "navbar-container-burger-menu",
+                            className: "jsx-80e3684cc2023d79" + " " + "navbar-container-burger-menu",
                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
                                 viewBox: "0 0 1024 1024",
-                                className: "jsx-772c1d5a708b2277" + " " + "navbar-container-icon",
+                                className: "jsx-80e3684cc2023d79" + " " + "navbar-container-icon",
                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                                     d: "M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z",
-                                    className: "jsx-772c1d5a708b2277"
+                                    className: "jsx-80e3684cc2023d79"
                                 })
                             })
                         }),
                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                             "data-type": "MobileMenu",
-                            className: "jsx-772c1d5a708b2277" + " " + "navbar-container-mobile-menu",
+                            className: "jsx-80e3684cc2023d79" + " " + "navbar-container-mobile-menu",
                             children: [
                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                    className: "jsx-772c1d5a708b2277" + " " + "navbar-container-container",
+                                    className: "jsx-80e3684cc2023d79" + " " + "navbar-container-container",
                                     children: [
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                            className: "jsx-772c1d5a708b2277" + " " + "card-Heading navbar-container-heading",
+                                            className: "jsx-80e3684cc2023d79" + " " + "card-Heading navbar-container-heading",
                                             children: props.Heading
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                             "data-type": "CloseMobileMenu",
-                                            className: "jsx-772c1d5a708b2277" + " " + "navbar-container-close-menu",
+                                            className: "jsx-80e3684cc2023d79" + " " + "navbar-container-close-menu",
                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
                                                 viewBox: "0 0 1024 1024",
-                                                className: "jsx-772c1d5a708b2277" + " " + "navbar-container-icon2",
+                                                className: "jsx-80e3684cc2023d79" + " " + "navbar-container-icon2",
                                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                                                     d: "M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z",
-                                                    className: "jsx-772c1d5a708b2277"
+                                                    className: "jsx-80e3684cc2023d79"
                                                 })
                                             })
                                         })
                                     ]
                                 }),
                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                    className: "jsx-772c1d5a708b2277" + " " + "navbar-container-links-container1",
+                                    className: "jsx-80e3684cc2023d79" + " " + "navbar-container-links-container1",
                                     children: [
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                            className: "jsx-772c1d5a708b2277" + " " + "navbar-container-link5 navbar-Link",
+                                            className: "jsx-80e3684cc2023d79" + " " + "navbar-container-link06 navbar-Link",
                                             children: props.link3
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                            className: "jsx-772c1d5a708b2277" + " " + "navbar-container-link6 navbar-Link",
+                                            className: "jsx-80e3684cc2023d79" + " " + "navbar-container-link07 navbar-Link",
                                             children: props.link4
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                            className: "jsx-772c1d5a708b2277" + " " + "navbar-container-link7 navbar-Link",
+                                            className: "jsx-80e3684cc2023d79" + " " + "navbar-container-link08 navbar-Link",
                                             children: props.link5
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                            className: "jsx-772c1d5a708b2277" + " " + "navbar-Link",
+                                            className: "jsx-80e3684cc2023d79" + " " + "navbar-Link",
                                             children: props.link6
                                         })
                                     ]
@@ -220,8 +223,8 @@ const NavbarContainer = (props)=>{
                 })
             }),
             react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default()), {
-                id: "772c1d5a708b2277",
-                children: ".navbar-container-navbar-container.jsx-772c1d5a708b2277{width:100%;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;z-index:100;position:fixed;-webkit-box-shadow:5px 5px 10px 0px#d4d4d4;-moz-box-shadow:5px 5px 10px 0px#d4d4d4;box-shadow:5px 5px 10px 0px#d4d4d4;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;background-color:var(--dl-color-gray-white)}.navbar-container-navbar.jsx-772c1d5a708b2277{width:100%;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;max-width:var(--dl-size-size-maxcontent);-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;padding-top:var(--dl-space-space-tripleunit);padding-left:var(--dl-space-space-tripleunit);padding-right:var(--dl-space-space-tripleunit);-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-moz-box-orient:horizontal;-moz-box-direction:normal;-ms-flex-direction:row;flex-direction:row;padding-bottom:var(--dl-space-space-tripleunit);-webkit-box-pack:justify;-webkit-justify-content:space-between;-moz-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.navbar-container-image.jsx-772c1d5a708b2277{width:100px;height:90px;-o-object-fit:cover;object-fit:cover}.navbar-container-links-container.jsx-772c1d5a708b2277{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-moz-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-moz-box-orient:horizontal;-moz-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.navbar-container-link1.jsx-772c1d5a708b2277{margin-right:var(--dl-space-space-tripleunit);text-decoration:none}.navbar-container-link2.jsx-772c1d5a708b2277{margin-right:var(--dl-space-space-tripleunit)}.navbar-container-link4.jsx-772c1d5a708b2277{text-decoration:none}.navbar-container-burger-menu.jsx-772c1d5a708b2277{display:none;-webkit-box-align:start;-webkit-align-items:flex-start;-moz-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.navbar-container-icon.jsx-772c1d5a708b2277{width:36px;height:36px}.navbar-container-mobile-menu.jsx-772c1d5a708b2277{top:0px;left:0px;width:100%;height:100vh;display:none;padding:var(--dl-space-space-tripleunit);position:absolute;-webkit-box-align:start;-webkit-align-items:flex-start;-moz-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;background-color:#fff}.navbar-container-container.jsx-772c1d5a708b2277{-webkit-box-flex:0;-webkit-flex:0 0 auto;-moz-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:100%;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:var(--dl-space-space-doubleunit);-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-moz-box-orient:horizontal;-moz-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-moz-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.navbar-container-close-menu.jsx-772c1d5a708b2277{-webkit-box-flex:0;-webkit-flex:0 0 auto;-moz-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-moz-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.navbar-container-icon2.jsx-772c1d5a708b2277{width:24px;height:24px}.navbar-container-links-container1.jsx-772c1d5a708b2277{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-moz-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.navbar-container-link5.jsx-772c1d5a708b2277{margin-bottom:var(--dl-space-space-unit)}.navbar-container-link6.jsx-772c1d5a708b2277{margin-bottom:var(--dl-space-space-unit)}.navbar-container-link7.jsx-772c1d5a708b2277{margin-bottom:var(--dl-space-space-unit)}.navbar-container-root-class-name.jsx-772c1d5a708b2277{top:0px;right:0px;background-color:#d9d9d9}.navbar-container-root-class-name1.jsx-772c1d5a708b2277{top:-22px;left:-18px}.navbar-container-root-class-name2.jsx-772c1d5a708b2277{top:-22px;left:-18px}@media(max-width:991px){.navbar-container-heading.jsx-772c1d5a708b2277{text-align:center}}@media(max-width:767px){.navbar-container-navbar.jsx-772c1d5a708b2277{position:relative}.navbar-container-links-container.jsx-772c1d5a708b2277{display:none}.navbar-container-burger-menu.jsx-772c1d5a708b2277{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;padding:var(--dl-space-space-halfunit);margin-left:var(--dl-space-space-tripleunit);-webkit-border-radius:var(--dl-radius-radius-radius4);-moz-border-radius:var(--dl-radius-radius-radius4);border-radius:var(--dl-radius-radius-radius4);background-color:var(--dl-color-gray-black)}.navbar-container-icon.jsx-772c1d5a708b2277{fill:var(--dl-color-gray-white)}}@media(max-width:479px){.navbar-container-burger-menu.jsx-772c1d5a708b2277{margin-left:var(--dl-space-space-doubleunit)}}"
+                id: "80e3684cc2023d79",
+                children: ".navbar-container-navbar-container.jsx-80e3684cc2023d79{width:100%;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;z-index:100;position:fixed;-webkit-box-shadow:5px 5px 10px 0px#d4d4d4;-moz-box-shadow:5px 5px 10px 0px#d4d4d4;box-shadow:5px 5px 10px 0px#d4d4d4;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;background-color:var(--dl-color-gray-white)}.navbar-container-navbar.jsx-80e3684cc2023d79{width:100%;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;max-width:var(--dl-size-size-maxcontent);-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;padding-top:var(--dl-space-space-tripleunit);padding-left:var(--dl-space-space-tripleunit);padding-right:var(--dl-space-space-tripleunit);-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-moz-box-orient:horizontal;-moz-box-direction:normal;-ms-flex-direction:row;flex-direction:row;padding-bottom:var(--dl-space-space-tripleunit);-webkit-box-pack:justify;-webkit-justify-content:space-between;-moz-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.navbar-container-image.jsx-80e3684cc2023d79{width:100px;height:90px;-o-object-fit:cover;object-fit:cover}.navbar-container-links-container.jsx-80e3684cc2023d79{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-moz-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-moz-box-orient:horizontal;-moz-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.navbar-container-link01.jsx-80e3684cc2023d79{margin-right:var(--dl-space-space-tripleunit);text-decoration:none}.navbar-container-link03.jsx-80e3684cc2023d79{margin-right:var(--dl-space-space-tripleunit);text-decoration:none}.navbar-container-link05.jsx-80e3684cc2023d79{text-decoration:none}.navbar-container-burger-menu.jsx-80e3684cc2023d79{display:none;-webkit-box-align:start;-webkit-align-items:flex-start;-moz-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.navbar-container-icon.jsx-80e3684cc2023d79{width:36px;height:36px}.navbar-container-mobile-menu.jsx-80e3684cc2023d79{top:0px;left:0px;width:100%;height:100vh;display:none;padding:var(--dl-space-space-tripleunit);position:absolute;-webkit-box-align:start;-webkit-align-items:flex-start;-moz-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;background-color:#fff}.navbar-container-container.jsx-80e3684cc2023d79{-webkit-box-flex:0;-webkit-flex:0 0 auto;-moz-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:100%;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:var(--dl-space-space-doubleunit);-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-moz-box-orient:horizontal;-moz-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-moz-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.navbar-container-close-menu.jsx-80e3684cc2023d79{-webkit-box-flex:0;-webkit-flex:0 0 auto;-moz-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-moz-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.navbar-container-icon2.jsx-80e3684cc2023d79{width:24px;height:24px}.navbar-container-links-container1.jsx-80e3684cc2023d79{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-moz-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.navbar-container-link06.jsx-80e3684cc2023d79{margin-bottom:var(--dl-space-space-unit)}.navbar-container-link07.jsx-80e3684cc2023d79{margin-bottom:var(--dl-space-space-unit)}.navbar-container-link08.jsx-80e3684cc2023d79{margin-bottom:var(--dl-space-space-unit)}.navbar-container-root-class-name.jsx-80e3684cc2023d79{top:0px;right:0px;background-color:var(--dl-color-gray-white)}.navbar-container-root-class-name1.jsx-80e3684cc2023d79{top:-22px;left:-18px}.navbar-container-root-class-name2.jsx-80e3684cc2023d79{top:-22px;left:-18px}@media(max-width:991px){.navbar-container-heading.jsx-80e3684cc2023d79{text-align:center}}@media(max-width:767px){.navbar-container-navbar.jsx-80e3684cc2023d79{position:relative}.navbar-container-links-container.jsx-80e3684cc2023d79{display:none}.navbar-container-burger-menu.jsx-80e3684cc2023d79{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;padding:var(--dl-space-space-halfunit);margin-left:var(--dl-space-space-tripleunit);-webkit-border-radius:var(--dl-radius-radius-radius4);-moz-border-radius:var(--dl-radius-radius-radius4);border-radius:var(--dl-radius-radius-radius4);background-color:var(--dl-color-gray-black)}.navbar-container-icon.jsx-80e3684cc2023d79{fill:var(--dl-color-gray-white)}}@media(max-width:479px){.navbar-container-burger-menu.jsx-80e3684cc2023d79{margin-left:var(--dl-space-space-doubleunit)}}"
             })
         ]
     });
@@ -233,7 +236,7 @@ NavbarContainer.defaultProps = {
     link5: "Portofolio",
     link: "About",
     link6: "Contact",
-    image_src: "/playground_assets/tpana%20%5B2%5D-200h.png",
+    image_src: "/playground_assets/1_dark-200h.png",
     Heading: "Logo",
     image_alt: "image",
     link2: "Contact",

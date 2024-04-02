@@ -1,0 +1,50 @@
+.next/BUILD_ID
+.next/BUILD_ID 2
+.next/build-manifest.json
+.next/prerender-manifest.json
+.next/required-server-files.json
+.next/trace
+.next/cache/config.json
+.next/cache/webpack/client-production/0.pack
+.next/cache/webpack/client-production/index.pack
+.next/cache/webpack/client-production/index.pack.old
+.next/cache/webpack/server-production/0.pack
+.next/cache/webpack/server-production/index.pack
+.next/cache/webpack/server-production/index.pack.old
+.next/server/font-manifest.json
+.next/server/pages-manifest.json
+.next/server/chunks/664 2.js
+.next/server/chunks/926.js
+.next/server/chunks/font-manifest.json
+.next/server/pages/_app.js.nft.json
+.next/server/pages/_document.js.nft.json
+.next/server/pages/_error.js.nft.json
+.next/server/pages/404.html
+.next/server/pages/500.html
+.next/server/pages/about.html
+.next/server/pages/about.js.nft.json
+.next/server/pages/contact.html
+.next/server/pages/contact.js.nft.json
+.next/server/pages/experience.html
+.next/server/pages/experience.js.nft.json
+.next/server/pages/index.html
+.next/server/pages/index.js.nft.json
+.next/static/9VIFmGVPCdqUfLgxo9vWZ/_buildManifest.js
+.next/static/9VIFmGVPCdqUfLgxo9vWZ/_ssgManifest.js
+.next/static/SooBrLMDAjAL_jiLswOpX/_buildManifest.js
+.next/static/SooBrLMDAjAL_jiLswOpX/_ssgManifest.js
+.next/static/chunks/926-4a1cfa26afecf7c2.js
+.next/static/chunks/926-7bd565d11808e77b.js
+.next/static/chunks/pages/_app-e1a621be6f5e18e6 2.js
+.next/static/chunks/pages/_error-a4ba2246ff8fb532 2.js
+.next/static/chunks/pages/about-73ffe5eeec461fc6.js
+.next/static/chunks/pages/about-adf073296956bb94.js
+.next/static/chunks/pages/index-b39d1ba6a5004659.js
+.next/static/chunks/pages/index-cbf4bbf21d9128ca.js
+node_modules/.package-lock.json
+node_modules/@next/swc-linux-x64-gnu/next-swc.linux-x64-gnu.node
+node_modules/@next/swc-linux-x64-gnu/package.json
+node_modules/@next/swc-linux-x64-gnu/README.md
+node_modules/@next/swc-linux-x64-musl/next-swc.linux-x64-musl.node
+node_modules/@next/swc-linux-x64-musl/package.json
+node_modules/@next/swc-linux-x64-musl/README.md

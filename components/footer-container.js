@@ -96,7 +96,7 @@ const FooterContainer = (props) => {
 }
 
 FooterContainer.defaultProps = {
-  link: 'Copyright, ' + new Date().getYear(),
+  link: 'Copyright, ' + new Date().getFullYear(),
   rootClassName: '',
 }
 
