@@ -48,3 +48,5 @@ node_modules/@next/swc-linux-x64-gnu/README.md
 node_modules/@next/swc-linux-x64-musl/next-swc.linux-x64-musl.node
 node_modules/@next/swc-linux-x64-musl/package.json
 node_modules/@next/swc-linux-x64-musl/README.md
+.next
+node_modules
