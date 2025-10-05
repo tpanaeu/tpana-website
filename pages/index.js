@@ -3,10 +3,9 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 import NavbarContainer from '../components/navbar-container'
-import CtaBtn from '../components/cta-btn'
 import FooterContainer from '../components/footer-container'
 
-const Home = (props) => {
+const Home = () => {
   return (
     <>
       <div className="home-container">
@@ -15,100 +14,139 @@ const Home = (props) => {
           <meta property="og:title" content="TPANA IT Solutions" />
         </Head>
         <NavbarContainer></NavbarContainer>
-        <div className="home-section-separator"></div>
-        <div className="home-section-separator1"></div>
-        <div className="home-container1">
-          <div className="home-hero">
-            <div className="home-hero-text-container">
+        <main className="home-main">
+          <section className="home-hero">
+            <div className="home-hero-content">
+              <span className="home-hero-badge">Strategic Software Consulting</span>
               <h1 className="home-heading section-Heading">
-                We help organizations achieve their goals through technology
+                We help organizations move faster, smarter, and with confidence.
               </h1>
-              <span className="home-text">
-                <span>
-                  {' '}
-                  Working directly with the customer to analyze, design, develop
-                  and deliver outstanding applications, quickly and effectively.
-                </span>
-                <br className="section-Text"></br>
-              </span>
-              <div className="home-cta-btn-container">
-                <Link href="/about">
-                  <a className="home-link">
-                    <CtaBtn className="home-component1"></CtaBtn>
-                  </a>
+              <p className="home-text content">
+                We embed with your teams to understand what matters most. Then we
+                prototype, build, and launch digital products that create real
+                impact-from automation and integrations to customer-facing
+                experiences.
+              </p>
+              <div className="home-actions">
+                <Link href="/contact">
+                  <a className="button home-primary-action">Start a project</a>
+                </Link>
+                <Link href="/experience">
+                  <a className="home-secondary-action">View recent work</a>
                 </Link>
               </div>
-            </div>
-            <img
-              alt="image"
-              src="/playground_assets/818-1500w.jpg"
-              className="home-image"
-            />
-          </div>
-        </div>
-        <div className="home-features">
-          <div className="home-heading-container">
-            <h2 className="home-text3 section-Heading">Services</h2>
-          </div>
-          <div className="home-cards-container">
-            <div className="home-card">
-              <div className="home-icon-container">
-                <svg
-                  viewBox="0 0 1170.2857142857142 1024"
-                  className="home-icon"
-                >
-                  <path d="M1170.286 877.714v73.143h-1170.286v-877.714h73.143v804.571h1097.143zM1097.143 164.571v248.571c0 16-19.429 24.571-31.429 12.571l-69.143-69.143-361.714 361.714c-7.429 7.429-18.857 7.429-26.286 0l-133.143-133.143-237.714 237.714-109.714-109.714 334.286-334.286c7.429-7.429 18.857-7.429 26.286 0l133.143 133.143 265.143-265.143-69.143-69.143c-12-12-3.429-31.429 12.571-31.429h248.571c10.286 0 18.286 8 18.286 18.286z"></path>
-                </svg>
-              </div>
-              <div className="home-content-container">
-                <span className="home-heading1 card-Heading">
-                  Process Automation
-                </span>
-                <span className="home-text4 card-Text">
-                  Reduce the time required to do business by automating common
-                  tasks.
-                </span>
+              <div className="home-metrics">
+                <div className="home-metric">
+                  <span className="home-metric-number">16+</span>
+                  <span className="home-metric-label">Years in the field</span>
+                </div>
+                <div className="home-metric">
+                  <span className="home-metric-number">6</span>
+                  <span className="home-metric-label">Industries served</span>
+                </div>
+                <div className="home-metric">
+                  <span className="home-metric-number">100%</span>
+                  <span className="home-metric-label">Client retention</span>
+                </div>
               </div>
             </div>
-            <div className="home-card1">
-              <div className="home-icon-container1">
-                <svg viewBox="0 0 1024 1024" className="home-icon2">
-                  <path d="M810 128q34 0 60 26t26 60v256h-214l44-172-172 44v-214h256zM726 726l-44-172h214v256q0 34-26 60t-60 26h-256v-214zM342 554l-44 172 172-44v214h-256q-34 0-60-26t-26-60v-256h214zM128 214q0-34 26-60t60-26h256v214l-172-44 44 172h-214v-256z"></path>
-                </svg>
-              </div>
-              <div className="home-content-container1">
-                <span className="home-heading2 card-Heading">
-                  Requirements Analysis
-                </span>
-                <span className="home-text5 card-Text">
-                  Identify your core business needs, with future extensibility
-                  in mind.
-                </span>
-              </div>
-            </div>
-            <div className="home-card2">
-              <div className="home-icon-container2">
-                <svg
-                  viewBox="0 0 865.7188571428571 1024"
-                  className="home-icon4"
-                >
-                  <path d="M207.429 877.714l52-52-134.286-134.286-52 52v61.143h73.143v73.143h61.143zM506.286 347.429c0-7.429-5.143-12.571-12.571-12.571-3.429 0-6.857 1.143-9.714 4l-309.714 309.714c-2.857 2.857-4 6.286-4 9.714 0 7.429 5.143 12.571 12.571 12.571 3.429 0 6.857-1.143 9.714-4l309.714-309.714c2.857-2.857 4-6.286 4-9.714zM475.429 237.714l237.714 237.714-475.429 475.429h-237.714v-237.714zM865.714 292.571c0 19.429-8 38.286-21.143 51.429l-94.857 94.857-237.714-237.714 94.857-94.286c13.143-13.714 32-21.714 51.429-21.714s38.286 8 52 21.714l134.286 133.714c13.143 13.714 21.143 32.571 21.143 52z"></path>
-                </svg>
-              </div>
-              <div className="home-content-container2">
-                <span className="home-heading3 card-Heading">
-                  Software Design
-                </span>
-                <span className="home-text6">
-                  Design your applications with robust modern technologies.
-                </span>
+            <div className="home-hero-visual">
+              <div className="home-hero-card">
+                <img
+                  alt="TP Software Consultants logo"
+                  src="/assets/tp-logotype-vertical.png"
+                  className="home-hero-logo"
+                />
+                <div className="home-hero-card-content">
+                  <p className="content">
+                    "TPANA brought clarity to our roadmap and delivered software
+                    that scaled with our growth."
+                  </p>
+                  <span className="home-hero-card-caption">CTO, Fintech partner</span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="home-section-separator2"></div>
-        <div className="home-section-separator3"></div>
-        <div className="home-section-separator4"></div>
+          </section>
+
+          <section className="home-services">
+            <div className="home-section-header">
+              <span className="home-section-subtitle">What we do</span>
+              <h2 className="section-Heading">Services built for complex challenges</h2>
+              <p className="content">
+                We combine strategy, engineering, and delivery excellence to help you
+                transition from idea to outcome without compromising quality or speed.
+              </p>
+            </div>
+            <div className="home-cards-container">
+              <article className="home-card">
+                <div className="home-icon-container">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M7 9a2 2 0 0 1 2-2h9.5a2 2 0 0 1 1.6.8L23.5 12H39a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9Z" fill="rgba(37,114,173,0.12)" stroke="var(--dl-color-primary-500)" strokeWidth="1.5" />
+                    <path d="M16 31h6M16 24h16" stroke="var(--dl-color-primary-500)" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <h3 className="card-Heading">Process Automation</h3>
+                <p className="card-Text">
+                  Automate manual flows with resilient integrations and micro-services that
+                  connect the dots across your business.
+                </p>
+              </article>
+              <article className="home-card">
+                <div className="home-icon-container">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M8 12a4 4 0 0 1 4-4h12l6 6h10v22a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V12Z" fill="rgba(241,178,74,0.12)" stroke="var(--dl-color-accent-500)" strokeWidth="1.5" />
+                    <path d="M16 28h16M16 20h12" stroke="var(--dl-color-accent-500)" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <h3 className="card-Heading">Requirements &amp; Discovery</h3>
+                <p className="card-Text">
+                  Facilitate product workshops, align stakeholders, and translate insights into
+                  actionable delivery plans.
+                </p>
+              </article>
+              <article className="home-card">
+                <div className="home-icon-container">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M8 16.5 24 7l16 9.5v15L24 41l-16-9.5v-15Z" fill="rgba(26,79,116,0.12)" stroke="var(--dl-color-primary-700)" strokeWidth="1.5" />
+                    <path d="M24 17v17.5M14 22l10 6M34 22l-10 6" stroke="var(--dl-color-primary-700)" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <h3 className="card-Heading">Architecture &amp; Delivery</h3>
+                <p className="card-Text">
+                  Design modern, scalable systems and lead delivery teams to ship with pace and
+                  confidence.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section className="home-approach">
+            <div className="home-approach-content">
+              <span className="home-section-subtitle">Our approach</span>
+              <h2 className="section-Heading">Human-centered delivery that meets enterprise standards</h2>
+              <ul className="home-approach-list">
+                <li>
+                  <strong>Co-create the vision</strong>
+                  <p className="card-Text">
+                    Collaborative discovery sessions to clarify objectives, success metrics, and risks.
+                  </p>
+                </li>
+                <li>
+                  <strong>Design lean solutions</strong>
+                  <p className="card-Text">
+                    Experience-led prototypes backed by technical validation ensure feasibility from day one.
+                  </p>
+                </li>
+                <li>
+                  <strong>Deliver and iterate</strong>
+                  <p className="card-Text">
+                    Pragmatic releases with measurable checkpoints keep stakeholders aligned and outcomes on track.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </main>
         <FooterContainer></FooterContainer>
       </div>
       <style jsx>
@@ -121,301 +159,287 @@ const Home = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .home-section-separator {
+          .home-main {
             width: 100%;
-            height: 1px;
             display: flex;
-            margin-top: var(--dl-space-space-tenunits);
-            align-items: flex-start;
             flex-direction: column;
-            background-color: var(--dl-color-gray-900);
-          }
-          .home-section-separator1 {
-            width: 100%;
-            height: 1px;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            background-color: var(--dl-color-gray-900);
-          }
-          .home-container1 {
-            width: 100%;
-            display: flex;
             align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            background-color: #f1f1f1;
+            margin-top: 120px;
+            gap: var(--dl-space-space-tenunits);
           }
           .home-hero {
             width: 100%;
-            display: flex;
+            display: grid;
             max-width: var(--dl-size-size-maxcontent);
-            margin-top: var(--dl-space-space-fiveunits);
-            align-items: center;
-            padding-top: var(--dl-space-space-fiveunits);
-            padding-left: var(--dl-space-space-tripleunit);
-            margin-bottom: var(--dl-space-space-fiveunits);
-            padding-right: var(--dl-space-space-tripleunit);
-            flex-direction: row;
-            padding-bottom: var(--dl-space-space-fiveunits);
-            justify-content: space-between;
-            background-color: #f1f1f1;
+            padding: var(--dl-space-space-tenunits) var(--dl-space-space-tripleunit);
+            border-radius: 28px;
+            position: relative;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--dl-space-space-fiveunits);
+            background: radial-gradient(120% 140% at 0% 0%, rgba(37, 114, 173, 0.16) 0%, rgba(18, 41, 66, 0.78) 65%, rgba(13, 30, 48, 0.95) 100%);
+            color: var(--dl-color-gray-white);
+            overflow: hidden;
           }
-          .home-hero-text-container {
-            width: 45%;
+          .home-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(19, 46, 69, 0.15), rgba(37, 114, 173, 0.05));
+            pointer-events: none;
+          }
+          .home-hero-content {
+            position: relative;
             display: flex;
-            align-items: flex-start;
             flex-direction: column;
+            gap: var(--dl-space-space-fourunits);
+            z-index: 1;
+          }
+          .home-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--dl-space-space-halfunit);
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background: rgba(255, 255, 255, 0.08);
           }
           .home-heading {
-            color: #040404;
-            margin-bottom: var(--dl-space-space-tripleunit);
+            color: var(--dl-color-gray-white);
           }
           .home-text {
-            color: var(--dl-color-gray-black);
-            margin-bottom: var(--dl-space-space-fiveunits);
+            color: rgba(255, 255, 255, 0.78);
+            max-width: 540px;
           }
-          .home-cta-btn-container {
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-link {
-            display: contents;
-          }
-          .home-component1 {
-            text-decoration: none;
-          }
-          .home-image {
-            width: 40%;
-            object-fit: cover;
-          }
-          .home-features {
-            width: 100%;
-            height: 521px;
-            display: flex;
-            max-width: var(--dl-size-size-maxcontent);
-            margin-top: var(--dl-space-space-fiveunits);
-            align-items: center;
-            padding-top: var(--dl-space-space-fiveunits);
-            padding-left: var(--dl-space-space-tripleunit);
-            margin-bottom: var(--dl-space-space-fiveunits);
-            padding-right: var(--dl-space-space-tripleunit);
-            flex-direction: column;
-            padding-bottom: var(--dl-space-space-fiveunits);
-          }
-          .home-heading-container {
-            width: 45%;
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--dl-space-space-fiveunits);
-            flex-direction: column;
-          }
-          .home-text3 {
-            margin-bottom: var(--dl-space-space-fourunits);
-          }
-          .home-cards-container {
-            width: 100%;
+          .home-actions {
             display: flex;
             flex-wrap: wrap;
-            align-items: flex-start;
-            flex-direction: row;
-            justify-content: space-between;
+            gap: var(--dl-space-space-doubleunit);
+          }
+          .home-primary-action {
+            color: var(--dl-color-gray-white);
+            box-shadow: 0 16px 36px -18px rgba(11, 27, 44, 0.8);
+          }
+          .home-secondary-action {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--dl-space-space-halfunit);
+            color: rgba(255, 255, 255, 0.8);
+            font-family: var(--dl-font-heading);
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 160ms ease;
+          }
+          .home-secondary-action::after {
+            content: '';
+            display: inline-block;
+            width: 36px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.5);
+          }
+          .home-secondary-action:hover,
+          .home-secondary-action:focus {
+            color: var(--dl-color-gray-white);
+          }
+          .home-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--dl-space-space-fiveunits);
+          }
+          .home-metric {
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-halfunit);
+          }
+          .home-metric-number {
+            font-family: var(--dl-font-heading);
+            font-size: 44px;
+            font-weight: 700;
+          }
+          .home-metric-label {
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.58);
+          }
+          .home-hero-visual {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .home-hero-card {
+            width: min(360px, 100%);
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-tripleunit);
+            padding: var(--dl-space-space-fiveunits);
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 22px 48px -26px rgba(0, 0, 0, 0.45);
+          }
+          .home-hero-logo {
+            width: 120px;
+            height: auto;
+            align-self: center;
+          }
+          .home-hero-card-content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-doubleunit);
+            color: rgba(255, 255, 255, 0.8);
+            text-align: left;
+          }
+          .home-hero-card-caption {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(255, 255, 255, 0.56);
+          }
+          .home-services {
+            width: 100%;
+            max-width: var(--dl-size-size-maxcontent);
+            padding: 0 var(--dl-space-space-tripleunit);
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-fiveunits);
+          }
+          .home-section-header {
+            max-width: 760px;
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-doubleunit);
+            text-align: left;
+            color: var(--dl-color-neutral-900);
+          }
+          .home-section-subtitle {
+            font-family: var(--dl-font-heading);
+            font-size: 13px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--dl-color-primary-600);
+          }
+          .home-cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: var(--dl-space-space-fiveunits);
           }
           .home-card {
-            width: 30%;
             display: flex;
-            align-items: center;
-            padding-top: var(--dl-space-space-doubleunit);
-            padding-left: var(--dl-space-space-doubleunit);
-            margin-bottom: var(--dl-space-space-fourunits);
-            padding-right: var(--dl-space-space-doubleunit);
             flex-direction: column;
-            padding-bottom: var(--dl-space-space-doubleunit);
+            gap: var(--dl-space-space-doubleunit);
+            padding: var(--dl-space-space-fourunits);
+            border-radius: 24px;
+            background: var(--dl-color-gray-white);
+            box-shadow: var(--dl-shadow-soft);
+            transition: transform 180ms ease, box-shadow 180ms ease;
+          }
+          .home-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 28px 56px -30px rgba(12, 23, 38, 0.35);
           }
           .home-icon-container {
-            display: flex;
-            padding: var(--dl-space-space-unit);
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: inline-flex;
             align-items: center;
-            border-radius: var(--dl-radius-radius-round);
-            margin-bottom: var(--dl-space-space-tripleunit);
+            justify-content: center;
+            background: var(--dl-color-neutral-100);
+          }
+          .home-icon-container svg {
+            width: 48px;
+            height: 48px;
+          }
+          .home-approach {
+            width: 100%;
+            max-width: var(--dl-size-size-maxcontent);
+            padding: 0 var(--dl-space-space-tripleunit) var(--dl-space-space-tenunits);
+          }
+          .home-approach-content {
+            display: flex;
             flex-direction: column;
+            gap: var(--dl-space-space-fourunits);
+            padding: var(--dl-space-space-fiveunits);
+            border-radius: 24px;
+            background: linear-gradient(140deg, rgba(32, 91, 134, 0.08), rgba(241, 178, 74, 0.1));
+            border: 1px solid rgba(37, 114, 173, 0.15);
           }
-          .home-icon {
-            fill: var(--dl-color-gray-900);
-            width: 100px;
-            height: 100px;
-            min-width: 100px;
-            min-height: 100px;
+          .home-approach-list {
+            display: grid;
+            gap: var(--dl-space-space-fourunits);
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            list-style: none;
+            padding: 0;
+            margin: 0;
           }
-          .home-content-container {
+          .home-approach-list li {
             display: flex;
-            align-items: center;
             flex-direction: column;
-          }
-          .home-heading1 {
-            margin-bottom: var(--dl-space-space-tripleunit);
-          }
-          .home-text4 {
-            text-align: center;
-          }
-          .home-card1 {
-            width: 30%;
-            display: flex;
-            align-items: center;
-            padding-top: var(--dl-space-space-doubleunit);
-            padding-left: var(--dl-space-space-doubleunit);
-            margin-bottom: var(--dl-space-space-fourunits);
+            gap: var(--dl-space-space-unit);
             padding-right: var(--dl-space-space-doubleunit);
-            flex-direction: column;
-            padding-bottom: var(--dl-space-space-doubleunit);
           }
-          .home-icon-container1 {
-            display: flex;
-            padding: var(--dl-space-space-unit);
-            align-items: center;
-            border-radius: var(--dl-radius-radius-round);
-            margin-bottom: var(--dl-space-space-tripleunit);
-            flex-direction: column;
-          }
-          .home-icon2 {
-            fill: var(--dl-color-gray-900);
-            width: 100px;
-            height: 100px;
-            min-width: 100px;
-            min-height: 100px;
-          }
-          .home-content-container1 {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          }
-          .home-heading2 {
-            margin-bottom: var(--dl-space-space-tripleunit);
-          }
-          .home-text5 {
-            text-align: center;
-          }
-          .home-card2 {
-            width: 30%;
-            display: flex;
-            align-items: center;
-            padding-top: var(--dl-space-space-doubleunit);
-            padding-left: var(--dl-space-space-doubleunit);
-            margin-bottom: var(--dl-space-space-fourunits);
-            padding-right: var(--dl-space-space-doubleunit);
-            flex-direction: column;
-            padding-bottom: var(--dl-space-space-doubleunit);
-          }
-          .home-icon-container2 {
-            display: flex;
-            padding: var(--dl-space-space-unit);
-            align-items: center;
-            border-radius: var(--dl-radius-radius-round);
-            margin-bottom: var(--dl-space-space-tripleunit);
-            flex-direction: column;
-          }
-          .home-icon4 {
-            fill: var(--dl-color-gray-900);
-            width: 100px;
-            height: 100px;
-            min-width: 100px;
-            min-height: 100px;
-          }
-          .home-content-container2 {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          }
-          .home-heading3 {
-            margin-bottom: var(--dl-space-space-tripleunit);
-          }
-          .home-text6 {
-            text-align: center;
-          }
-          .home-section-separator2 {
-            width: 100%;
-            height: 1px;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            background-color: var(--dl-color-gray-900);
-          }
-          .home-section-separator3 {
-            width: 100%;
-            height: 1px;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            background-color: var(--dl-color-gray-900);
-          }
-          .home-section-separator4 {
-            width: 100%;
-            height: 1px;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            background-color: var(--dl-color-gray-900);
+          .home-approach-list strong {
+            font-family: var(--dl-font-heading);
+            font-size: 18px;
+            color: var(--dl-color-primary-700);
           }
           @media (max-width: 991px) {
-            .home-hero {
-              align-items: center;
-              flex-direction: column;
-              justify-content: center;
+            .home-main {
+              margin-top: 96px;
             }
-            .home-hero-text-container {
-              width: 80%;
-              align-items: center;
-              margin-bottom: var(--dl-space-space-fourunits);
+            .home-hero {
+              padding: var(--dl-space-space-eightunits) var(--dl-space-space-doubleunit);
             }
             .home-heading {
-              text-align: center;
+              font-size: 40px;
             }
-            .home-text {
-              text-align: center;
-            }
-            .home-image {
-              width: 100%;
-            }
-            .home-text3 {
-              text-align: center;
+            .home-hero-card {
+              margin: 0 auto;
             }
           }
           @media (max-width: 767px) {
-            .home-heading-container {
-              width: 100%;
+            .home-main {
+              gap: var(--dl-space-space-eightunits);
             }
-            .home-cards-container {
-              align-items: center;
+            .home-hero {
+              border-radius: 20px;
+            }
+            .home-actions {
               flex-direction: column;
+              align-items: stretch;
             }
-            .home-card {
-              width: 70%;
-              margin-bottom: var(--dl-space-space-tripleunit);
+            .home-metrics {
+              gap: var(--dl-space-space-fourunits);
             }
-            .home-card1 {
-              width: 70%;
-              margin-bottom: var(--dl-space-space-tripleunit);
+            .home-metric-number {
+              font-size: 36px;
             }
-            .home-card2 {
-              width: 70%;
-              margin-bottom: var(--dl-space-space-tripleunit);
+            .home-services,
+            .home-approach {
+              padding: 0 var(--dl-space-space-doubleunit);
             }
           }
           @media (max-width: 479px) {
-            .home-hero-text-container {
-              width: 100%;
+            .home-main {
+              margin-top: 88px;
             }
-            .home-card {
-              width: 100%;
+            .home-hero {
+              padding: var(--dl-space-space-sixunits) var(--dl-space-space-doubleunit);
             }
-            .home-card1 {
-              width: 100%;
+            .home-hero-card {
+              padding: var(--dl-space-space-fourunits);
             }
-            .home-card2 {
-              width: 100%;
+            .home-hero-logo {
+              width: 96px;
+            }
+            .home-approach-content {
+              padding: var(--dl-space-space-fourunits);
             }
           }
         `}

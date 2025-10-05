@@ -1,93 +1,176 @@
 import React from 'react'
+import Link from 'next/link'
 
 import PropTypes from 'prop-types'
 
 const FooterContainer = (props) => {
+  const currentYear = new Date().getFullYear()
+
   return (
     <>
-      <div
+      <footer
         className={`footer-container-footer-container ${props.rootClassName} `}
       >
         <div className="footer-container-footer">
-          <div className="footer-container-social-links">
-            <svg
-              viewBox="0 0 950.8571428571428 1024"
-              className="footer-container-icon"
-            >
-              <path d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"></path>
-            </svg>
-            <svg
-              viewBox="0 0 877.7142857142857 1024"
-              className="footer-container-icon2"
-            >
-              <path d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z"></path>
-            </svg>
-            <svg
-              viewBox="0 0 877.7142857142857 1024"
-              className="footer-container-icon4"
-            >
-              <path d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"></path>
-            </svg>
+          <div className="footer-container-brand">
+            <img
+              src="/assets/tp-logotype-vertical.png"
+              alt="TP Software Consultants logo"
+              className="footer-container-brand-mark"
+            />
+            <p className="footer-container-tagline content">
+              Tailor-made software solutions with measurable business impact.
+            </p>
           </div>
-          <div className="footer-container-copyright-container">
-            <svg viewBox="0 0 1024 1024" className="footer-container-icon6">
-              <path d="M512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM506 390q-80 0-80 116v12q0 116 80 116 30 0 50-17t20-43h76q0 50-44 88-42 36-102 36-80 0-122-48t-42-132v-12q0-82 40-128 48-54 124-54 66 0 104 38 42 42 42 98h-76q0-14-6-26-10-20-14-24-20-20-50-20z"></path>
-            </svg>
-            <span className="anchor">{props.link}</span>
+          <div className="footer-container-links">
+            <h2 className="footer-container-heading">Explore</h2>
+            <Link href="/about">
+              <a className="footer-container-link">About</a>
+            </Link>
+            <Link href="/experience">
+              <a className="footer-container-link">Experience</a>
+            </Link>
+            <Link href="/contact">
+              <a className="footer-container-link">Contact</a>
+            </Link>
+          </div>
+          <div className="footer-container-contact">
+            <h2 className="footer-container-heading">Contact</h2>
+            <a className="footer-container-link" href="mailto:contact@tpana.eu">
+              contact@tpana.eu
+            </a>
+            <div className="footer-container-social-links">
+              <a
+                className="footer-container-social"
+                href="https://www.linkedin.com/in/thodorispanagopoulos/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M4.984 3.5c0 1.38-1.11 2.5-2.484 2.5S0 4.88 0 3.5 1.11 1 2.5 1s2.484 1.12 2.484 2.5zM.297 23.429V7.714h4.407v15.715H.297zm7.063-15.715h4.224v2.147h.058c.59-1.118 2.034-2.296 4.187-2.296 4.477 0 5.303 2.947 5.303 6.782v7.782h-4.59v-6.899c0-1.646-.03-3.763-2.294-3.763-2.295 0-2.647 1.79-2.647 3.64v7.022H7.36V7.714z"></path>
+                </svg>
+              </a>
+              <a
+                className="footer-container-social"
+                href="https://github.com/tpanagopoulos"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.094 3.292 9.41 7.866 10.941.575.105.785-.25.785-.556 0-.274-.01-1.183-.015-2.146-3.2.696-3.875-1.537-3.875-1.537-.523-1.328-1.28-1.682-1.28-1.682-1.046-.713.079-.699.079-.699 1.158.082 1.768 1.19 1.768 1.19 1.03 1.766 2.704 1.256 3.364.96.105-.746.403-1.256.733-1.546-2.553-.29-5.238-1.277-5.238-5.683 0-1.255.45-2.282 1.187-3.086-.12-.29-.515-1.46.112-3.047 0 0 .965-.309 3.164 1.18a11.01 11.01 0 012.883-.388c.978.005 1.964.132 2.883.388 2.197-1.49 3.16-1.18 3.16-1.18.63 1.587.235 2.757.116 3.047.74.804 1.186 1.831 1.186 3.086 0 4.418-2.69 5.388-5.256 5.673.414.356.792 1.065.792 2.146 0 1.548-.014 2.795-.014 3.175 0 .309.207.666.79.553C20.712 21.405 24 17.09 24 12 24 5.648 18.352.5 12 .5z"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+        <div className="footer-container-bottom">
+          <span className="footer-container-bottom-text">
+            © {currentYear} TP Software Consultants. All rights reserved.
+          </span>
+        </div>
+      </footer>
       <style jsx>
         {`
           .footer-container-footer-container {
             width: 100%;
             display: flex;
-            position: relative;
-            align-items: center;
             flex-direction: column;
-            justify-content: center;
-            background-color: var(--dl-color-gray-white);
+            align-items: center;
+            background: linear-gradient(180deg, rgba(18, 41, 66, 0.95), rgba(15, 35, 56, 0.98));
+            color: var(--dl-color-gray-white);
+            margin-top: var(--dl-space-space-tenunits);
           }
           .footer-container-footer {
             width: 100%;
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--dl-space-space-fiveunits);
             max-width: var(--dl-size-size-maxcontent);
-            align-items: center;
-            padding-top: var(--dl-space-space-tripleunit);
-            padding-left: var(--dl-space-space-tripleunit);
-            padding-right: var(--dl-space-space-tripleunit);
-            flex-direction: row;
-            padding-bottom: var(--dl-space-space-tripleunit);
-            justify-content: space-between;
+            padding: var(--dl-space-space-fiveunits) var(--dl-space-space-tripleunit);
+          }
+          .footer-container-brand {
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-doubleunit);
+            max-width: 280px;
+          }
+          .footer-container-brand-mark {
+            width: 120px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.25));
+          }
+          .footer-container-tagline {
+            color: rgba(255, 255, 255, 0.7);
+          }
+          .footer-container-links,
+          .footer-container-contact {
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-unit);
+          }
+          .footer-container-heading {
+            font-family: var(--dl-font-heading);
+            font-size: 15px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: var(--dl-space-space-unit);
+          }
+          .footer-container-link {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 16px;
+            transition: color 120ms ease;
+          }
+          .footer-container-link:hover,
+          .footer-container-link:focus {
+            color: var(--dl-color-gray-white);
           }
           .footer-container-social-links {
             display: flex;
-            align-items: flex-start;
-            flex-direction: row;
+            gap: var(--dl-space-space-doubleunit);
+            margin-top: var(--dl-space-space-doubleunit);
           }
-          .footer-container-icon {
-            width: 24px;
-            height: 24px;
-            margin-right: var(--dl-space-space-doubleunit);
-          }
-          .footer-container-icon2 {
-            width: 24px;
-            height: 24px;
-            margin-right: var(--dl-space-space-doubleunit);
-          }
-          .footer-container-icon4 {
-            width: 24px;
-            height: 24px;
-          }
-          .footer-container-copyright-container {
-            display: flex;
+          .footer-container-social {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
             align-items: center;
-            flex-direction: row;
+            justify-content: center;
+            border-radius: var(--dl-radius-radius-round);
+            background: rgba(255, 255, 255, 0.08);
+            transition: transform 160ms ease, background 160ms ease;
           }
-          .footer-container-icon6 {
-            width: 24px;
-            height: 24px;
-            margin-right: var(--dl-space-space-doubleunit);
+          .footer-container-social:hover,
+          .footer-container-social:focus {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.14);
+          }
+          .footer-container-social svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--dl-color-gray-white);
+          }
+          .footer-container-bottom {
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: var(--dl-space-space-doubleunit) var(--dl-space-space-tripleunit);
+            display: flex;
+            justify-content: center;
+          }
+          .footer-container-bottom-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+          }
+          @media (max-width: 767px) {
+            .footer-container-footer {
+              gap: var(--dl-space-space-fourunits);
+              padding: var(--dl-space-space-fourunits) var(--dl-space-space-doubleunit);
+            }
+            .footer-container-brand {
+              align-items: flex-start;
+            }
           }
         `}
       </style>
@@ -96,12 +179,10 @@ const FooterContainer = (props) => {
 }
 
 FooterContainer.defaultProps = {
-  link: 'Copyright, ' + new Date().getFullYear(),
   rootClassName: '',
 }
 
 FooterContainer.propTypes = {
-  link: PropTypes.string,
   rootClassName: PropTypes.string,
 }
 

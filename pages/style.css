@@ -3,34 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --dl-color-gray-500: #595959;
-  --dl-color-gray-700: #999999;
-  --dl-color-gray-800: #cbcbcbff;
-  --dl-color-gray-900: #D9D9D9;
-  --dl-color-danger-300: #A22020;
-  --dl-color-danger-500: #BF2626;
-  --dl-color-danger-700: #E14747;
-  --dl-color-gray-black: #000000;
-  --dl-color-gray-white: #FFFFFF;
+  --dl-color-primary-900: #0f2f45;
+  --dl-color-primary-700: #1a4f74;
+  --dl-color-primary-600: #1f5f8f;
+  --dl-color-primary-500: #2572ad;
+  --dl-color-primary-300: #3d8bc3;
+  --dl-color-primary-100: #e5f0f9;
+  --dl-color-accent-500: #f1b24a;
+  --dl-color-neutral-900: #121926;
+  --dl-color-neutral-700: #3f4a5d;
+  --dl-color-neutral-400: #94a3b8;
+  --dl-color-neutral-200: #cdd6e6;
+  --dl-color-neutral-100: #f3f6fb;
+  --dl-color-neutral-50: #f9fbff;
+  --dl-color-gray-black: #0b0d17;
+  --dl-color-gray-white: #ffffff;
   --dl-space-space-unit: 8px;
-  --dl-color-primary-100: #003EB3;
-  --dl-color-primary-300: #0074F0;
-  --dl-color-primary-500: #14A9FF;
-  --dl-color-primary-700: #85DCFF;
-  --dl-color-success-300: #199033;
-  --dl-color-success-500: #32A94C;
-  --dl-color-success-700: #4CC366;
-  --dl-radius-radius-round: 50%;
-  --dl-size-size-maxcontent: 1414px;
   --dl-space-space-halfunit: 4px;
-  --dl-space-space-tenunits: 80px;
-  --dl-radius-radius-radius2: 2px;
-  --dl-radius-radius-radius4: 4px;
-  --dl-radius-radius-radius8: 8px;
-  --dl-space-space-fiveunits: 40px;
-  --dl-space-space-fourunits: 32px;
   --dl-space-space-doubleunit: 16px;
   --dl-space-space-tripleunit: 24px;
+  --dl-space-space-fourunits: 32px;
+  --dl-space-space-fiveunits: 40px;
+  --dl-space-space-tenunits: 80px;
+  --dl-radius-radius-round: 50%;
+  --dl-radius-radius-radius2: 2px;
+  --dl-radius-radius-radius4: 6px;
+  --dl-radius-radius-radius8: 12px;
+  --dl-size-size-maxcontent: 1200px;
+  --dl-shadow-soft: 0 22px 48px -22px rgba(15, 47, 69, 0.25);
+  --dl-shadow-card: 0 14px 32px -18px rgba(18, 26, 38, 0.35);
+  --dl-font-heading: 'Poppins', 'Segoe UI', sans-serif;
+  --dl-font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
 }
 .teleport-show {
   display: flex !important;
@@ -44,95 +47,118 @@
   list-style-position: outside;
 }
 .button {
-  color: var(--dl-color-gray-black);
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  font-family: Arial;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-gray-white);
+  color: var(--dl-color-gray-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--dl-font-heading);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: var(--dl-radius-radius-radius8);
+  background: linear-gradient(135deg, var(--dl-color-primary-600), var(--dl-color-primary-500));
+  box-shadow: var(--dl-shadow-card);
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px -18px rgba(37, 114, 173, 0.45);
+  background: linear-gradient(135deg, var(--dl-color-primary-700), var(--dl-color-primary-500));
+}
+.button:focus-visible {
+  outline: 3px solid var(--dl-color-accent-500);
+  outline-offset: 4px;
 }
 .list-item {
   display: list-item;
 }
 .textarea {
-  color: var(--dl-color-gray-black);
-  cursor: auto;
-  padding: 0.5rem;
-  font-family: Arial;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: 4px;
+  color: var(--dl-color-neutral-900);
+  padding: 0.75rem 1rem;
+  font-family: var(--dl-font-body);
+  border: 1px solid var(--dl-color-neutral-200);
+  border-radius: var(--dl-radius-radius-radius8);
   background-color: var(--dl-color-gray-white);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+.textarea:focus {
+  border-color: var(--dl-color-primary-500);
+  box-shadow: 0 0 0 3px rgba(37, 114, 173, 0.15);
+  outline: none;
 }
 .input {
-  color: var(--dl-color-gray-black);
-  cursor: auto;
-  padding: 0.5rem 1rem;
-  font-family: Arial;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: 4px;
+  color: var(--dl-color-neutral-900);
+  padding: 0.75rem 1rem;
+  font-family: var(--dl-font-body);
+  border: 1px solid var(--dl-color-neutral-200);
+  border-radius: var(--dl-radius-radius-radius8);
   background-color: var(--dl-color-gray-white);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+.input:focus {
+  border-color: var(--dl-color-primary-500);
+  box-shadow: 0 0 0 3px rgba(37, 114, 173, 0.15);
+  outline: none;
 }
 .section-Text {
   font-size: 18px;
-  font-family: Playfair Display;
-  font-weight: 600;
-  line-height: 1.55;
-  letter-spacing: 2;
+  font-family: var(--dl-font-body);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
   text-transform: none;
   text-decoration: none;
 }
 .card-Text {
   font-size: 16px;
-  font-style: normal;
-  font-family: Playfair Display;
+  font-family: var(--dl-font-body);
   font-weight: 400;
-  line-height: 1.55;
-  letter-spacing: 1;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
   text-transform: none;
   text-decoration: none;
 }
 .content {
-  font-size: 16px;
-  font-family: Arial;
+  font-size: 17px;
+  font-family: var(--dl-font-body);
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.7;
   text-transform: none;
   text-decoration: none;
 }
 .card-Heading {
   font-size: 24px;
-  font-style: normal;
-  font-family: Overpass;
-  font-weight: 700;
-  line-height: 1.55;
+  font-family: var(--dl-font-heading);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
   text-transform: none;
   text-decoration: none;
 }
 .anchor {
   font-size: 16px;
-  font-family: Overpass;
-  font-weight: 700;
-  line-height: 1.55;
-  text-transform: capitalize;
+  font-family: var(--dl-font-heading);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   text-decoration: none;
 }
 .navbar-Link {
-  font-size: 24px;
-  font-family: Overpass;
-  font-weight: 700;
-  line-height: 1.55;
-  text-transform: none;
+  font-size: 16px;
+  font-family: var(--dl-font-heading);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   text-decoration: none;
 }
 .section-Heading {
-  font-size: 48px;
-  font-family: Overpass;
-  font-weight: 900;
-  line-height: 1.22;
+  font-size: 44px;
+  font-family: var(--dl-font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
   text-transform: none;
   text-decoration: none;
 }

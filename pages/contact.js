@@ -4,7 +4,7 @@ import Head from 'next/head'
 import NavbarContainer from '../components/navbar-container'
 import FooterContainer from '../components/footer-container'
 
-const Contact = (props) => {
+const Contact = () => {
   return (
     <>
       <div className="contact-container">
@@ -13,131 +13,145 @@ const Contact = (props) => {
           <meta property="og:title" content="Contact - TPANA IT Solutions" />
         </Head>
         <NavbarContainer rootClassName="navbar-container-root-class-name"></NavbarContainer>
-        <div className="contact-container1">
-          <div className="contact-hero">
-            <div className="contact-container2">
-              <h1 className="contact-heading section-Heading">Want to chat?</h1>
-              <span className="contact-text">
-                <span>
-                  {' '}
-                  You may drop us an a message at :
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <a href="mailto:contact@tpana.eu?subject=">contact@tpana.eu</a>
-                <br className="section-Text"></br>
-                <br className="section-Text"></br>
-                <br className="section-Text"></br>
-              </span>
+        <main className="contact-main">
+          <section className="contact-hero">
+            <div className="contact-copy">
+              <span className="contact-eyebrow">Contact</span>
+              <h1 className="contact-heading section-Heading">Let's create something meaningful together</h1>
+              <p className="contact-text content">
+                Share your challenge and we will respond within two business days with next steps.
+                Whether you need a technical audit, a delivery partner, or a second opinion on your
+                roadmap-we're here to help.
+              </p>
+              <a className="contact-email" href="mailto:contact@tpana.eu?subject=Let's%20work%20together">
+                contact@tpana.eu
+              </a>
             </div>
-            <div className="contact-hero-text-container">
-              <div className="contact-cta-btn-container"></div>
+            <div className="contact-card">
+              <h2>What to expect</h2>
+              <ul>
+                <li>Discovery call to understand your goals and constraints.</li>
+                <li>Tangible recommendations tailored to your context.</li>
+                <li>Transparent proposals and clear engagement models.</li>
+              </ul>
             </div>
-            <img
-              alt="image"
-              src="/playground_assets/818-1500w.jpg"
-              className="contact-image"
-            />
-          </div>
-        </div>
+          </section>
+        </main>
         <FooterContainer rootClassName="footer-container-root-class-name"></FooterContainer>
       </div>
       <style jsx>
         {`
           .contact-container {
             width: 100%;
-            display: flex;
-            overflow: auto;
             min-height: 100vh;
-            align-items: center;
-            flex-direction: column;
-            justify-content: flex-end;
-          }
-          .contact-container1 {
-            width: 100%;
-            height: 808px;
             display: flex;
-            align-items: center;
             flex-direction: column;
-            justify-content: center;
-            background-color: #f1f1f1;
+            align-items: center;
+          }
+          .contact-main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 120px;
           }
           .contact-hero {
             width: 100%;
-            height: 822px;
-            display: flex;
             max-width: var(--dl-size-size-maxcontent);
-            margin-top: var(--dl-space-space-fiveunits);
-            align-items: center;
-            padding-top: var(--dl-space-space-fiveunits);
-            padding-left: var(--dl-space-space-tripleunit);
-            margin-bottom: var(--dl-space-space-fiveunits);
-            padding-right: var(--dl-space-space-tripleunit);
-            flex-direction: row;
-            padding-bottom: var(--dl-space-space-fiveunits);
-            justify-content: space-between;
-            background-color: #f1f1f1;
+            padding: var(--dl-space-space-tenunits) var(--dl-space-space-tripleunit) var(--dl-space-space-twelveunits);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--dl-space-space-fiveunits);
+            align-items: stretch;
           }
-          .contact-container2 {
-            width: 555px;
-            height: auto;
+          .contact-copy {
             display: flex;
-            align-items: space-between;
             flex-direction: column;
+            gap: var(--dl-space-space-fourunits);
+          }
+          .contact-eyebrow {
+            font-family: var(--dl-font-heading);
+            font-size: 13px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--dl-color-primary-600);
           }
           .contact-heading {
-            color: #040404;
-            width: 549px;
-            margin-bottom: var(--dl-space-space-tripleunit);
+            color: var(--dl-color-neutral-900);
           }
           .contact-text {
-            color: var(--dl-color-gray-black);
-            margin-bottom: var(--dl-space-space-fiveunits);
+            color: var(--dl-color-neutral-700);
+            max-width: 580px;
           }
-          .contact-hero-text-container {
-            width: 45%;
+          .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--dl-space-space-unit);
+            font-family: var(--dl-font-heading);
+            font-size: 20px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--dl-color-primary-700);
+            transition: color 160ms ease;
+          }
+          .contact-email::after {
+            content: '';
+            display: inline-block;
+            width: 42px;
+            height: 1px;
+            background: currentColor;
+          }
+          .contact-email:hover,
+          .contact-email:focus {
+            color: var(--dl-color-primary-500);
+          }
+          .contact-card {
+            background: linear-gradient(150deg, rgba(18, 41, 66, 0.9), rgba(37, 114, 173, 0.85));
+            color: rgba(255, 255, 255, 0.82);
+            border-radius: 24px;
+            padding: var(--dl-space-space-fiveunits);
+            box-shadow: var(--dl-shadow-card);
             display: flex;
-            align-items: flex-start;
             flex-direction: column;
+            gap: var(--dl-space-space-threeunits);
           }
-          .contact-cta-btn-container {
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-            justify-content: flex-start;
+          .contact-card h2 {
+            font-family: var(--dl-font-heading);
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
           }
-          .contact-image {
-            width: 40%;
-            object-fit: cover;
+          .contact-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: var(--dl-space-space-doubleunit);
+            font-size: 17px;
           }
           @media (max-width: 991px) {
-            .contact-hero {
-              align-items: center;
-              flex-direction: column;
-              justify-content: center;
+            .contact-main {
+              margin-top: 96px;
             }
             .contact-heading {
-              text-align: center;
+              font-size: 40px;
             }
-            .contact-text {
-              text-align: center;
+          }
+          @media (max-width: 767px) {
+            .contact-hero {
+              padding: var(--dl-space-space-eightunits) var(--dl-space-space-doubleunit) var(--dl-space-space-tenunits);
             }
-            .contact-hero-text-container {
-              width: 80%;
-              align-items: center;
-              margin-bottom: var(--dl-space-space-fourunits);
-            }
-            .contact-image {
-              width: 100%;
+            .contact-card {
+              padding: var(--dl-space-space-fourunits);
             }
           }
           @media (max-width: 479px) {
-            .contact-hero-text-container {
-              width: 100%;
+            .contact-main {
+              margin-top: 88px;
+            }
+            .contact-hero {
+              padding: var(--dl-space-space-sixunits) var(--dl-space-space-doubleunit) var(--dl-space-space-eightunits);
             }
           }
         `}

@@ -4,7 +4,7 @@ import Head from 'next/head'
 import NavbarContainer from '../components/navbar-container'
 import FooterContainer from '../components/footer-container'
 
-const About = (props) => {
+const About = () => {
   return (
     <>
       <div className="about-container">
@@ -13,133 +13,229 @@ const About = (props) => {
           <meta property="og:title" content="About - TPANA IT Solutions" />
         </Head>
         <NavbarContainer rootClassName="navbar-container-root-class-name"></NavbarContainer>
-        <div className="about-container1">
-          <div className="about-hero">
-            <div className="about-container2">
+        <main className="about-main">
+          <section className="about-hero">
+            <div className="about-copy">
+              <span className="about-eyebrow">About us</span>
               <h1 className="about-heading section-Heading">
-                Thodoris Panagopoulos k SIA GP
+                Trusted partners in digital transformation
               </h1>
-              <span className="about-text">
-                <span>
-                  {' '}
-                  TPANA was established in 2022, with the vision of helping
-                  organizations achieve their business goals through software.
-                </span>
-                <br className="section-Text"></br>
-                <br className="content"></br>
-                <span className="content">
-                  We have a passion for technology, enjoy working with others,
-                  understanding their needs and help them overcome their
-                  problems.
-                </span>
-                <br className="section-Text"></br>
-              </span>
+              <p className="about-text content">
+                TPANA was established in 2022 with a simple goal: help forward-thinking
+                organizations transform ambiguous challenges into robust, scalable
+                software. We bring deep engineering expertise, an obsession with user
+                experience, and a collaborative mindset to every engagement.
+              </p>
+              <div className="about-pillars">
+                <div className="about-pillar">
+                  <span className="about-pillar-title">Co-create</span>
+                  <p className="card-Text">We listen first, shape together, and align your stakeholders around a shared vision.</p>
+                </div>
+                <div className="about-pillar">
+                  <span className="about-pillar-title">Simplify</span>
+                  <p className="card-Text">We translate complex requirements into intuitive services and products.</p>
+                </div>
+                <div className="about-pillar">
+                  <span className="about-pillar-title">Deliver</span>
+                  <p className="card-Text">We lead implementation with accountability, transparency, and measurable outcomes.</p>
+                </div>
+              </div>
             </div>
-            <div className="about-hero-text-container">
-              <div className="about-cta-btn-container"></div>
+            <div className="about-panel">
+              <div className="about-panel-card">
+                <img
+                  alt="Theodoros Panagopoulos Software Consultants logo"
+                  src="/assets/tp-logotype-horizontal.png"
+                  className="about-panel-logo"
+                />
+                <p className="content">
+                  Thodoris Panagopoulos &amp; SIA GP is a boutique consultancy led by hands-on senior engineers. We craft long-term partnerships across finance, telco, insurance, public sector, and sustainability.
+                </p>
+                <div className="about-highlight">
+                  <span>Based in Athens, collaborating globally.</span>
+                </div>
+              </div>
             </div>
-            <img
-              alt="image"
-              src="/playground_assets/tpana_animation-1500w.gif"
-              className="about-image"
-            />
-          </div>
-        </div>
+          </section>
+
+          <section className="about-history">
+            <div className="about-history-card">
+              <h2 className="section-Heading">A philosophy rooted in craftsmanship</h2>
+              <p className="content">
+                Our work thrives at the intersection of strategy and execution. Every solution we build is designed to scale, adapt, and deliver sustainable impact. We are relentless about quality, yet pragmatic about shipping value.
+              </p>
+              <ul className="about-list">
+                <li>
+                  <strong>Expert engineering leadership:</strong> 16+ years of experience building and integrating enterprise-grade systems.
+                </li>
+                <li>
+                  <strong>Empathetic consultancy:</strong> We align technology decisions with business value and customer needs.
+                </li>
+                <li>
+                  <strong>Outcome-focused delivery:</strong> Clear milestones, collaborative rituals, and measurable success metrics.
+                </li>
+              </ul>
+            </div>
+          </section>
+        </main>
         <FooterContainer rootClassName="footer-container-root-class-name"></FooterContainer>
       </div>
       <style jsx>
         {`
           .about-container {
             width: 100%;
-            display: flex;
-            overflow: auto;
             min-height: 100vh;
-            align-items: center;
-            flex-direction: column;
-            justify-content: flex-end;
-          }
-          .about-container1 {
-            width: 100%;
-            height: 808px;
             display: flex;
-            align-items: center;
             flex-direction: column;
-            justify-content: center;
-            background-color: #f1f1f1;
+            align-items: center;
+          }
+          .about-main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 120px;
+            gap: var(--dl-space-space-tenunits);
           }
           .about-hero {
             width: 100%;
-            height: 822px;
-            display: flex;
             max-width: var(--dl-size-size-maxcontent);
-            margin-top: var(--dl-space-space-fiveunits);
-            align-items: center;
-            padding-top: var(--dl-space-space-fiveunits);
-            padding-left: var(--dl-space-space-tripleunit);
-            margin-bottom: var(--dl-space-space-fiveunits);
-            padding-right: var(--dl-space-space-tripleunit);
-            flex-direction: row;
-            padding-bottom: var(--dl-space-space-fiveunits);
-            justify-content: space-between;
-            background-color: #f1f1f1;
+            padding: var(--dl-space-space-tenunits) var(--dl-space-space-tripleunit);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--dl-space-space-fiveunits);
+            align-items: stretch;
           }
-          .about-container2 {
-            width: 657px;
-            height: 291px;
+          .about-copy {
             display: flex;
-            align-items: space-between;
             flex-direction: column;
+            gap: var(--dl-space-space-fourunits);
+          }
+          .about-eyebrow {
+            font-family: var(--dl-font-heading);
+            font-size: 13px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--dl-color-primary-600);
           }
           .about-heading {
-            color: #040404;
-            width: 549px;
-            margin-bottom: var(--dl-space-space-tripleunit);
+            color: var(--dl-color-neutral-900);
           }
           .about-text {
-            color: var(--dl-color-gray-black);
-            margin-bottom: var(--dl-space-space-fiveunits);
+            color: var(--dl-color-neutral-700);
+            max-width: 620px;
           }
-          .about-hero-text-container {
-            width: 45%;
+          .about-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: var(--dl-space-space-fourunits);
+          }
+          .about-pillar {
             display: flex;
-            align-items: flex-start;
             flex-direction: column;
+            gap: var(--dl-space-space-unit);
+            padding-right: var(--dl-space-space-unit);
           }
-          .about-cta-btn-container {
-            border: 2px dashed rgba(120, 120, 120, 0.4);
+          .about-pillar-title {
+            font-family: var(--dl-font-heading);
+            font-size: 18px;
+            color: var(--dl-color-primary-700);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+          }
+          .about-panel {
             display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-            justify-content: flex-start;
+            align-items: center;
+            justify-content: center;
           }
-          .about-image {
-            width: 40%;
-            object-fit: cover;
+          .about-panel-card {
+            width: 100%;
+            padding: var(--dl-space-space-fiveunits);
+            border-radius: 24px;
+            background: linear-gradient(140deg, rgba(18, 41, 66, 0.9), rgba(37, 114, 173, 0.85));
+            box-shadow: var(--dl-shadow-card);
+            color: rgba(255, 255, 255, 0.82);
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-tripleunit);
+          }
+          .about-panel-logo {
+            width: min(320px, 100%);
+            height: auto;
+            align-self: center;
+            filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.35));
+          }
+          .about-highlight {
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+            padding-top: var(--dl-space-space-doubleunit);
+            font-size: 15px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+          }
+          .about-history {
+            width: 100%;
+            max-width: var(--dl-size-size-maxcontent);
+            padding: 0 var(--dl-space-space-tripleunit) var(--dl-space-space-tenunits);
+          }
+          .about-history-card {
+            padding: var(--dl-space-space-fiveunits);
+            border-radius: 24px;
+            background: var(--dl-color-gray-white);
+            box-shadow: var(--dl-shadow-soft);
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-fourunits);
+          }
+          .about-history-card .content {
+            color: var(--dl-color-neutral-700);
+          }
+          .about-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: var(--dl-space-space-doubleunit);
+          }
+          .about-list li {
+            font-family: var(--dl-font-body);
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--dl-color-neutral-900);
+          }
+          .about-list strong {
+            color: var(--dl-color-primary-700);
           }
           @media (max-width: 991px) {
-            .about-hero {
-              align-items: center;
-              flex-direction: column;
-              justify-content: center;
+            .about-main {
+              margin-top: 96px;
             }
             .about-heading {
-              text-align: center;
+              font-size: 40px;
             }
-            .about-text {
-              text-align: center;
+          }
+          @media (max-width: 767px) {
+            .about-main {
+              gap: var(--dl-space-space-eightunits);
             }
-            .about-hero-text-container {
-              width: 80%;
-              align-items: center;
-              margin-bottom: var(--dl-space-space-fourunits);
+            .about-hero {
+              padding: var(--dl-space-space-eightunits) var(--dl-space-space-doubleunit);
             }
-            .about-image {
-              width: 100%;
+            .about-history {
+              padding: 0 var(--dl-space-space-doubleunit) var(--dl-space-space-eightunits);
+            }
+            .about-history-card {
+              padding: var(--dl-space-space-fourunits);
             }
           }
           @media (max-width: 479px) {
-            .about-hero-text-container {
-              width: 100%;
+            .about-main {
+              margin-top: 88px;
+            }
+            .about-hero {
+              padding: var(--dl-space-space-sixunits) var(--dl-space-space-doubleunit);
+            }
+            .about-panel-card {
+              padding: var(--dl-space-space-fourunits);
             }
           }
         `}
