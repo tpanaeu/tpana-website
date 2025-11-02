@@ -19,7 +19,7 @@ const FooterContainer = (props) => {
               className="footer-container-brand-mark"
             />
             <p className="footer-container-tagline content">
-              Tailor-made software solutions with measurable business impact.
+              Boutique technology leadership for critical, high-trust digital products.
             </p>
           </div>
           <div className="footer-container-links">

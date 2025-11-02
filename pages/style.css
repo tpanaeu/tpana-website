@@ -21,10 +21,14 @@
   --dl-space-space-unit: 8px;
   --dl-space-space-halfunit: 4px;
   --dl-space-space-doubleunit: 16px;
+  --dl-space-space-threeunits: 24px;
   --dl-space-space-tripleunit: 24px;
   --dl-space-space-fourunits: 32px;
   --dl-space-space-fiveunits: 40px;
+  --dl-space-space-sixunits: 48px;
+  --dl-space-space-eightunits: 64px;
   --dl-space-space-tenunits: 80px;
+  --dl-space-space-twelveunits: 96px;
   --dl-radius-radius-round: 50%;
   --dl-radius-radius-radius2: 2px;
   --dl-radius-radius-radius4: 6px;
@@ -34,6 +38,7 @@
   --dl-shadow-card: 0 14px 32px -18px rgba(18, 26, 38, 0.35);
   --dl-font-heading: 'Poppins', 'Segoe UI', sans-serif;
   --dl-font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --dl-color-neutral-800: #27334b;
 }
 .teleport-show {
   display: flex !important;

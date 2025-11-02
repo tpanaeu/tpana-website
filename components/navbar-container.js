@@ -131,6 +131,7 @@ const NavbarContainer = (props) => {
             width: 220px;
             height: auto;
             object-fit: contain;
+            max-width: clamp(160px, 30vw, 220px);
           }
           .navbar-container-links-container {
             display: flex;
@@ -197,6 +198,7 @@ const NavbarContainer = (props) => {
             opacity: 0;
             pointer-events: none;
             transition: opacity 160ms ease;
+            overflow-y: auto;
           }
           .navbar-container-mobile-menu--open {
             display: flex;
@@ -289,6 +291,11 @@ const NavbarContainer = (props) => {
           @media (max-width: 767px) {
             .navbar-container-navbar {
               position: relative;
+              padding-left: var(--dl-space-space-doubleunit);
+              padding-right: var(--dl-space-space-doubleunit);
+            }
+            .navbar-container-mobile-menu {
+              padding: var(--dl-space-space-fourunits) var(--dl-space-space-doubleunit);
             }
           }
           @media (max-width: 479px) {

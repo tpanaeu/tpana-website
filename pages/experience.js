@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import NavbarContainer from '../components/navbar-container'
 import FooterContainer from '../components/footer-container'
@@ -18,12 +19,13 @@ const Experience = () => {
             <div className="experience-copy">
               <span className="experience-eyebrow">Experience</span>
               <h1 className="experience-heading section-Heading">
-                Build on solid ground
+                Complex programmes delivered with clarity and momentum.
               </h1>
               <p className="experience-lead content">
-                Our team has led multi-disciplinary initiatives across regulated industries and
-                fast-moving scale-ups alike. We bring a blend of product thinking, architecture,
-                and delivery pragmatism to every engagement.
+                Our leadership team has shepherded multi-year transformations and rapid delivery
+                squads alike. Whether the challenge is modernising a legacy estate or launching a
+                new digital product, we bring the structure, empathy, and engineering depth to make
+                it successful.
               </p>
             </div>
             <div className="experience-hero-card">
@@ -35,6 +37,31 @@ const Experience = () => {
                 <li>eGovernment Platforms</li>
                 <li>Sustainable &amp; Circular Economy</li>
               </ul>
+              <p className="card-Text">
+                We understand the governance demands of regulated industries and how to guide teams
+                through them without losing sight of user experience.
+              </p>
+            </div>
+          </section>
+
+          <section className="experience-results">
+            <div className="experience-results-card">
+              <span className="experience-results-eyebrow">Our impact</span>
+              <h2 className="section-Heading">Programmes we led unlocked measurable outcomes</h2>
+              <div className="experience-results-stats">
+                <div className="experience-results-stat">
+                  <span className="experience-results-number">6x</span>
+                  <span className="experience-results-label">Faster release cadence after modernisation</span>
+                </div>
+                <div className="experience-results-stat">
+                  <span className="experience-results-number">45%</span>
+                  <span className="experience-results-label">Reduction in manual processing effort</span>
+                </div>
+                <div className="experience-results-stat">
+                  <span className="experience-results-number">↑32</span>
+                  <span className="experience-results-label">Point lift in customer experience scores</span>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -42,31 +69,96 @@ const Experience = () => {
             <article className="experience-tile">
               <h3 className="card-Heading">Advisory &amp; Roadmapping</h3>
               <p className="card-Text">
-                Translate business strategy into actionable delivery plans, align stakeholders, and
-                de-risk investments with technical due diligence.
+                Turn complex ambitions into aligned, actionable plans with clear investments,
+                milestones, and measurable guardrails.
               </p>
+              <ul className="experience-tile-list">
+                <li>Vision articulation &amp; opportunity framing</li>
+                <li>Capability assessments &amp; due diligence</li>
+                <li>Funding decks and stakeholder storytelling</li>
+              </ul>
             </article>
             <article className="experience-tile">
               <h3 className="card-Heading">Solution Architecture</h3>
               <p className="card-Text">
-                Define modern architectures, integration patterns, and platform strategies that scale
-                confidently across hybrid and cloud environments.
+                Design scalable, secure architectures that integrate legacy environments with modern
+                platforms and cloud services.
               </p>
+              <ul className="experience-tile-list">
+                <li>Target architecture definition &amp; diagrams</li>
+                <li>Integration strategies &amp; migration plans</li>
+                <li>Security, compliance, and observability blueprints</li>
+              </ul>
             </article>
             <article className="experience-tile">
               <h3 className="card-Heading">Team Leadership</h3>
               <p className="card-Text">
-                Lead cross-functional teams, instil agile operating rhythms, and nurture capabilities
-                within your organisation.
+                Embed experienced product, engineering, and delivery leaders to uplift your teams
+                and accelerate execution.
               </p>
+              <ul className="experience-tile-list">
+                <li>Fractional CTO, CPO, and delivery leads</li>
+                <li>Operating model &amp; ritual design</li>
+                <li>Capability uplift through pairing and coaching</li>
+              </ul>
             </article>
             <article className="experience-tile">
               <h3 className="card-Heading">Delivery Excellence</h3>
               <p className="card-Text">
-                Ship production-ready software with rigorous quality practices, observability, and
-                continuous improvement baked in.
+                Ship production-ready software supported by mature practices, automated quality, and
+                transparent reporting.
               </p>
+              <ul className="experience-tile-list">
+                <li>Incremental delivery &amp; release governance</li>
+                <li>Quality engineering &amp; automation frameworks</li>
+                <li>Runbooks, support models, and continuous improvement</li>
+              </ul>
             </article>
+          </section>
+
+          <section className="experience-proof">
+            <div className="experience-proof-card">
+              <span className="experience-results-eyebrow">Recent highlights</span>
+              <div className="experience-proof-grid">
+                <article>
+                  <h3 className="card-Heading">RegTech platform scale-up</h3>
+                  <p className="card-Text">
+                    Unified fragmented compliance tooling into a single platform, streamlining KYC
+                    journeys across four markets and enabling faster expansion.
+                  </p>
+                </article>
+                <article>
+                  <h3 className="card-Heading">National eGovernment service</h3>
+                  <p className="card-Text">
+                    Led discovery, procurement alignment, and phased delivery of a citizen-facing
+                    service with full auditability and accessible UX.
+                  </p>
+                </article>
+                <article>
+                  <h3 className="card-Heading">Telecom customer operations</h3>
+                  <p className="card-Text">
+                    Introduced data-led service rituals, integrated CRM and billing estates, and
+                    reduced contact centre handling times by double digits.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section className="experience-cta">
+            <div className="experience-cta-card">
+              <div>
+                <span className="experience-results-eyebrow">Let's collaborate</span>
+                <h2 className="section-Heading">Bring us into your next mission-critical initiative</h2>
+              </div>
+              <p className="content">
+                Share where you want to be in the next 90 days and we'll outline how we can help
+                unblock the path—whether you need an audit, a squad, or long-term leadership.
+              </p>
+              <Link href="/contact">
+                <a className="button">Schedule a discovery call</a>
+              </Link>
+            </div>
           </section>
         </main>
         <FooterContainer rootClassName="footer-container-root-class-name"></FooterContainer>
@@ -93,7 +185,7 @@ const Experience = () => {
             max-width: var(--dl-size-size-maxcontent);
             padding: var(--dl-space-space-tenunits) var(--dl-space-space-tripleunit);
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: var(--dl-space-space-fiveunits);
           }
           .experience-copy {
@@ -101,7 +193,8 @@ const Experience = () => {
             flex-direction: column;
             gap: var(--dl-space-space-fourunits);
           }
-          .experience-eyebrow {
+          .experience-eyebrow,
+          .experience-results-eyebrow {
             font-family: var(--dl-font-heading);
             font-size: 13px;
             letter-spacing: 0.16em;
@@ -141,10 +234,48 @@ const Experience = () => {
             font-size: 18px;
             color: var(--dl-color-neutral-900);
           }
+          .experience-results {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0 var(--dl-space-space-tripleunit);
+          }
+          .experience-results-card {
+            width: 100%;
+            max-width: var(--dl-size-size-maxcontent);
+            padding: var(--dl-space-space-fiveunits);
+            border-radius: 28px;
+            background: var(--dl-color-neutral-50);
+            border: 1px solid rgba(18, 41, 66, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-fourunits);
+            box-shadow: var(--dl-shadow-soft);
+          }
+          .experience-results-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--dl-space-space-fourunits);
+          }
+          .experience-results-stat {
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-halfunit);
+          }
+          .experience-results-number {
+            font-family: var(--dl-font-heading);
+            font-size: 40px;
+            color: var(--dl-color-primary-700);
+          }
+          .experience-results-label {
+            font-size: 16px;
+            color: var(--dl-color-neutral-700);
+            line-height: 1.5;
+          }
           .experience-grid {
             width: 100%;
             max-width: var(--dl-size-size-maxcontent);
-            padding: 0 var(--dl-space-space-tripleunit) var(--dl-space-space-tenunits);
+            padding: 0 var(--dl-space-space-tripleunit);
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: var(--dl-space-space-fiveunits);
@@ -164,12 +295,78 @@ const Experience = () => {
             transform: translateY(-4px);
             box-shadow: 0 24px 48px -28px rgba(13, 30, 48, 0.35);
           }
+          .experience-tile-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: var(--dl-space-space-halfunit);
+            font-size: 15px;
+            color: var(--dl-color-neutral-700);
+          }
+          .experience-proof {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0 var(--dl-space-space-tripleunit);
+          }
+          .experience-proof-card {
+            width: 100%;
+            max-width: var(--dl-size-size-maxcontent);
+            padding: var(--dl-space-space-fiveunits);
+            border-radius: 28px;
+            background: linear-gradient(140deg, rgba(32, 91, 134, 0.08), rgba(241, 178, 74, 0.12));
+            border: 1px solid rgba(37, 114, 173, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-fourunits);
+          }
+          .experience-proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--dl-space-space-fourunits);
+          }
+          .experience-proof-grid article {
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-unit);
+            color: var(--dl-color-neutral-800);
+          }
+          .experience-cta {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0 var(--dl-space-space-tripleunit) var(--dl-space-space-tenunits);
+          }
+          .experience-cta-card {
+            width: 100%;
+            max-width: var(--dl-size-size-maxcontent);
+            padding: var(--dl-space-space-fiveunits);
+            border-radius: 28px;
+            background: linear-gradient(150deg, rgba(18, 41, 66, 0.92), rgba(37, 114, 173, 0.88));
+            box-shadow: var(--dl-shadow-card);
+            display: flex;
+            flex-direction: column;
+            gap: var(--dl-space-space-fourunits);
+            color: rgba(255, 255, 255, 0.88);
+          }
+          .experience-cta-card .content {
+            color: rgba(255, 255, 255, 0.8);
+          }
+          .experience-cta-card .button {
+            align-self: flex-start;
+          }
           @media (max-width: 991px) {
             .experience-main {
               margin-top: 96px;
             }
             .experience-heading {
               font-size: 40px;
+            }
+            .experience-results-card,
+            .experience-proof-card,
+            .experience-cta-card {
+              padding: var(--dl-space-space-fourunits);
             }
           }
           @media (max-width: 767px) {
@@ -179,8 +376,14 @@ const Experience = () => {
             .experience-hero {
               padding: var(--dl-space-space-eightunits) var(--dl-space-space-doubleunit);
             }
-            .experience-grid {
-              padding: 0 var(--dl-space-space-doubleunit) var(--dl-space-space-eightunits);
+            .experience-results,
+            .experience-grid,
+            .experience-proof,
+            .experience-cta {
+              padding: 0 var(--dl-space-space-doubleunit);
+            }
+            .experience-cta-card .button {
+              width: 100%;
             }
           }
           @media (max-width: 479px) {
@@ -192,6 +395,11 @@ const Experience = () => {
             }
             .experience-hero-card {
               padding: var(--dl-space-space-fourunits);
+            }
+            .experience-results-card,
+            .experience-proof-card,
+            .experience-cta-card {
+              gap: var(--dl-space-space-threeunits);
             }
           }
         `}
