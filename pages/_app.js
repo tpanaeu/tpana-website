@@ -1,10 +1,15 @@
 import "./style.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Script from "next/script";
+import ConsentGate, {
+  CONSENT_COOKIE_NAME,
+  CONSENT_GRANTED_VALUE,
+} from "../components/ConsentGate";
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const [hasMarketingConsent, setHasMarketingConsent] = useState(false);
   const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
   const claritySnippet = clarityProjectId
     ? `
@@ -20,7 +25,28 @@ export default function MyApp({ Component, pageProps }) {
   const trackedPagesRef = useRef(new Set());
 
   useEffect(() => {
-    if (!clarityProjectId || typeof window === "undefined") {
+    if (typeof document === "undefined") {
+      return;
+    }
+    const cookieMatch = document.cookie
+      .split(";")
+      .map((entry) => entry.trim())
+      .find((entry) => entry.startsWith(`${CONSENT_COOKIE_NAME}=`));
+
+    if (!cookieMatch) {
+      setHasMarketingConsent(false);
+    } else {
+      const [, value] = cookieMatch.split("=");
+      setHasMarketingConsent(value === CONSENT_GRANTED_VALUE);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (
+      !clarityProjectId ||
+      typeof window === "undefined" ||
+      !hasMarketingConsent
+    ) {
       return undefined;
     }
 
@@ -63,11 +89,39 @@ export default function MyApp({ Component, pageProps }) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [clarityProjectId, router.asPath]);
+  }, [clarityProjectId, hasMarketingConsent, router.asPath]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return undefined;
+    }
+
+    if (hasMarketingConsent) {
+      return undefined;
+    }
+
+    const clarityScript = document.getElementById("microsoft-clarity");
+    if (clarityScript && clarityScript.parentNode) {
+      clarityScript.parentNode.removeChild(clarityScript);
+    }
+
+    if (typeof window.clarity === "function") {
+      try {
+        window.clarity("consent", false);
+      } catch (error) {
+        // Ignore errors if clarity does not support consent revocation
+      }
+      delete window.clarity;
+    }
+
+    trackedPagesRef.current.clear();
+
+    return undefined;
+  }, [hasMarketingConsent]);
 
   return (
     <>
-      {claritySnippet ? (
+      {claritySnippet && hasMarketingConsent ? (
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"
@@ -76,7 +130,12 @@ export default function MyApp({ Component, pageProps }) {
           }}
         />
       ) : null}
-      <Component {...pageProps} />
+      <ConsentGate
+        onMarketingConsent={() => setHasMarketingConsent(true)}
+        onMarketingRevoke={() => setHasMarketingConsent(false)}
+      >
+        <Component {...pageProps} />
+      </ConsentGate>
     </>
   );
 }

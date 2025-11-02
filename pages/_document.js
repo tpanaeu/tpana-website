@@ -5,13 +5,6 @@ class CustomDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script
-            id="Cookiebot"
-            src="https://consent.cookiebot.com/uc.js"
-            data-cbid="4f86c3a7-2688-43aa-9a87-e640c27d55e2"
-            data-blockingmode="auto"
-            type="text/javascript"
-          ></script>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
