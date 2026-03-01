@@ -323,14 +323,24 @@ img {
 }
 
 .hero-shell .section-Heading,
+.panel-surface .section-Heading,
 .dark-surface .section-Heading {
   color: var(--dl-color-gray-white);
 }
 
 .hero-lead,
+.panel-surface .content,
 .dark-surface .content,
 .dark-surface .card-Text {
   color: rgba(255, 255, 255, 0.78);
+}
+
+.panel-surface .eyebrow {
+  color: var(--dl-color-primary-300);
+}
+
+.panel-surface .eyebrow::before {
+  background: rgba(126, 192, 228, 0.35);
 }
 
 .action-row {
