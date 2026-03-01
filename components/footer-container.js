@@ -11,11 +11,13 @@ const FooterContainer = (props) => {
         <div className="footer-shell">
           <div className="footer-top">
             <div className="footer-brand">
-              <img
-                src="/assets/tp-logotype-horizontal.png"
-                alt="TPANA logo"
-                className="footer-logo"
-              />
+              <div className="footer-logo-frame">
+                <img
+                  src="/assets/tp-logotype-horizontal.png"
+                  alt="TPANA logo"
+                  className="footer-logo"
+                />
+              </div>
               <p className="content footer-copy">
                 Strategy, product, and engineering leadership for organisations modernising
                 high-trust services.
@@ -113,9 +115,21 @@ const FooterContainer = (props) => {
           flex-direction: column;
           gap: 12px;
         }
+        .footer-logo-frame {
+          width: fit-content;
+          max-width: 100%;
+          padding: 14px 18px;
+          border-radius: 22px;
+          background: linear-gradient(180deg, rgba(238, 246, 252, 0.96), rgba(214, 230, 241, 0.9));
+          border: 1px solid rgba(126, 192, 228, 0.28);
+          box-shadow:
+            0 18px 42px -30px rgba(3, 12, 20, 0.95),
+            inset 0 1px 0 rgba(255, 255, 255, 0.7);
+        }
         .footer-logo {
           width: min(210px, 100%);
           height: auto;
+          display: block;
         }
         .footer-copy {
           max-width: 360px;
@@ -204,6 +218,10 @@ const FooterContainer = (props) => {
           }
           .footer-bottom {
             padding: 18px 22px 22px;
+          }
+          .footer-logo-frame {
+            padding: 12px 14px;
+            border-radius: 18px;
           }
         }
       `}</style>
