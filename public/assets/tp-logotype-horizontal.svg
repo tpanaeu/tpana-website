@@ -1,54 +1,36 @@
 <svg width="1224" height="370" viewBox="0 0 1224 370" fill="none" xmlns="http://www.w3.org/2000/svg">
   <title>TPANA horizontal logotype</title>
-  <g transform="translate(16 10)">
-    <polygon
-      points="160,18 295,96 295,252 160,330 25,252 25,96"
-      stroke="#163555"
-      stroke-width="24"
-      stroke-linejoin="round"
-    />
-    <text
-      x="43"
-      y="248"
+  <g transform="translate(22 28)">
+    <rect x="0" y="0" width="218" height="218" rx="40" stroke="#163555" stroke-width="20" />
+    <path d="M41 57H154V86H121V177H86V86H41V57Z" fill="#163555" />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M130 57H167C196.18 57 214 75.142 214 102C214 128.858 196.18 147 167 147H164V177H130V57ZM164 86V118H166C176.495 118 181 110.654 181 102C181 93.346 176.495 86 166 86H164Z"
       fill="#163555"
-      font-family="Noto Sans, DejaVu Sans, sans-serif"
-      font-size="206"
-      font-weight="700"
-      letter-spacing="-17"
-    >
-      TP
-    </text>
+    />
+    <rect x="130" y="57" width="12" height="120" rx="6" fill="#2F88BF" />
   </g>
   <text
-    x="362"
-    y="127"
+    x="292"
+    y="172"
     fill="#163555"
-    font-family="Noto Sans, DejaVu Sans, sans-serif"
-    font-size="90"
+    font-family="Noto Sans Display, Noto Sans, DejaVu Sans, sans-serif"
+    font-size="158"
     font-weight="700"
-    letter-spacing="1"
+    letter-spacing="3"
   >
-    THEODOROS
+    TPANA
   </text>
+  <rect x="296" y="212" width="548" height="4" rx="2" fill="#2F88BF" opacity="0.88" />
   <text
-    x="362"
-    y="223"
-    fill="#163555"
+    x="294"
+    y="268"
+    fill="#4A596D"
     font-family="Noto Sans, DejaVu Sans, sans-serif"
-    font-size="88"
+    font-size="34"
     font-weight="700"
-    letter-spacing="0.6"
-  >
-    PANAGOPOULLOS
-  </text>
-  <text
-    x="365"
-    y="306"
-    fill="#2F88BF"
-    font-family="Noto Sans, DejaVu Sans, sans-serif"
-    font-size="45"
-    font-weight="700"
-    letter-spacing="8"
+    letter-spacing="6"
   >
     SOFTWARE CONSULTANTS
   </text>

@@ -1,20 +1,12 @@
 <svg width="385" height="425" viewBox="0 0 385 425" fill="none" xmlns="http://www.w3.org/2000/svg">
   <title>TPANA mark</title>
-  <polygon
-    points="192.5,24 332,104.5 332,265.5 192.5,346 53,265.5 53,104.5"
-    stroke="#163555"
-    stroke-width="26"
-    stroke-linejoin="round"
-  />
-  <text
-    x="66"
-    y="265"
+  <rect x="69" y="65" width="247" height="247" rx="46" stroke="#163555" stroke-width="22" />
+  <path d="M102 122H236V154H185V258H146V154H102V122Z" fill="#163555" />
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M200 122H240C272.033 122 296 142.797 296 174C296 205.203 272.033 226 240 226H238V258H200V122ZM238 154V194H239C251.979 194 258 185.676 258 174C258 162.324 251.979 154 239 154H238Z"
     fill="#163555"
-    font-family="Noto Sans, DejaVu Sans, sans-serif"
-    font-size="214"
-    font-weight="700"
-    letter-spacing="-18"
-  >
-    TP
-  </text>
+  />
+  <rect x="200" y="122" width="14" height="136" rx="7" fill="#2F88BF" />
 </svg>
