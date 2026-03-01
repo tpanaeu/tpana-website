@@ -8,402 +8,191 @@ import FooterContainer from '../components/footer-container'
 const Experience = () => {
   return (
     <>
-      <div className="experience-container">
+      <div className="page-shell">
         <Head>
-          <title>Experience - TPANA IT Solutions</title>
-          <meta property="og:title" content="Experience - TPANA IT Solutions" />
+          <title>Experience | TPANA Engagement Outcomes</title>
+          <meta
+            name="description"
+            content="See how TPANA helps organisations modernise platforms, redesign services, and improve delivery outcomes in high-trust sectors."
+          />
+          <meta property="og:title" content="TPANA Experience" />
         </Head>
-        <NavbarContainer rootClassName="navbar-container-root-class-name"></NavbarContainer>
-        <main className="experience-main">
-          <section className="experience-hero">
-            <div className="experience-copy">
-              <span className="experience-eyebrow">Experience</span>
-              <h1 className="experience-heading section-Heading">
-                Complex programmes delivered with clarity and momentum.
-              </h1>
-              <p className="experience-lead content">
-                Our leadership team has shepherded multi-year transformations and rapid delivery
-                squads alike. Whether the challenge is modernising a legacy estate or launching a
-                new digital product, we bring the structure, empathy, and engineering depth to make
-                it successful.
-              </p>
-            </div>
-            <div className="experience-hero-card">
-              <h2>Core sectors</h2>
-              <ul>
-                <li>Financial Institutions</li>
-                <li>Insurance Brokers</li>
-                <li>Telecommunications</li>
-                <li>eGovernment Platforms</li>
-                <li>Sustainable &amp; Circular Economy</li>
-              </ul>
-              <p className="card-Text">
-                We understand the governance demands of regulated industries and how to guide teams
-                through them without losing sight of user experience.
-              </p>
+
+        <NavbarContainer />
+
+        <main className="page-main">
+          <section className="shell-section">
+            <div className="hero-shell">
+              <div className="hero-copy">
+                <span className="eyebrow">Experience</span>
+                <h1 className="section-Heading">
+                  Delivery experience built in environments where mistakes are expensive.
+                </h1>
+                <p className="content hero-lead">
+                  We work where services are regulated, stakeholders are numerous, and internal
+                  complexity can quietly derail good intentions. The role is to create clarity,
+                  momentum, and outcomes that hold up under scrutiny.
+                </p>
+              </div>
+              <aside className="hero-aside">
+                <div className="quote-card">
+                  <span className="experience-label">Core sectors</span>
+                  <ul className="list-clean experience-sector-list">
+                    <li>Financial institutions and RegTech</li>
+                    <li>Insurance and broker platforms</li>
+                    <li>Telecommunications operations</li>
+                    <li>eGovernment and citizen services</li>
+                    <li>Sustainability and circular economy ventures</li>
+                  </ul>
+                </div>
+              </aside>
             </div>
           </section>
 
-          <section className="experience-results">
-            <div className="experience-results-card">
-              <span className="experience-results-eyebrow">Our impact</span>
-              <h2 className="section-Heading">Programmes we led unlocked measurable outcomes</h2>
-              <div className="experience-results-stats">
-                <div className="experience-results-stat">
-                  <span className="experience-results-number">6x</span>
-                  <span className="experience-results-label">Faster release cadence after modernisation</span>
-                </div>
-                <div className="experience-results-stat">
-                  <span className="experience-results-number">45%</span>
-                  <span className="experience-results-label">Reduction in manual processing effort</span>
-                </div>
-                <div className="experience-results-stat">
-                  <span className="experience-results-number">↑32</span>
-                  <span className="experience-results-label">Point lift in customer experience scores</span>
-                </div>
+          <section className="shell-section">
+            <div className="light-surface experience-impact">
+              <div className="section-header">
+                <span className="eyebrow">Selected Impact</span>
+                <h2 className="section-Heading">Measured improvements, not just completed projects</h2>
+              </div>
+              <div className="stat-grid">
+                <article className="stat-card">
+                  <span className="stat-value">6x</span>
+                  <p className="card-Text">Faster release cadence after platform modernisation</p>
+                </article>
+                <article className="stat-card">
+                  <span className="stat-value">45%</span>
+                  <p className="card-Text">Reduction in manual processing effort in compliance-heavy flows</p>
+                </article>
+                <article className="stat-card">
+                  <span className="stat-value">32</span>
+                  <p className="card-Text">Point lift in customer experience scores on transformed services</p>
+                </article>
               </div>
             </div>
           </section>
 
-          <section className="experience-grid">
-            <article className="experience-tile">
-              <h3 className="card-Heading">Advisory &amp; Roadmapping</h3>
-              <p className="card-Text">
-                Turn complex ambitions into aligned, actionable plans with clear investments,
-                milestones, and measurable guardrails.
-              </p>
-              <ul className="experience-tile-list">
-                <li>Vision articulation &amp; opportunity framing</li>
-                <li>Capability assessments &amp; due diligence</li>
-                <li>Funding decks and stakeholder storytelling</li>
-              </ul>
-            </article>
-            <article className="experience-tile">
-              <h3 className="card-Heading">Solution Architecture</h3>
-              <p className="card-Text">
-                Design scalable, secure architectures that integrate legacy environments with modern
-                platforms and cloud services.
-              </p>
-              <ul className="experience-tile-list">
-                <li>Target architecture definition &amp; diagrams</li>
-                <li>Integration strategies &amp; migration plans</li>
-                <li>Security, compliance, and observability blueprints</li>
-              </ul>
-            </article>
-            <article className="experience-tile">
-              <h3 className="card-Heading">Team Leadership</h3>
-              <p className="card-Text">
-                Embed experienced product, engineering, and delivery leaders to uplift your teams
-                and accelerate execution.
-              </p>
-              <ul className="experience-tile-list">
-                <li>Fractional CTO, CPO, and delivery leads</li>
-                <li>Operating model &amp; ritual design</li>
-                <li>Capability uplift through pairing and coaching</li>
-              </ul>
-            </article>
-            <article className="experience-tile">
-              <h3 className="card-Heading">Delivery Excellence</h3>
-              <p className="card-Text">
-                Ship production-ready software supported by mature practices, automated quality, and
-                transparent reporting.
-              </p>
-              <ul className="experience-tile-list">
-                <li>Incremental delivery &amp; release governance</li>
-                <li>Quality engineering &amp; automation frameworks</li>
-                <li>Runbooks, support models, and continuous improvement</li>
-              </ul>
-            </article>
+          <section className="shell-section section-stack">
+            <div className="section-header">
+              <span className="eyebrow">How We Contribute</span>
+              <h2 className="section-Heading">Support across the full change lifecycle</h2>
+            </div>
+            <div className="card-grid">
+              <article className="feature-card">
+                <h3 className="card-Heading">Advisory and Roadmapping</h3>
+                <ul className="check-list">
+                  <li>Opportunity framing and proposition design</li>
+                  <li>Capability assessments and technical due diligence</li>
+                  <li>Investment cases and executive alignment materials</li>
+                </ul>
+              </article>
+              <article className="feature-card">
+                <h3 className="card-Heading">Architecture and Modernisation</h3>
+                <ul className="check-list">
+                  <li>Target architecture and migration sequencing</li>
+                  <li>Integration patterns for legacy and modern estates</li>
+                  <li>Security, compliance, and observability foundations</li>
+                </ul>
+              </article>
+              <article className="feature-card">
+                <h3 className="card-Heading">Leadership and Delivery</h3>
+                <ul className="check-list">
+                  <li>Fractional CTO, product, and delivery leadership</li>
+                  <li>Operating model and cadence design</li>
+                  <li>Quality, release, and support playbooks</li>
+                </ul>
+              </article>
+            </div>
           </section>
 
-          <section className="experience-proof">
-            <div className="experience-proof-card">
-              <span className="experience-results-eyebrow">Recent highlights</span>
-              <div className="experience-proof-grid">
-                <article>
-                  <h3 className="card-Heading">RegTech platform scale-up</h3>
+          <section className="shell-section">
+            <div className="light-surface experience-highlights">
+              <div className="section-header">
+                <span className="eyebrow">Recent Highlights</span>
+                <h2 className="section-Heading">Representative programme work</h2>
+              </div>
+              <div className="proof-grid">
+                <article className="proof-card">
+                  <span className="experience-highlight-tag">RegTech Platform</span>
+                  <h3 className="card-Heading">Cross-market onboarding transformation</h3>
                   <p className="card-Text">
-                    Unified fragmented compliance tooling into a single platform, streamlining KYC
-                    journeys across four markets and enabling faster expansion.
+                    Unified fragmented tooling into one compliance-led customer journey that
+                    supported expansion into multiple European markets.
                   </p>
                 </article>
-                <article>
-                  <h3 className="card-Heading">National eGovernment service</h3>
+                <article className="proof-card">
+                  <span className="experience-highlight-tag">National Service</span>
+                  <h3 className="card-Heading">Citizen-facing digital permitting</h3>
                   <p className="card-Text">
-                    Led discovery, procurement alignment, and phased delivery of a citizen-facing
-                    service with full auditability and accessible UX.
+                    Guided discovery, governance alignment, and phased delivery for a public
+                    service that demanded both accessibility and full auditability.
                   </p>
                 </article>
-                <article>
-                  <h3 className="card-Heading">Telecom customer operations</h3>
+                <article className="proof-card">
+                  <span className="experience-highlight-tag">Telecom Operations</span>
+                  <h3 className="card-Heading">Customer service and data integration reset</h3>
                   <p className="card-Text">
-                    Introduced data-led service rituals, integrated CRM and billing estates, and
-                    reduced contact centre handling times by double digits.
+                    Reworked service rituals and data access patterns to reduce handling times and
+                    give frontline teams faster access to the right context.
                   </p>
                 </article>
               </div>
             </div>
           </section>
 
-          <section className="experience-cta">
-            <div className="experience-cta-card">
-              <div>
-                <span className="experience-results-eyebrow">Let's collaborate</span>
-                <h2 className="section-Heading">Bring us into your next mission-critical initiative</h2>
+          <section className="shell-section">
+            <div className="dark-surface experience-cta">
+              <div className="section-header">
+                <span className="eyebrow">Bring Us In</span>
+                <h2 className="section-Heading">
+                  Useful when the initiative is visible, politically important, or simply stuck.
+                </h2>
+                <p className="content">
+                  If your programme needs a clearer path, sharper leadership, or a stronger delivery
+                  model, we can help define the next move quickly.
+                </p>
               </div>
-              <p className="content">
-                Share where you want to be in the next 90 days and we'll outline how we can help
-                unblock the path—whether you need an audit, a squad, or long-term leadership.
-              </p>
-              <Link href="/contact">
-                <a className="button">Schedule a discovery call</a>
-              </Link>
+              <div className="action-row">
+                <Link href="/contact">
+                  <a className="button">Schedule a discovery call</a>
+                </Link>
+              </div>
             </div>
           </section>
         </main>
-        <FooterContainer rootClassName="footer-container-root-class-name"></FooterContainer>
+
+        <FooterContainer />
       </div>
-      <style jsx>
-        {`
-          .experience-container {
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-          .experience-main {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 120px;
-            gap: var(--dl-space-space-tenunits);
-          }
-          .experience-hero {
-            width: 100%;
-            max-width: var(--dl-size-size-maxcontent);
-            padding: var(--dl-space-space-tenunits) var(--dl-space-space-tripleunit);
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: var(--dl-space-space-fiveunits);
-          }
-          .experience-copy {
-            display: flex;
-            flex-direction: column;
-            gap: var(--dl-space-space-fourunits);
-          }
-          .experience-eyebrow,
-          .experience-results-eyebrow {
-            font-family: var(--dl-font-heading);
-            font-size: 13px;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--dl-color-primary-600);
-          }
-          .experience-heading {
-            color: var(--dl-color-neutral-900);
-          }
-          .experience-lead {
-            color: var(--dl-color-neutral-700);
-            max-width: 640px;
-          }
-          .experience-hero-card {
-            background: linear-gradient(140deg, rgba(37, 114, 173, 0.12), rgba(18, 41, 66, 0.12));
-            border: 1px solid rgba(37, 114, 173, 0.2);
-            border-radius: 24px;
-            padding: var(--dl-space-space-fiveunits);
-            display: flex;
-            flex-direction: column;
-            gap: var(--dl-space-space-threeunits);
-            box-shadow: var(--dl-shadow-soft);
-          }
-          .experience-hero-card h2 {
-            font-family: var(--dl-font-heading);
-            font-size: 22px;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--dl-color-primary-700);
-          }
-          .experience-hero-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            gap: var(--dl-space-space-unit);
-            font-size: 18px;
-            color: var(--dl-color-neutral-900);
-          }
-          .experience-results {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 0 var(--dl-space-space-tripleunit);
-          }
-          .experience-results-card {
-            width: 100%;
-            max-width: var(--dl-size-size-maxcontent);
-            padding: var(--dl-space-space-fiveunits);
-            border-radius: 28px;
-            background: var(--dl-color-neutral-50);
-            border: 1px solid rgba(18, 41, 66, 0.08);
-            display: flex;
-            flex-direction: column;
-            gap: var(--dl-space-space-fourunits);
-            box-shadow: var(--dl-shadow-soft);
-          }
-          .experience-results-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: var(--dl-space-space-fourunits);
-          }
-          .experience-results-stat {
-            display: flex;
-            flex-direction: column;
-            gap: var(--dl-space-space-halfunit);
-          }
-          .experience-results-number {
-            font-family: var(--dl-font-heading);
-            font-size: 40px;
-            color: var(--dl-color-primary-700);
-          }
-          .experience-results-label {
-            font-size: 16px;
-            color: var(--dl-color-neutral-700);
-            line-height: 1.5;
-          }
-          .experience-grid {
-            width: 100%;
-            max-width: var(--dl-size-size-maxcontent);
-            padding: 0 var(--dl-space-space-tripleunit);
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: var(--dl-space-space-fiveunits);
-          }
-          .experience-tile {
-            background: var(--dl-color-gray-white);
-            border-radius: 24px;
-            padding: var(--dl-space-space-fourunits);
-            box-shadow: var(--dl-shadow-soft);
-            display: flex;
-            flex-direction: column;
-            gap: var(--dl-space-space-doubleunit);
-            border: 1px solid rgba(18, 41, 66, 0.08);
-            transition: transform 180ms ease, box-shadow 180ms ease;
-          }
-          .experience-tile:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 24px 48px -28px rgba(13, 30, 48, 0.35);
-          }
-          .experience-tile-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            gap: var(--dl-space-space-halfunit);
-            font-size: 15px;
-            color: var(--dl-color-neutral-700);
-          }
-          .experience-proof {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 0 var(--dl-space-space-tripleunit);
-          }
-          .experience-proof-card {
-            width: 100%;
-            max-width: var(--dl-size-size-maxcontent);
-            padding: var(--dl-space-space-fiveunits);
-            border-radius: 28px;
-            background: linear-gradient(140deg, rgba(32, 91, 134, 0.08), rgba(241, 178, 74, 0.12));
-            border: 1px solid rgba(37, 114, 173, 0.15);
-            display: flex;
-            flex-direction: column;
-            gap: var(--dl-space-space-fourunits);
-          }
-          .experience-proof-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: var(--dl-space-space-fourunits);
-          }
-          .experience-proof-grid article {
-            display: flex;
-            flex-direction: column;
-            gap: var(--dl-space-space-unit);
-            color: var(--dl-color-neutral-800);
-          }
-          .experience-cta {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 0 var(--dl-space-space-tripleunit) var(--dl-space-space-tenunits);
-          }
-          .experience-cta-card {
-            width: 100%;
-            max-width: var(--dl-size-size-maxcontent);
-            padding: var(--dl-space-space-fiveunits);
-            border-radius: 28px;
-            background: linear-gradient(150deg, rgba(18, 41, 66, 0.92), rgba(37, 114, 173, 0.88));
-            box-shadow: var(--dl-shadow-card);
-            display: flex;
-            flex-direction: column;
-            gap: var(--dl-space-space-fourunits);
-            color: rgba(255, 255, 255, 0.88);
-          }
-          .experience-cta-card .content {
-            color: rgba(255, 255, 255, 0.8);
-          }
-          .experience-cta-card .button {
-            align-self: flex-start;
-          }
-          @media (max-width: 991px) {
-            .experience-main {
-              margin-top: 96px;
-            }
-            .experience-heading {
-              font-size: 40px;
-            }
-            .experience-results-card,
-            .experience-proof-card,
-            .experience-cta-card {
-              padding: var(--dl-space-space-fourunits);
-            }
-          }
-          @media (max-width: 767px) {
-            .experience-main {
-              gap: var(--dl-space-space-eightunits);
-            }
-            .experience-hero {
-              padding: var(--dl-space-space-eightunits) var(--dl-space-space-doubleunit);
-            }
-            .experience-results,
-            .experience-grid,
-            .experience-proof,
-            .experience-cta {
-              padding: 0 var(--dl-space-space-doubleunit);
-            }
-            .experience-cta-card .button {
-              width: 100%;
-            }
-          }
-          @media (max-width: 479px) {
-            .experience-main {
-              margin-top: 88px;
-            }
-            .experience-hero {
-              padding: var(--dl-space-space-sixunits) var(--dl-space-space-doubleunit);
-            }
-            .experience-hero-card {
-              padding: var(--dl-space-space-fourunits);
-            }
-            .experience-results-card,
-            .experience-proof-card,
-            .experience-cta-card {
-              gap: var(--dl-space-space-threeunits);
-            }
-          }
-        `}
-      </style>
+
+      <style jsx>{`
+        .experience-label,
+        .experience-highlight-tag {
+          font-family: var(--dl-font-heading);
+          font-size: 0.82rem;
+          font-weight: 700;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+        }
+        .experience-label {
+          color: var(--dl-color-accent-300);
+        }
+        .experience-sector-list li {
+          color: rgba(255, 255, 255, 0.76);
+        }
+        .experience-impact,
+        .experience-highlights,
+        .experience-cta {
+          padding: clamp(1.75rem, 4vw, 3rem);
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+        .experience-highlight-tag {
+          display: inline-flex;
+          margin-bottom: 12px;
+          color: var(--dl-color-primary-700);
+        }
+      `}</style>
     </>
   )
 }

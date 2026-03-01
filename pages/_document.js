@@ -21,13 +21,15 @@ class CustomDocument extends Document {
           <style
             dangerouslySetInnerHTML={{
               __html:
-                '\n  html {\n    font-family: var(--dl-font-body);\n    font-size: 16px;\n    background-color: var(--dl-color-neutral-50);\n  }\n\n  body {\n    font-weight: 400;\n    font-style: normal;\n    text-decoration: none;\n    text-transform: none;\n    letter-spacing: normal;\n    line-height: 1.65;\n    color: var(--dl-color-neutral-900);\n    background-color: var(--dl-color-neutral-50);\n    min-height: 100vh;\n  }\n\n  ',
+                '\n  html {\n    font-family: var(--dl-font-body);\n    font-size: 16px;\n  }\n\n  body {\n    font-weight: 400;\n    font-style: normal;\n    text-decoration: none;\n    text-transform: none;\n    letter-spacing: normal;\n    line-height: 1.65;\n    color: var(--dl-color-neutral-900);\n    min-height: 100vh;\n  }\n\n  ',
             }}
             data-tag="default-style-sheet"
           ></style>
+          <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
             data-tag="font"
           ></link>
         </Head>
