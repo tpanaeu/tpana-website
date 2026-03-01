@@ -268,7 +268,7 @@ img {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--dl-color-primary-700);
+  color: var(--dl-color-primary-300);
 }
 
 .eyebrow::before {
