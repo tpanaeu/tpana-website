@@ -104,9 +104,9 @@ const NavbarContainer = (props) => {
           align-items: center;
           padding: 14px 18px;
           border-radius: 24px;
-          background: rgba(255, 255, 255, 0.88);
-          border: 1px solid rgba(16, 28, 43, 0.08);
-          box-shadow: 0 24px 60px -42px rgba(17, 25, 36, 0.3);
+          background: rgba(14, 17, 23, 0.9);
+          border: 1px solid var(--dl-border-subtle);
+          box-shadow: 0 24px 60px -42px rgba(0, 0, 0, 0.72);
           backdrop-filter: blur(18px);
         }
         .navbar-brand {
@@ -126,7 +126,7 @@ const NavbarContainer = (props) => {
           line-height: 1.45;
           letter-spacing: 0.22em;
           text-transform: uppercase;
-          color: var(--dl-color-neutral-500);
+          color: var(--dl-color-neutral-300);
         }
         .navbar-links {
           display: flex;
@@ -134,7 +134,7 @@ const NavbarContainer = (props) => {
           gap: 18px;
         }
         .navbar-link {
-          color: var(--dl-color-neutral-800);
+          color: var(--dl-color-neutral-100);
           position: relative;
           padding-bottom: 6px;
         }
@@ -168,11 +168,11 @@ const NavbarContainer = (props) => {
           width: 48px;
           height: 48px;
           border-radius: 16px;
-          border: 1px solid rgba(16, 28, 43, 0.12);
-          background: rgba(255, 255, 255, 0.94);
+          border: 1px solid var(--dl-border-subtle);
+          background: rgba(16, 24, 36, 0.92);
           align-items: center;
           justify-content: center;
-          color: var(--dl-color-neutral-800);
+          color: var(--dl-color-neutral-100);
         }
         .navbar-toggle svg,
         .navbar-mobile-close svg {
@@ -188,7 +188,7 @@ const NavbarContainer = (props) => {
           inset: 0;
           display: none;
           justify-content: flex-end;
-          background: rgba(20, 28, 40, 0.26);
+          background: rgba(6, 9, 14, 0.5);
           backdrop-filter: blur(8px);
         }
         .navbar-mobile-open {
@@ -201,9 +201,10 @@ const NavbarContainer = (props) => {
           display: flex;
           flex-direction: column;
           gap: 28px;
-          background: linear-gradient(180deg, rgba(248, 252, 255, 0.99), rgba(236, 244, 250, 0.99));
-          color: var(--dl-color-neutral-900);
-          box-shadow: -24px 0 60px -36px rgba(17, 25, 36, 0.44);
+          background: linear-gradient(180deg, rgba(12, 18, 27, 0.99), rgba(14, 17, 23, 0.99));
+          color: var(--dl-color-neutral-100);
+          box-shadow: -24px 0 60px -36px rgba(0, 0, 0, 0.72);
+          border-left: 1px solid var(--dl-border-subtle);
         }
         .navbar-mobile-top {
           display: flex;
@@ -221,11 +222,11 @@ const NavbarContainer = (props) => {
           width: 44px;
           height: 44px;
           border-radius: 14px;
-          border: 1px solid rgba(16, 28, 43, 0.16);
+          border: 1px solid var(--dl-border-subtle);
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          color: var(--dl-color-neutral-900);
+          color: var(--dl-color-neutral-100);
         }
         .navbar-mobile-links {
           display: flex;

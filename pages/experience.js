@@ -177,7 +177,7 @@ const Experience = () => {
           color: var(--dl-color-primary-500);
         }
         .experience-sector-list li {
-          color: var(--dl-color-neutral-700);
+          color: var(--dl-color-neutral-200);
         }
         .experience-impact,
         .experience-highlights,

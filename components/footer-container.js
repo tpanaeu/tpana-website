@@ -98,11 +98,11 @@ const FooterContainer = (props) => {
           border-radius: 32px;
           overflow: hidden;
           background:
-            radial-gradient(circle at top left, rgba(0, 210, 220, 0.12), transparent 34%),
-            linear-gradient(160deg, rgba(248, 252, 255, 0.98), rgba(236, 243, 250, 0.98));
-          color: var(--dl-color-neutral-900);
-          box-shadow: 0 36px 80px -48px rgba(17, 25, 36, 0.28);
-          border: 1px solid rgba(16, 28, 43, 0.08);
+            radial-gradient(circle at top left, rgba(0, 210, 220, 0.15), transparent 38%),
+            linear-gradient(160deg, rgba(14, 17, 23, 0.98), rgba(19, 25, 36, 0.98));
+          color: var(--dl-color-neutral-100);
+          box-shadow: 0 36px 80px -48px rgba(0, 0, 0, 0.76);
+          border: 1px solid var(--dl-border-subtle);
         }
         .footer-top {
           display: grid;
@@ -121,11 +121,11 @@ const FooterContainer = (props) => {
           max-width: 100%;
           padding: 14px 18px;
           border-radius: 22px;
-          background: linear-gradient(180deg, rgba(242, 248, 251, 0.98), rgba(226, 236, 244, 0.9));
-          border: 1px solid rgba(0, 210, 220, 0.32);
+          background: linear-gradient(180deg, rgba(13, 19, 28, 0.98), rgba(10, 15, 22, 0.9));
+          border: 1px solid rgba(0, 210, 220, 0.28);
           box-shadow:
             0 18px 42px -30px rgba(3, 12, 20, 0.95),
-            inset 0 1px 0 rgba(255, 255, 255, 0.7);
+            inset 0 1px 0 rgba(255, 255, 255, 0.06);
         }
         .footer-logo {
           width: min(210px, 100%);
@@ -134,7 +134,7 @@ const FooterContainer = (props) => {
         }
         .footer-copy {
           max-width: 360px;
-          color: var(--dl-color-neutral-700);
+          color: var(--dl-color-neutral-200);
         }
         .footer-label {
           font-family: var(--dl-font-mono);
@@ -151,7 +151,7 @@ const FooterContainer = (props) => {
           line-height: 1.6;
         }
         .footer-link {
-          color: var(--dl-color-neutral-900);
+          color: var(--dl-color-neutral-100);
           transition: color 140ms ease;
         }
         .footer-link:hover,
@@ -159,7 +159,7 @@ const FooterContainer = (props) => {
           color: var(--dl-color-primary-300);
         }
         .footer-meta {
-          color: var(--dl-color-neutral-700);
+          color: var(--dl-color-neutral-300);
         }
         .footer-email {
           font-family: var(--dl-font-mono);
@@ -178,27 +178,27 @@ const FooterContainer = (props) => {
           align-items: center;
           justify-content: center;
           border-radius: 14px;
-          background: rgba(255, 255, 255, 0.72);
-          border: 1px solid rgba(16, 28, 43, 0.1);
+          background: rgba(12, 18, 27, 0.72);
+          border: 1px solid var(--dl-border-subtle);
           transition: transform 140ms ease, background 140ms ease;
         }
         .footer-social:hover,
         .footer-social:focus-visible {
           transform: translateY(-2px);
-          background: rgba(255, 255, 255, 0.95);
+          background: rgba(15, 22, 33, 0.95);
         }
         .footer-social svg {
           width: 18px;
           height: 18px;
-          fill: var(--dl-color-neutral-900);
+          fill: var(--dl-color-neutral-100);
         }
         .footer-bottom {
           padding: 18px 40px 24px;
-          border-top: 1px solid rgba(16, 28, 43, 0.1);
+          border-top: 1px solid var(--dl-border-subtle);
         }
         .footer-bottom-text {
           font-size: 0.9rem;
-          color: var(--dl-color-neutral-700);
+          color: var(--dl-color-neutral-300);
         }
         @media (max-width: 991px) {
           .footer-top {

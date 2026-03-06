@@ -176,7 +176,7 @@ const About = () => {
           font-weight: 500;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: var(--dl-color-primary-300);
+          color: var(--dl-color-primary-500);
         }
         .about-story,
         .about-values {

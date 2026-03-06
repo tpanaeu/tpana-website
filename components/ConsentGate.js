@@ -39,35 +39,35 @@ const setConsentCookie = (value) => {
 
 const consentOverlayStyles = {
   backdrop:
-    "fixed inset-0 z-50 flex items-end justify-center bg-slate-900/75 px-4 sm:px-6 pb-4 sm:pb-6",
+    "fixed inset-0 z-50 flex items-end justify-center bg-slate-950/80 px-4 sm:px-6 pb-4 sm:pb-6",
   panel:
-    "w-full max-w-5xl rounded-t-2xl bg-white p-6 sm:p-8 shadow-2xl border border-slate-200 text-slate-900",
-  heading: "text-2xl sm:text-3xl font-semibold font-heading text-slate-900 mb-4",
-  body: "text-base sm:text-lg text-slate-700 leading-relaxed font-body",
+    "w-full max-w-5xl rounded-t-2xl bg-[#0E1117] p-6 sm:p-8 shadow-2xl border border-white/10 text-slate-100",
+  heading: "text-2xl sm:text-3xl font-semibold font-heading text-white mb-4",
+  body: "text-base sm:text-lg text-slate-200 leading-relaxed font-body",
   actions: "mt-6 flex justify-end",
   primaryButton:
-    "w-full sm:w-auto px-6 py-3 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600",
+    "w-full sm:w-auto px-6 py-3 rounded-md bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500",
 };
 
 const manageTriggerStyles = {
   button:
-    "fixed bottom-4 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300",
+    "fixed bottom-4 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500 text-slate-950 shadow-lg transition hover:bg-cyan-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300",
   icon: "h-6 w-6",
 };
 
 const manageOverlayStyles = {
   backdrop:
-    "fixed inset-0 z-50 flex items-end justify-center bg-slate-900/75 px-4 sm:px-6 pb-4 sm:pb-6",
+    "fixed inset-0 z-50 flex items-end justify-center bg-slate-950/80 px-4 sm:px-6 pb-4 sm:pb-6",
   panel:
-    "w-full max-w-5xl rounded-t-2xl bg-white p-6 sm:p-8 shadow-2xl border border-slate-200 text-slate-900",
-  heading: "text-2xl sm:text-3xl font-semibold font-heading text-slate-900 mb-4",
-  body: "text-base sm:text-lg text-slate-700 leading-relaxed font-body",
+    "w-full max-w-5xl rounded-t-2xl bg-[#0E1117] p-6 sm:p-8 shadow-2xl border border-white/10 text-slate-100",
+  heading: "text-2xl sm:text-3xl font-semibold font-heading text-white mb-4",
+  body: "text-base sm:text-lg text-slate-200 leading-relaxed font-body",
   actions:
     "mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end sm:gap-4",
   keepButton:
-    "w-full sm:w-auto px-6 py-3 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600",
+    "w-full sm:w-auto px-6 py-3 rounded-md bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500",
   revokeButton:
-    "w-full sm:w-auto px-6 py-3 rounded-md border border-slate-300 text-slate-700 font-semibold transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400",
+    "w-full sm:w-auto px-6 py-3 rounded-md border border-white/25 text-slate-200 font-semibold transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500",
 };
 
 const ConsentOverlay = ({ onAccept }) => {
