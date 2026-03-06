@@ -14,7 +14,7 @@ const FooterContainer = (props) => {
               <div className="footer-logo-frame">
                 <img
                   src="/assets/tp-logotype-horizontal.png"
-                  alt="TPANA logo"
+                  alt="TPANA horizontal logotype"
                   className="footer-logo"
                 />
               </div>
@@ -98,10 +98,11 @@ const FooterContainer = (props) => {
           border-radius: 32px;
           overflow: hidden;
           background:
-            radial-gradient(circle at top left, rgba(126, 192, 228, 0.18), transparent 32%),
-            linear-gradient(160deg, rgba(8, 21, 34, 0.98), rgba(18, 51, 78, 0.96));
-          color: var(--dl-color-gray-white);
-          box-shadow: 0 36px 80px -48px rgba(8, 21, 34, 0.82);
+            radial-gradient(circle at top left, rgba(0, 210, 220, 0.12), transparent 34%),
+            linear-gradient(160deg, rgba(248, 252, 255, 0.98), rgba(236, 243, 250, 0.98));
+          color: var(--dl-color-neutral-900);
+          box-shadow: 0 36px 80px -48px rgba(17, 25, 36, 0.28);
+          border: 1px solid rgba(16, 28, 43, 0.08);
         }
         .footer-top {
           display: grid;
@@ -120,8 +121,8 @@ const FooterContainer = (props) => {
           max-width: 100%;
           padding: 14px 18px;
           border-radius: 22px;
-          background: linear-gradient(180deg, rgba(238, 246, 252, 0.96), rgba(214, 230, 241, 0.9));
-          border: 1px solid rgba(126, 192, 228, 0.28);
+          background: linear-gradient(180deg, rgba(242, 248, 251, 0.98), rgba(226, 236, 244, 0.9));
+          border: 1px solid rgba(0, 210, 220, 0.32);
           box-shadow:
             0 18px 42px -30px rgba(3, 12, 20, 0.95),
             inset 0 1px 0 rgba(255, 255, 255, 0.7);
@@ -133,15 +134,15 @@ const FooterContainer = (props) => {
         }
         .footer-copy {
           max-width: 360px;
-          color: rgba(255, 255, 255, 0.72);
+          color: var(--dl-color-neutral-700);
         }
         .footer-label {
-          font-family: var(--dl-font-heading);
-          font-size: 0.78rem;
-          font-weight: 700;
-          letter-spacing: 0.16em;
+          font-family: var(--dl-font-mono);
+          font-size: 0.72rem;
+          font-weight: 500;
+          letter-spacing: 0.22em;
           text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.56);
+          color: var(--dl-color-accent-500);
           margin-bottom: 6px;
         }
         .footer-link,
@@ -150,19 +151,20 @@ const FooterContainer = (props) => {
           line-height: 1.6;
         }
         .footer-link {
-          color: rgba(255, 255, 255, 0.84);
+          color: var(--dl-color-neutral-900);
           transition: color 140ms ease;
         }
         .footer-link:hover,
         .footer-link:focus-visible {
-          color: var(--dl-color-accent-300);
+          color: var(--dl-color-primary-300);
         }
         .footer-meta {
-          color: rgba(255, 255, 255, 0.65);
+          color: var(--dl-color-neutral-700);
         }
         .footer-email {
-          font-family: var(--dl-font-heading);
+          font-family: var(--dl-font-mono);
           font-weight: 700;
+          letter-spacing: 0.04em;
         }
         .footer-socials {
           display: flex;
@@ -176,27 +178,27 @@ const FooterContainer = (props) => {
           align-items: center;
           justify-content: center;
           border-radius: 14px;
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: rgba(255, 255, 255, 0.72);
+          border: 1px solid rgba(16, 28, 43, 0.1);
           transition: transform 140ms ease, background 140ms ease;
         }
         .footer-social:hover,
         .footer-social:focus-visible {
           transform: translateY(-2px);
-          background: rgba(255, 255, 255, 0.14);
+          background: rgba(255, 255, 255, 0.95);
         }
         .footer-social svg {
           width: 18px;
           height: 18px;
-          fill: var(--dl-color-gray-white);
+          fill: var(--dl-color-neutral-900);
         }
         .footer-bottom {
           padding: 18px 40px 24px;
-          border-top: 1px solid rgba(255, 255, 255, 0.08);
+          border-top: 1px solid rgba(16, 28, 43, 0.1);
         }
         .footer-bottom-text {
           font-size: 0.9rem;
-          color: rgba(255, 255, 255, 0.56);
+          color: var(--dl-color-neutral-700);
         }
         @media (max-width: 991px) {
           .footer-top {

@@ -167,17 +167,17 @@ const Experience = () => {
       <style jsx>{`
         .experience-label,
         .experience-highlight-tag {
-          font-family: var(--dl-font-heading);
-          font-size: 0.82rem;
-          font-weight: 700;
-          letter-spacing: 0.14em;
+          font-family: var(--dl-font-mono);
+          font-size: 0.74rem;
+          font-weight: 500;
+          letter-spacing: 0.2em;
           text-transform: uppercase;
         }
         .experience-label {
-          color: var(--dl-color-accent-300);
+          color: var(--dl-color-primary-500);
         }
         .experience-sector-list li {
-          color: rgba(255, 255, 255, 0.76);
+          color: var(--dl-color-neutral-700);
         }
         .experience-impact,
         .experience-highlights,
@@ -190,7 +190,7 @@ const Experience = () => {
         .experience-highlight-tag {
           display: inline-flex;
           margin-bottom: 12px;
-          color: var(--dl-color-primary-700);
+          color: var(--dl-color-primary-500);
         }
       `}</style>
     </>

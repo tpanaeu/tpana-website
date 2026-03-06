@@ -268,23 +268,23 @@ const Home = () => {
           gap: 6px;
         }
         .home-quote-role {
-          font-family: var(--dl-font-heading);
-          font-size: 0.84rem;
-          font-weight: 700;
-          letter-spacing: 0.12em;
+          font-family: var(--dl-font-mono);
+          font-size: 0.76rem;
+          font-weight: 500;
+          letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: var(--dl-color-accent-300);
+          color: var(--dl-color-primary-500);
         }
         .home-quote-company {
-          color: rgba(255, 255, 255, 0.6);
+          color: var(--dl-color-neutral-700);
         }
         .home-intro-note {
           margin-top: 16px;
-          font-family: var(--dl-font-heading);
-          font-size: 0.88rem;
-          letter-spacing: 0.12em;
+          font-family: var(--dl-font-mono);
+          font-size: 0.8rem;
+          letter-spacing: 0.18em;
           text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.58);
+          color: var(--dl-color-neutral-700);
         }
         .home-subheading {
           max-width: 780px;
@@ -293,24 +293,24 @@ const Home = () => {
         .home-proof-sector {
           display: inline-flex;
           margin-bottom: 14px;
-          font-family: var(--dl-font-heading);
-          font-size: 0.8rem;
-          font-weight: 700;
-          letter-spacing: 0.14em;
+          font-family: var(--dl-font-mono);
+          font-size: 0.74rem;
+          font-weight: 500;
+          letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: var(--dl-color-primary-700);
+          color: var(--dl-color-primary-500);
         }
         .home-proof-band {
           padding: clamp(1.75rem, 4vw, 3rem);
         }
         .home-proof-result {
           margin-top: 18px;
-          font-family: var(--dl-font-heading);
+          font-family: var(--dl-font-mono);
           font-size: 0.92rem;
-          font-weight: 700;
-          letter-spacing: 0.08em;
+          font-weight: 500;
+          letter-spacing: 0.12em;
           text-transform: uppercase;
-          color: var(--dl-color-primary-700);
+          color: var(--dl-color-primary-300);
         }
         .home-cta {
           display: flex;

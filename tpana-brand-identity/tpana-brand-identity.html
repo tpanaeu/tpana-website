@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TPANA — Brand Identity System</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:          #0E1117;
+  --bg-mid:      #131920;
+  --card:        #161C25;
+  --card-2:      #1A2130;
+  --border:      rgba(255,255,255,0.055);
+  --muted:       #6B7F94;
+  --steel:       #8C9EAF;
+  --pale:        #C8D6E2;
+  --white:       #FFFFFF;
+  --off-white:   #F0F4F8;
+  --cyan:        #00D2DC;
+  --cyan-dim:    #009FAA;
+  --cyan-ghost:  rgba(0,210,220,0.08);
+  --cyan-glow:   rgba(0,210,220,0.14);
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--pale); line-height: 1.6; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #2A3545; border-radius: 3px; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 64px;
+  background: rgba(14,17,23,0.9);
+  backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { display: flex; align-items: center; gap: 14px; }
+.nav-mark { display: flex; flex-direction: column; gap: 5px; }
+.nav-bar { border-radius: 2px; }
+.nav-wordmark { font-size: 16px; font-weight: 700; letter-spacing: -0.4px; color: var(--white); }
+.nav-wordmark span { color: var(--cyan); }
+.nav-links { display: flex; gap: 36px; }
+.nav-links a {
+  font-size: 11px; font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--cyan); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 64px 64px 0;
+  position: relative; overflow: hidden;
+  gap: 80px;
+}
+.hero-grid-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  animation: gridSlide 25s linear infinite;
+}
+@keyframes gridSlide { to { background-position: 48px 48px; } }
+.hero-glow {
+  position: absolute; top: 10%; right: 0; width: 55%; height: 80%;
+  background: radial-gradient(ellipse at 70% 40%, rgba(0,210,220,0.055) 0%, transparent 65%);
+  pointer-events: none; z-index: 0;
+}
+
+.hero-left { position: relative; z-index: 1; }
+.eyebrow {
+  font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--cyan);
+  display: flex; align-items: center; gap: 14px; margin-bottom: 28px;
+}
+.eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--cyan); }
+.hero h1 {
+  font-size: clamp(60px, 7.5vw, 108px);
+  font-weight: 700; letter-spacing: -3.5px; line-height: 0.92;
+  color: var(--white);
+}
+.hero h1 em { color: var(--cyan); font-style: normal; }
+.hero-descriptor {
+  font-size: 13px; font-weight: 300; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--muted); margin-top: 24px;
+}
+.hero-rule { width: 48px; height: 1px; background: var(--cyan); margin: 32px 0; }
+.hero-body { font-size: 17px; font-weight: 300; color: var(--pale); line-height: 1.75; max-width: 440px; }
+.hero-body strong { font-weight: 500; color: var(--white); }
+
+/* hero right: animated mark showcase */
+.hero-right {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-mark-stage {
+  width: 380px; height: 380px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.hero-mark-stage::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 50%, var(--cyan-ghost) 0%, transparent 60%);
+}
+.hero-mark-stage svg { position: relative; z-index: 1; }
+
+/* bar animations */
+.bar-1 { animation: barIn 0.7s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.2s; }
+.bar-2 { animation: barIn 0.7s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.38s; }
+.bar-3 { animation: barIn 0.7s cubic-bezier(0.22,1,0.36,1) both; animation-delay: 0.56s; }
+@keyframes barIn { from { opacity:0; transform: translateX(-18px); } to { opacity:1; transform:translateX(0); } }
+
+/* ── SECTION BASE ── */
+.section {
+  padding: 96px 64px;
+  border-top: 1px solid var(--border);
+}
+.section.alt { background: var(--bg-mid); }
+.section.on-light { background: var(--off-white); color: #1A2130; }
+
+.s-eyebrow {
+  font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--cyan);
+  display: flex; align-items: center; gap: 12px; margin-bottom: 10px;
+}
+.s-eyebrow::before { content: ''; width: 22px; height: 1px; background: var(--cyan); }
+.on-light .s-eyebrow { color: var(--cyan-dim); }
+.on-light .s-eyebrow::before { background: var(--cyan-dim); }
+
+.s-title {
+  font-size: 36px; font-weight: 700; letter-spacing: -1px;
+  color: var(--white); margin-bottom: 52px;
+}
+.on-light .s-title { color: #0E1117; }
+
+/* ── MARK ANATOMY ── */
+.anatomy-grid {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 2px;
+}
+.anatomy-stage {
+  background: #0B0E13;
+  min-height: 460px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.anatomy-stage::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 40% 50%, rgba(0,210,220,0.06) 0%, transparent 65%);
+}
+.anatomy-info {
+  background: var(--card);
+  padding: 48px 44px;
+  display: flex; flex-direction: column; justify-content: center;
+  gap: 28px;
+}
+.anatomy-item { display: flex; gap: 20px; align-items: flex-start; }
+.anatomy-dot {
+  width: 10px; height: 10px; border-radius: 2px;
+  flex-shrink: 0; margin-top: 5px;
+}
+.anatomy-item-title { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 5px; }
+.anatomy-item-desc { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.7; }
+
+/* ── LOGO SYSTEM ── */
+.logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.logo-tile {
+  min-height: 240px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 44px 40px 36px;
+  position: relative; overflow: hidden;
+}
+.lt-d1 { background: #09090C; }
+.lt-d2 { background: #0E1117; }
+.lt-d3 { background: #161C25; }
+.lt-lg { background: #EDF2F7; }
+.lt-span2 { grid-column: span 2; }
+.tile-label {
+  position: absolute; bottom: 14px; left: 18px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase;
+}
+.lt-lg .tile-label { color: #9AABBF; }
+
+/* ── INLINE MARK SVG helpers ── */
+/* The Stack mark as inline SVG — consistent geometry */
+
+/* ── COLOR PALETTE ── */
+.palette { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.swatch { border-radius: 14px; overflow: hidden; }
+.swatch-color { height: 96px; }
+.swatch-info { padding: 14px 16px 16px; background: var(--card); border: 1px solid var(--border); border-top: none; border-radius: 0 0 14px 14px; }
+.on-light .swatch-info { background: white; border-color: #E2ECF4; }
+.swatch-name { font-size: 13px; font-weight: 600; color: var(--white); }
+.on-light .swatch-name { color: #0E1117; }
+.swatch-hex { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 3px; }
+.swatch-role { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); margin-top: 6px; }
+.on-light .swatch-role { color: var(--cyan-dim); }
+
+/* ── TYPOGRAPHY ── */
+.type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.type-tile { background: var(--card); padding: 36px 40px 32px; }
+.type-meta { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--cyan); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px; }
+.t-disp { font-size: 72px; font-weight: 700; letter-spacing: -3px; color: var(--white); line-height: 1; }
+.t-head { font-size: 30px; font-weight: 600; letter-spacing: -0.8px; color: var(--pale); line-height: 1.25; }
+.t-sub  { font-size: 14px; font-weight: 400; letter-spacing: 4.5px; text-transform: uppercase; color: var(--steel); }
+.t-body { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--pale); }
+.t-mono { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--cyan); letter-spacing: 0.3px; }
+.t-mono-dim { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--muted); letter-spacing: 0.3px; }
+
+/* ── BUSINESS CARD ── */
+.card-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 780px; margin: 0 auto; }
+.bcard {
+  aspect-ratio: 1.75; border-radius: 16px; padding: 28px 32px;
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: space-between;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+}
+.bcard-front {
+  background: linear-gradient(145deg, #0E1117 0%, #161C25 100%);
+  border: 1px solid rgba(0,210,220,0.12);
+}
+.bcard-back {
+  background: linear-gradient(145deg, #08090D 0%, #0E1117 100%);
+  border: 1px solid rgba(0,210,220,0.07);
+  align-items: center; justify-content: center;
+}
+.bcard-glow {
+  position: absolute; width: 200px; height: 200px; border-radius: 50%;
+  bottom: -70px; right: -70px;
+  background: radial-gradient(circle, rgba(0,210,220,0.09) 0%, transparent 70%);
+}
+.bc-name { font-size: 13px; font-weight: 600; color: var(--white); }
+.bc-role { font-size: 9px; font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase; color: var(--cyan); margin-top: 4px; }
+.bc-contact { font-family: 'DM Mono', monospace; font-size: 9.5px; color: var(--muted); line-height: 2.1; margin-top: 12px; }
+.bc-logo { font-size: 40px; font-weight: 700; letter-spacing: -2px; color: var(--white); }
+.bc-logo em { color: var(--cyan); font-style: normal; }
+.bc-sub { font-size: 8px; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-top: 5px; text-align: center; }
+
+/* ── DIGITAL CONTEXTS ── */
+.contexts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.ctx-card { background: var(--card); border-radius: 14px; padding: 28px 24px; border: 1px solid var(--border); }
+.ctx-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--cyan-ghost); border: 1px solid rgba(0,210,220,0.18); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.ctx-title { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 7px; }
+.ctx-desc { font-size: 12px; font-weight: 300; color: var(--muted); line-height: 1.75; }
+
+/* ── USAGE RULES ── */
+.rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.rule { background: var(--card); border-radius: 12px; padding: 26px 22px; border-top: 2px solid transparent; }
+.rule.do   { border-top-color: #00C896; }
+.rule.dont { border-top-color: #FF5A5A; }
+.rule-badge { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+.rule.do   .rule-badge { color: #00C896; }
+.rule.dont .rule-badge { color: #FF5A5A; }
+.rule p { font-size: 13px; font-weight: 300; color: var(--pale); line-height: 1.75; }
+
+/* ── TAGLINES ── */
+.taglines { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.tl-item {
+  background: var(--card); border-radius: 10px; padding: 20px 24px;
+  border-left: 2px solid var(--cyan);
+  font-size: 15px; font-weight: 300; color: var(--pale); font-style: italic;
+  transition: background 0.2s;
+}
+.tl-item:hover { background: var(--card-2); }
+
+/* ── SIZE GUIDE ── */
+.size-row { display: flex; align-items: flex-end; gap: 28px; flex-wrap: wrap; }
+.size-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.size-bg { display: flex; align-items: center; justify-content: center; border-radius: 6px; }
+.size-lbl { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 1px; }
+
+/* ── FOOTER ── */
+footer {
+  padding: 40px 64px;
+  border-top: 1px solid var(--border);
+  background: #09090D;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 20px;
+}
+.f-left { display: flex; align-items: center; gap: 16px; }
+.f-wordmark { font-size: 17px; font-weight: 700; letter-spacing: -0.4px; color: var(--white); }
+.f-wordmark em { color: var(--cyan); font-style: normal; }
+.f-sep { width: 1px; height: 20px; background: var(--border); }
+.f-tagline { font-size: 12px; font-weight: 300; color: var(--muted); }
+.f-note { font-family: 'DM Mono', monospace; font-size: 9px; color: #3A4A5A; letter-spacing: 1.5px; }
+
+/* ── FADE-IN ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.hero-left > * { animation: fadeUp 0.65s ease both; }
+.eyebrow { animation-delay: 0.05s; }
+.hero h1 { animation-delay: 0.15s; }
+.hero-descriptor { animation-delay: 0.25s; }
+.hero-rule { animation-delay: 0.32s; }
+.hero-body { animation-delay: 0.4s; }
+.hero-right { animation: fadeUp 0.8s ease 0.3s both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <!-- tiny nav mark -->
+    <svg width="28" height="22" viewBox="0 0 140 110">
+      <rect x="4" y="4"   width="132" height="18" rx="4" fill="white"/>
+      <rect x="4" y="46"  width="9"   height="18" rx="3" fill="#00D2DC"/>
+      <rect x="20" y="46" width="90"  height="18" rx="4" fill="white"/>
+      <rect x="4" y="88"  width="9"   height="18" rx="3" fill="rgba(0,210,220,0.35)"/>
+      <rect x="20" y="88" width="9"   height="18" rx="3" fill="#00D2DC"/>
+      <rect x="36" y="88" width="56"  height="18" rx="4" fill="white"/>
+    </svg>
+    <div class="nav-wordmark">TP<span>ANA</span></div>
+  </div>
+  <div class="nav-links">
+    <a href="#mark">Mark</a>
+    <a href="#logos">Logos</a>
+    <a href="#colors">Colors</a>
+    <a href="#type">Type</a>
+    <a href="#applications">Apply</a>
+  </div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-left">
+    <div class="eyebrow">Brand Identity System · 2025</div>
+    <h1>TP<em>ANA</em></h1>
+    <div class="hero-descriptor">Theodoros Panagopoulos · Software Consultants</div>
+    <div class="hero-rule"></div>
+    <p class="hero-body">A <strong>precision-engineered identity</strong> built on The Stack — a mark that speaks the language of software: layered, structured, purposeful. Every bar, every pixel intentional.</p>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-mark-stage">
+      <svg width="220" height="180" viewBox="0 0 280 220">
+        <!-- Bar 1 -->
+        <g class="bar-1">
+          <rect x="18" y="28" width="244" height="48" rx="10" fill="white"/>
+        </g>
+        <!-- Bar 2 -->
+        <g class="bar-2">
+          <rect x="18"  y="94"  width="20"  height="48" rx="6"  fill="#00D2DC"/>
+          <rect x="48"  y="94"  width="176" height="48" rx="10" fill="white"/>
+        </g>
+        <!-- Bar 3 -->
+        <g class="bar-3">
+          <rect x="18"  y="160" width="20"  height="48" rx="6"  fill="rgba(0,210,220,0.3)"/>
+          <rect x="48"  y="160" width="20"  height="48" rx="6"  fill="#00D2DC"/>
+          <rect x="78"  y="160" width="110" height="48" rx="10" fill="white"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MARK ANATOMY ══════════ -->
+<section class="section alt" id="mark">
+  <div class="s-eyebrow">01 — The Mark</div>
+  <div class="s-title">The Stack — Anatomy</div>
+
+  <div class="anatomy-grid">
+    <div class="anatomy-stage">
+      <!-- Large annotated mark -->
+      <svg width="320" height="260" viewBox="0 0 320 260" style="position:relative;z-index:1;">
+        <!-- Bar 1: full -->
+        <rect x="18" y="28"  width="284" height="52" rx="10" fill="white"/>
+        <!-- Bar 2 -->
+        <rect x="18"  y="106" width="22"  height="52" rx="6"  fill="#00D2DC"/>
+        <rect x="50"  y="106" width="200" height="52" rx="10" fill="white"/>
+        <!-- Bar 3 -->
+        <rect x="18"  y="184" width="22"  height="52" rx="6"  fill="rgba(0,210,220,0.28)"/>
+        <rect x="50"  y="184" width="22"  height="52" rx="6"  fill="#00D2DC"/>
+        <rect x="82"  y="184" width="122" height="52" rx="10" fill="white"/>
+
+        <!-- annotation lines -->
+        <!-- Bar 1 label line -->
+        <line x1="302" y1="54" x2="340" y2="54" stroke="rgba(0,210,220,0.4)" stroke-width="1" stroke-dasharray="3,3"/>
+        <!-- Bar 2 label line -->
+        <line x1="250" y1="132" x2="340" y2="132" stroke="rgba(0,210,220,0.4)" stroke-width="1" stroke-dasharray="3,3"/>
+        <!-- Bar 3 label line -->
+        <line x1="204" y1="210" x2="340" y2="210" stroke="rgba(0,210,220,0.4)" stroke-width="1" stroke-dasharray="3,3"/>
+        <!-- Pip label line -->
+        <line x1="18" y1="106" x2="-20" y2="80" stroke="rgba(0,210,220,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+      </svg>
+    </div>
+
+    <div class="anatomy-info">
+      <div>
+        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:20px;">Design Concept</div>
+        <p style="font-size:14px;font-weight:300;color:var(--pale);line-height:1.85;">Three descending horizontal bars, each offset to the right as they progress downward. The form reads simultaneously as a software stack, a data hierarchy, and structured thought. Cascading cyan pips on the left margin mark each layer — the brand's signature detail, impossible to mistake for anything else.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:22px;margin-top:8px;">
+        <div class="anatomy-item">
+          <div class="anatomy-dot" style="background:white;"></div>
+          <div>
+            <div class="anatomy-item-title">Foundation Bar</div>
+            <div class="anatomy-item-desc">Full-width. The widest bar anchors the mark. Represents the comprehensive foundation of technical expertise TPANA brings to every engagement.</div>
+          </div>
+        </div>
+        <div class="anatomy-item">
+          <div class="anatomy-dot" style="background:#00D2DC;"></div>
+          <div>
+            <div class="anatomy-item-title">Cyan Pip — Layer Marker</div>
+            <div class="anatomy-item-desc">The signature accent. Each descending bar introduces an additional cyan pip — one then two — marking depth, precision, and accumulated layers of thinking.</div>
+          </div>
+        </div>
+        <div class="anatomy-item">
+          <div class="anatomy-dot" style="background:rgba(0,210,220,0.35);width:10px;height:10px;border-radius:2px;flex-shrink:0;margin-top:5px;"></div>
+          <div>
+            <div class="anatomy-item-title">Ghost Pip — Depth Signal</div>
+            <div class="anatomy-item-desc">A semi-transparent cyan pip at 30% opacity. Creates visual rhythm and signals that complexity exists — but is handled gracefully.</div>
+          </div>
+        </div>
+        <div class="anatomy-item">
+          <div class="anatomy-dot" style="background:var(--muted);"></div>
+          <div>
+            <div class="anatomy-item-title">Step Cascade</div>
+            <div class="anatomy-item-desc">Each bar narrows as it descends, creating a pyramid of focus. The cascading offset reads left-to-right like executable code — logic in motion.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ LOGO SYSTEM ══════════ -->
+<section class="section" id="logos">
+  <div class="s-eyebrow">02 — Logo System</div>
+  <div class="s-title">Lockups & Variations</div>
+
+  <div class="logo-grid">
+
+    <!-- Mark on darkest -->
+    <div class="logo-tile lt-d1" style="min-height:300px;">
+      <svg width="200" height="160" viewBox="0 0 280 220">
+        <rect x="18" y="28"  width="244" height="46" rx="9" fill="white"/>
+        <rect x="18"  y="98"  width="20"  height="46" rx="5" fill="#00D2DC"/>
+        <rect x="48"  y="98"  width="175" height="46" rx="9" fill="white"/>
+        <rect x="18"  y="168" width="20"  height="46" rx="5" fill="rgba(0,210,220,0.3)"/>
+        <rect x="48"  y="168" width="20"  height="46" rx="5" fill="#00D2DC"/>
+        <rect x="78"  y="168" width="110" height="46" rx="9" fill="white"/>
+      </svg>
+      <div class="tile-label">Primary Mark — Dark</div>
+    </div>
+
+    <!-- Horizontal lockup on dark -->
+    <div class="logo-tile lt-d2" style="min-height:300px;gap:28px;justify-content:flex-start;padding-left:52px;flex-direction:row;">
+      <svg width="90" height="72" viewBox="0 0 280 220">
+        <rect x="18" y="28"  width="244" height="46" rx="9" fill="white"/>
+        <rect x="18"  y="98"  width="20"  height="46" rx="5" fill="#00D2DC"/>
+        <rect x="48"  y="98"  width="175" height="46" rx="9" fill="white"/>
+        <rect x="18"  y="168" width="20"  height="46" rx="5" fill="rgba(0,210,220,0.3)"/>
+        <rect x="48"  y="168" width="20"  height="46" rx="5" fill="#00D2DC"/>
+        <rect x="78"  y="168" width="110" height="46" rx="9" fill="white"/>
+      </svg>
+      <div style="display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-size:52px;font-weight:700;letter-spacing:-2px;color:white;line-height:1;">TPANA</div>
+        <div style="height:1px;background:rgba(0,210,220,0.3);margin:8px 0 6px;"></div>
+        <div style="font-size:11px;font-weight:300;letter-spacing:4.5px;color:var(--muted);text-transform:uppercase;">Software Consultants</div>
+      </div>
+      <div class="tile-label">Horizontal Lockup — Dark</div>
+    </div>
+
+    <!-- Mark on light -->
+    <div class="logo-tile lt-lg" style="min-height:220px;">
+      <svg width="180" height="144" viewBox="0 0 280 220">
+        <rect x="18" y="28"  width="244" height="46" rx="9" fill="#0E1117"/>
+        <rect x="18"  y="98"  width="20"  height="46" rx="5" fill="#009FAA"/>
+        <rect x="48"  y="98"  width="175" height="46" rx="9" fill="#0E1117"/>
+        <rect x="18"  y="168" width="20"  height="46" rx="5" fill="rgba(0,159,170,0.3)"/>
+        <rect x="48"  y="168" width="20"  height="46" rx="5" fill="#009FAA"/>
+        <rect x="78"  y="168" width="110" height="46" rx="9" fill="#0E1117"/>
+      </svg>
+      <div class="tile-label">Primary Mark — Light</div>
+    </div>
+
+    <!-- Wordmark on light -->
+    <div class="logo-tile lt-lg" style="min-height:220px;">
+      <div style="text-align:left;padding-left:8px;">
+        <div style="font-size:60px;font-weight:700;letter-spacing:-2.5px;color:#0E1117;line-height:1;">TPANA</div>
+        <div style="width:100%;height:1px;background:rgba(0,159,170,0.5);margin:8px 0 7px;"></div>
+        <div style="font-size:11px;font-weight:400;letter-spacing:4.5px;color:#3A4655;text-transform:uppercase;">Software Consultants</div>
+      </div>
+      <div class="tile-label">Wordmark — Light</div>
+    </div>
+
+    <!-- Stacked vertical on mid dark -->
+    <div class="logo-tile lt-d3 lt-span2" style="min-height:280px;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:18px;">
+        <svg width="160" height="128" viewBox="0 0 280 220">
+          <rect x="18" y="28"  width="244" height="46" rx="9" fill="white"/>
+          <rect x="18"  y="98"  width="20"  height="46" rx="5" fill="#00D2DC"/>
+          <rect x="48"  y="98"  width="175" height="46" rx="9" fill="white"/>
+          <rect x="18"  y="168" width="20"  height="46" rx="5" fill="rgba(0,210,220,0.3)"/>
+          <rect x="48"  y="168" width="20"  height="46" rx="5" fill="#00D2DC"/>
+          <rect x="78"  y="168" width="110" height="46" rx="9" fill="white"/>
+        </svg>
+        <div style="text-align:center;">
+          <div style="font-size:42px;font-weight:700;letter-spacing:-1.5px;color:white;line-height:1;">TPANA</div>
+          <div style="width:160px;height:1px;background:rgba(0,210,220,0.25);margin:9px auto;"></div>
+          <div style="font-size:10px;font-weight:300;letter-spacing:4px;color:var(--muted);text-transform:uppercase;">Theodoros Panagopoulos</div>
+          <div style="font-size:10px;font-weight:300;letter-spacing:4px;color:var(--muted);text-transform:uppercase;margin-top:4px;">Software Consultants</div>
+        </div>
+      </div>
+      <div class="tile-label">Vertical Lockup</div>
+    </div>
+
+  </div>
+
+  <!-- Size guide -->
+  <div style="margin-top:48px;">
+    <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:24px;">Mark at scale</div>
+    <div class="size-row">
+      <div class="size-item">
+        <div class="size-bg" style="width:120px;height:120px;background:#0B0E13;border-radius:10px;">
+          <svg width="88" height="70" viewBox="0 0 280 220">
+            <rect x="18" y="28"  width="244" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="98"  width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="48"  y="98"  width="175" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="168" width="20"  height="46" rx="5"  fill="rgba(0,210,220,0.3)"/>
+            <rect x="48"  y="168" width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="78"  y="168" width="110" height="46" rx="9"  fill="white"/>
+          </svg>
+        </div>
+        <span class="size-lbl">120px</span>
+      </div>
+      <div class="size-item">
+        <div class="size-bg" style="width:80px;height:80px;background:#0B0E13;border-radius:8px;">
+          <svg width="58" height="46" viewBox="0 0 280 220">
+            <rect x="18" y="28"  width="244" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="98"  width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="48"  y="98"  width="175" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="168" width="20"  height="46" rx="5"  fill="rgba(0,210,220,0.3)"/>
+            <rect x="48"  y="168" width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="78"  y="168" width="110" height="46" rx="9"  fill="white"/>
+          </svg>
+        </div>
+        <span class="size-lbl">80px</span>
+      </div>
+      <div class="size-item">
+        <div class="size-bg" style="width:56px;height:56px;background:#0B0E13;border-radius:8px;">
+          <svg width="40" height="32" viewBox="0 0 280 220">
+            <rect x="18" y="28"  width="244" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="98"  width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="48"  y="98"  width="175" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="168" width="20"  height="46" rx="5"  fill="rgba(0,210,220,0.3)"/>
+            <rect x="48"  y="168" width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="78"  y="168" width="110" height="46" rx="9"  fill="white"/>
+          </svg>
+        </div>
+        <span class="size-lbl">56px</span>
+      </div>
+      <div class="size-item">
+        <div class="size-bg" style="width:40px;height:40px;background:#0B0E13;border-radius:6px;">
+          <svg width="28" height="22" viewBox="0 0 280 220">
+            <rect x="18" y="28"  width="244" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="98"  width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="48"  y="98"  width="175" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="168" width="20"  height="46" rx="5"  fill="rgba(0,210,220,0.3)"/>
+            <rect x="48"  y="168" width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="78"  y="168" width="110" height="46" rx="9"  fill="white"/>
+          </svg>
+        </div>
+        <span class="size-lbl">40px</span>
+      </div>
+      <div class="size-item">
+        <div class="size-bg" style="width:28px;height:28px;background:#0B0E13;border-radius:5px;">
+          <svg width="20" height="16" viewBox="0 0 280 220">
+            <rect x="18" y="28"  width="244" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="98"  width="28"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="56"  y="98"  width="170" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="168" width="28"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="56"  y="168" width="120" height="46" rx="9"  fill="white"/>
+          </svg>
+        </div>
+        <span class="size-lbl">28px</span>
+      </div>
+      <div class="size-item" style="margin-left:20px;">
+        <div class="size-bg" style="width:80px;height:80px;background:#EDF2F7;border-radius:8px;">
+          <svg width="58" height="46" viewBox="0 0 280 220">
+            <rect x="18" y="28"  width="244" height="46" rx="9"  fill="#0E1117"/>
+            <rect x="18"  y="98"  width="20"  height="46" rx="5"  fill="#009FAA"/>
+            <rect x="48"  y="98"  width="175" height="46" rx="9"  fill="#0E1117"/>
+            <rect x="18"  y="168" width="20"  height="46" rx="5"  fill="rgba(0,159,170,0.3)"/>
+            <rect x="48"  y="168" width="20"  height="46" rx="5"  fill="#009FAA"/>
+            <rect x="78"  y="168" width="110" height="46" rx="9"  fill="#0E1117"/>
+          </svg>
+        </div>
+        <span class="size-lbl">on light</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ COLORS ══════════ -->
+<section class="section on-light" id="colors">
+  <div class="s-eyebrow">03 — Color System</div>
+  <div class="s-title">Brand Palette</div>
+  <div class="palette">
+    <div class="swatch">
+      <div class="swatch-color" style="background:#0E1117;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Charcoal</div>
+        <div class="swatch-hex">#0E1117</div>
+        <div class="swatch-role">Primary BG</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#161C25;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Deep Slate</div>
+        <div class="swatch-hex">#161C25</div>
+        <div class="swatch-role">Card / Surface</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#3A4655;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Slate</div>
+        <div class="swatch-hex">#3A4655</div>
+        <div class="swatch-role">Secondary</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#00D2DC;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Cyan</div>
+        <div class="swatch-hex">#00D2DC</div>
+        <div class="swatch-role">Signature Accent</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#C8D6E2;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Pale Steel</div>
+        <div class="swatch-hex">#C8D6E2</div>
+        <div class="swatch-role">Body Text</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:36px;padding:28px 32px;background:white;border-radius:14px;border:1px solid #E2ECF4;">
+    <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan-dim);margin-bottom:14px;">Colour Ratios — Typical Digital Layout</div>
+    <div style="display:flex;border-radius:6px;overflow:hidden;height:10px;">
+      <div style="background:#0E1117;flex:0 0 45%;" title="Charcoal 45%"></div>
+      <div style="background:#161C25;flex:0 0 28%;" title="Deep Slate 28%"></div>
+      <div style="background:#3A4655;flex:0 0 14%;" title="Slate 14%"></div>
+      <div style="background:#C8D6E2;flex:0 0 6%;"  title="Pale 6%"></div>
+      <div style="background:#00D2DC;flex:0 0 7%;"  title="Cyan 7%"></div>
+    </div>
+    <div style="display:flex;gap:22px;margin-top:12px;flex-wrap:wrap;">
+      <span style="font-size:11px;color:#3A4655;">■ Charcoal 45%</span>
+      <span style="font-size:11px;color:#3A4655;">■ Deep Slate 28%</span>
+      <span style="font-size:11px;color:#3A4655;">■ Slate 14%</span>
+      <span style="font-size:11px;color:#3A4655;">■ Pale 6%</span>
+      <span style="font-size:11px;color:var(--cyan-dim);">■ Cyan 7%</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TYPOGRAPHY ══════════ -->
+<section class="section alt" id="type">
+  <div class="s-eyebrow">04 — Typography</div>
+  <div class="s-title">Type System — DM Sans + DM Mono</div>
+  <div class="type-grid">
+    <div class="type-tile">
+      <div class="type-meta">Display · DM Sans 700 · −3px tracking</div>
+      <div class="t-disp">TPANA</div>
+    </div>
+    <div class="type-tile">
+      <div class="type-meta">Headline · DM Sans 600 · −0.8px tracking</div>
+      <div class="t-head">Precision at every layer of the stack.</div>
+    </div>
+    <div class="type-tile">
+      <div class="type-meta">Label · DM Sans 400 · +4.5px tracking · Caps</div>
+      <div class="t-sub">Software Consultants</div>
+    </div>
+    <div class="type-tile">
+      <div class="type-meta">Body · DM Sans 300 · 1.85 line-height</div>
+      <div class="t-body">We architect and optimize software systems for organizations that demand excellence. Our work bridges engineering depth with strategic clarity — delivering solutions that scale, endure, and perform.</div>
+    </div>
+    <div class="type-tile" style="grid-column:span 2;">
+      <div class="type-meta">Monospace · DM Mono — Code, data labels, contact, metadata</div>
+      <div style="display:flex;gap:32px;flex-wrap:wrap;margin-top:4px;">
+        <div class="t-mono">theodoros@tpana.com</div>
+        <div class="t-mono">+30 210 000 0000</div>
+        <div class="t-mono">tpana.com</div>
+        <div class="t-mono-dim">v1.0 · 2025</div>
+        <div class="t-mono-dim">Athens, GR</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:2px;background:var(--card);padding:32px 40px;">
+    <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:20px;">Pairing Rationale</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
+      <p style="font-size:13px;font-weight:300;color:var(--pale);line-height:1.85;"><strong style="color:white;font-weight:500;">DM Sans</strong> — a geometric humanist sans that is both technical and warm. Its optical sizing range (9–40pt) means it reads crisply at caption size and with authority at display size. The wide weight range (300–700) provides full expressive spectrum without changing typeface.</p>
+      <p style="font-size:13px;font-weight:300;color:var(--pale);line-height:1.85;"><strong style="color:white;font-weight:500;">DM Mono</strong> — from the same family, ensuring harmony. Used exclusively for contact details, code references, version numbers, and data labels. Its presence immediately codes the brand as technically credible.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ APPLICATIONS ══════════ -->
+<section class="section" id="applications">
+  <div class="s-eyebrow">05 — Applications</div>
+  <div class="s-title">Brand in Use</div>
+
+  <!-- Business card -->
+  <div style="margin-bottom:64px;">
+    <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:26px;">Business Card</div>
+    <div class="card-wrap">
+      <div class="bcard bcard-front">
+        <div style="display:flex;align-items:center;gap:13px;">
+          <svg width="38" height="30" viewBox="0 0 280 220">
+            <rect x="18" y="28"  width="244" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="98"  width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="48"  y="98"  width="175" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="168" width="20"  height="46" rx="5"  fill="rgba(0,210,220,0.3)"/>
+            <rect x="48"  y="168" width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="78"  y="168" width="110" height="46" rx="9"  fill="white"/>
+          </svg>
+          <div>
+            <div style="font-size:13px;font-weight:700;letter-spacing:-0.3px;color:white;">TPANA</div>
+            <div style="font-size:8px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-top:2px;">Software Consultants</div>
+          </div>
+        </div>
+        <div>
+          <div class="bc-name">Theodoros Panagopoulos</div>
+          <div class="bc-role">Principal Software Consultant</div>
+          <div class="bc-contact">
+            theodoros@tpana.com<br>
+            +30 210 000 0000<br>
+            tpana.com · Athens, GR
+          </div>
+        </div>
+        <div class="bcard-glow"></div>
+      </div>
+      <div class="bcard bcard-back">
+        <div style="text-align:center;">
+          <svg width="110" height="88" viewBox="0 0 280 220" style="margin-bottom:14px;">
+            <rect x="18" y="28"  width="244" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="98"  width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="48"  y="98"  width="175" height="46" rx="9"  fill="white"/>
+            <rect x="18"  y="168" width="20"  height="46" rx="5"  fill="rgba(0,210,220,0.3)"/>
+            <rect x="48"  y="168" width="20"  height="46" rx="5"  fill="#00D2DC"/>
+            <rect x="78"  y="168" width="110" height="46" rx="9"  fill="white"/>
+          </svg>
+          <div class="bc-logo">TP<em>ANA</em></div>
+          <div class="bc-sub">Software Consultants</div>
+        </div>
+        <div class="bcard-glow"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Digital contexts -->
+  <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:24px;">Digital Contexts</div>
+  <div class="contexts">
+    <div class="ctx-card">
+      <div class="ctx-icon">
+        <svg width="24" height="19" viewBox="0 0 280 220">
+          <rect x="18" y="28"  width="244" height="46" rx="9"  fill="#00D2DC"/>
+          <rect x="18"  y="98"  width="20"  height="46" rx="5"  fill="white"/>
+          <rect x="48"  y="98"  width="175" height="46" rx="9"  fill="#00D2DC"/>
+          <rect x="18"  y="168" width="20"  height="46" rx="5"  fill="rgba(255,255,255,0.4)"/>
+          <rect x="48"  y="168" width="20"  height="46" rx="5"  fill="white"/>
+          <rect x="78"  y="168" width="110" height="46" rx="9"  fill="#00D2DC"/>
+        </svg>
+      </div>
+      <div class="ctx-title">Favicon & App Icon</div>
+      <div class="ctx-desc">The Stack mark on charcoal at 32×32px minimum. At 16px, simplify to two bars only. The pip cascade remains legible at all tested sizes.</div>
+    </div>
+    <div class="ctx-card">
+      <div class="ctx-icon">
+        <svg width="22" height="18" viewBox="0 0 280 220">
+          <rect x="18" y="28"  width="244" height="46" rx="9"  fill="white"/>
+          <rect x="18"  y="98"  width="20"  height="46" rx="5"  fill="#00D2DC"/>
+          <rect x="48"  y="98"  width="175" height="46" rx="9"  fill="white"/>
+          <rect x="48"  y="168" width="20"  height="46" rx="5"  fill="#00D2DC"/>
+          <rect x="78"  y="168" width="110" height="46" rx="9"  fill="white"/>
+        </svg>
+      </div>
+      <div class="ctx-title">Social / Profile Avatar</div>
+      <div class="ctx-desc">Mark on square charcoal background with 15% padding. LinkedIn, GitHub, X — consistent across all platforms. Never use the wordmark alone as an avatar.</div>
+    </div>
+    <div class="ctx-card">
+      <div class="ctx-icon">
+        <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-start;">
+          <div style="width:18px;height:3px;background:white;border-radius:1px;"></div>
+          <div style="width:4px;height:3px;background:var(--cyan);border-radius:1px;margin-left:0;"></div>
+          <div style="width:4px;height:3px;background:var(--cyan);border-radius:1px;margin-left:0;"></div>
+        </div>
+      </div>
+      <div class="ctx-title">Email Signature</div>
+      <div class="ctx-desc">Horizontal lockup on white. Charcoal wordmark, 1px cyan rule at 40% opacity, Slate grey subtitle. DM Mono for all contact details — never DM Sans.</div>
+    </div>
+  </div>
+
+  <!-- Email sig mockup -->
+  <div style="margin-top:20px;background:white;border-radius:14px;padding:36px 40px;border:1px solid #E2ECF4;">
+    <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#9AABBF;margin-bottom:22px;">Email Signature Mockup</div>
+    <div style="display:flex;align-items:center;gap:28px;border-bottom:1px solid #EDF2F7;padding-bottom:22px;">
+      <svg width="64" height="51" viewBox="0 0 280 220">
+        <rect x="18" y="28"  width="244" height="46" rx="9"  fill="#0E1117"/>
+        <rect x="18"  y="98"  width="20"  height="46" rx="5"  fill="#009FAA"/>
+        <rect x="48"  y="98"  width="175" height="46" rx="9"  fill="#0E1117"/>
+        <rect x="18"  y="168" width="20"  height="46" rx="5"  fill="rgba(0,159,170,0.3)"/>
+        <rect x="48"  y="168" width="20"  height="46" rx="5"  fill="#009FAA"/>
+        <rect x="78"  y="168" width="110" height="46" rx="9"  fill="#0E1117"/>
+      </svg>
+      <div style="border-left:1px solid #E2ECF4;padding-left:28px;">
+        <div style="font-size:15px;font-weight:600;color:#0E1117;letter-spacing:-0.3px;">Theodoros Panagopoulos</div>
+        <div style="font-size:10px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:#009FAA;margin-top:3px;">Principal Software Consultant · TPANA</div>
+        <div style="font-family:'DM Mono',monospace;font-size:11px;color:#6B7F94;line-height:1.9;margin-top:8px;">
+          theodoros@tpana.com<br>
+          +30 210 000 0000 · tpana.com
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TAGLINES ══════════ -->
+<section class="section alt">
+  <div class="s-eyebrow">06 — Voice & Messaging</div>
+  <div class="s-title">Brand Taglines</div>
+  <div class="taglines">
+    <div class="tl-item">Code that thinks ahead.</div>
+    <div class="tl-item">Where engineering meets strategy.</div>
+    <div class="tl-item">Precision at every layer of the stack.</div>
+    <div class="tl-item">Software built for what comes next.</div>
+    <div class="tl-item">Deep expertise. Clear outcomes.</div>
+    <div class="tl-item">Architected for ambition.</div>
+  </div>
+</section>
+
+<!-- ══════════ USAGE RULES ══════════ -->
+<section class="section">
+  <div class="s-eyebrow">07 — Logo Usage</div>
+  <div class="s-title">Do's &amp; Don'ts</div>
+  <div class="rules">
+    <div class="rule do"><div class="rule-badge">✓ Do</div><p>Use the mark exclusively on charcoal, near-black, white, or off-white backgrounds for full contrast and legibility.</p></div>
+    <div class="rule do"><div class="rule-badge">✓ Do</div><p>Keep all three bars and both cyan pips intact — the pip cascade is the brand's non-negotiable signature detail.</p></div>
+    <div class="rule do"><div class="rule-badge">✓ Do</div><p>Maintain clear space equal to the height of one bar on all four sides of the mark at all times.</p></div>
+    <div class="rule dont"><div class="rule-badge">✗ Don't</div><p>Never use the mark on coloured, photographic, gradient, or patterned backgrounds without an approved dark overlay.</p></div>
+    <div class="rule dont"><div class="rule-badge">✗ Don't</div><p>Never alter bar proportions, remove a bar, reorder the stack, or change the cascade direction.</p></div>
+    <div class="rule dont"><div class="rule-badge">✗ Don't</div><p>Never replace the cyan (#00D2DC) pips with any other colour. The pips are the only element that can appear in cyan — everything else is white or charcoal.</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-left">
+    <div class="f-wordmark">TP<em>ANA</em></div>
+    <div class="f-sep"></div>
+    <div class="f-tagline">Brand Identity System · The Stack</div>
+  </div>
+  <div class="f-note">THEODOROS PANAGOPOULOS SOFTWARE CONSULTANTS · V1.0 · 2025</div>
+</footer>
+
+</body>
+</html>

@@ -104,9 +104,9 @@ const NavbarContainer = (props) => {
           align-items: center;
           padding: 14px 18px;
           border-radius: 24px;
-          background: rgba(255, 255, 255, 0.76);
-          border: 1px solid rgba(23, 28, 36, 0.08);
-          box-shadow: 0 24px 60px -42px rgba(17, 19, 24, 0.48);
+          background: rgba(255, 255, 255, 0.88);
+          border: 1px solid rgba(16, 28, 43, 0.08);
+          box-shadow: 0 24px 60px -42px rgba(17, 25, 36, 0.3);
           backdrop-filter: blur(18px);
         }
         .navbar-brand {
@@ -116,17 +116,17 @@ const NavbarContainer = (props) => {
           min-width: 0;
         }
         .navbar-logo {
-          width: clamp(126px, 15vw, 168px);
+          width: clamp(126px, 15vw, 166px);
           height: auto;
           flex-shrink: 0;
         }
         .navbar-brand-copy {
           max-width: 250px;
-          font-size: 0.74rem;
+          font-size: 0.68rem;
           line-height: 1.45;
-          letter-spacing: 0.08em;
+          letter-spacing: 0.22em;
           text-transform: uppercase;
-          color: var(--dl-color-neutral-700);
+          color: var(--dl-color-neutral-500);
         }
         .navbar-links {
           display: flex;
@@ -134,7 +134,7 @@ const NavbarContainer = (props) => {
           gap: 18px;
         }
         .navbar-link {
-          color: var(--dl-color-primary-800);
+          color: var(--dl-color-neutral-800);
           position: relative;
           padding-bottom: 6px;
         }
@@ -168,11 +168,11 @@ const NavbarContainer = (props) => {
           width: 48px;
           height: 48px;
           border-radius: 16px;
-          border: 1px solid rgba(29, 79, 119, 0.14);
-          background: rgba(255, 255, 255, 0.9);
+          border: 1px solid rgba(16, 28, 43, 0.12);
+          background: rgba(255, 255, 255, 0.94);
           align-items: center;
           justify-content: center;
-          color: var(--dl-color-primary-800);
+          color: var(--dl-color-neutral-800);
         }
         .navbar-toggle svg,
         .navbar-mobile-close svg {
@@ -188,7 +188,7 @@ const NavbarContainer = (props) => {
           inset: 0;
           display: none;
           justify-content: flex-end;
-          background: rgba(8, 21, 34, 0.42);
+          background: rgba(20, 28, 40, 0.26);
           backdrop-filter: blur(8px);
         }
         .navbar-mobile-open {
@@ -201,9 +201,9 @@ const NavbarContainer = (props) => {
           display: flex;
           flex-direction: column;
           gap: 28px;
-          background: linear-gradient(180deg, rgba(11, 24, 38, 0.98), rgba(19, 52, 79, 0.98));
-          color: var(--dl-color-gray-white);
-          box-shadow: -24px 0 60px -36px rgba(8, 21, 34, 0.8);
+          background: linear-gradient(180deg, rgba(248, 252, 255, 0.99), rgba(236, 244, 250, 0.99));
+          color: var(--dl-color-neutral-900);
+          box-shadow: -24px 0 60px -36px rgba(17, 25, 36, 0.44);
         }
         .navbar-mobile-top {
           display: flex;
@@ -211,21 +211,21 @@ const NavbarContainer = (props) => {
           justify-content: space-between;
         }
         .navbar-mobile-label {
-          font-family: var(--dl-font-heading);
-          font-size: 0.82rem;
-          letter-spacing: 0.16em;
+          font-family: var(--dl-font-mono);
+          font-size: 0.74rem;
+          letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.62);
+          color: var(--dl-color-primary-500);
         }
         .navbar-mobile-close {
           width: 44px;
           height: 44px;
           border-radius: 14px;
-          border: 1px solid rgba(255, 255, 255, 0.16);
+          border: 1px solid rgba(16, 28, 43, 0.16);
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          color: var(--dl-color-gray-white);
+          color: var(--dl-color-neutral-900);
         }
         .navbar-mobile-links {
           display: flex;
@@ -280,7 +280,7 @@ const NavbarContainer = (props) => {
 NavbarContainer.defaultProps = {
   rootClassName: '',
   Heading: 'TPANA',
-  image_alt: 'TPANA logo',
+  image_alt: 'TPANA horizontal logotype',
   image_src: '/assets/tp-logotype-horizontal.png',
   link: 'About',
   link1: 'Experience',

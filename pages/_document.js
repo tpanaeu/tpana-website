@@ -29,7 +29,7 @@ class CustomDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
             data-tag="font"
           ></link>
         </Head>

@@ -106,24 +106,25 @@ const Contact = () => {
           min-height: 52px;
           padding: 0.95rem 1.25rem;
           border-radius: 999px;
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: rgba(255, 255, 255, 0.95);
+          border: 1px solid rgba(16, 28, 43, 0.14);
           font-family: var(--dl-font-heading);
           font-size: 0.95rem;
           font-weight: 700;
           letter-spacing: 0.08em;
           text-transform: uppercase;
+          color: var(--dl-color-neutral-900);
         }
         .contact-side-label {
-          font-family: var(--dl-font-heading);
-          font-size: 0.82rem;
-          font-weight: 700;
-          letter-spacing: 0.16em;
+          font-family: var(--dl-font-mono);
+          font-size: 0.74rem;
+          font-weight: 500;
+          letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: var(--dl-color-accent-300);
+          color: var(--dl-color-primary-500);
         }
         .contact-side-list li {
-          color: rgba(255, 255, 255, 0.76);
+          color: var(--dl-color-neutral-700);
         }
         .contact-bands {
           padding: clamp(1.75rem, 4vw, 3rem);

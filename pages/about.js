@@ -46,7 +46,7 @@ const About = () => {
               <aside className="hero-aside">
                 <div className="quote-card">
                   <img
-                    alt="TPANA logo"
+                    alt="TPANA vertical logotype"
                     src="/assets/tp-logotype-vertical.png"
                     className="about-mark"
                   />
@@ -171,12 +171,12 @@ const About = () => {
           height: auto;
         }
         .about-location {
-          font-family: var(--dl-font-heading);
-          font-size: 0.82rem;
-          font-weight: 700;
-          letter-spacing: 0.14em;
+          font-family: var(--dl-font-mono);
+          font-size: 0.74rem;
+          font-weight: 500;
+          letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.62);
+          color: var(--dl-color-primary-300);
         }
         .about-story,
         .about-values {
