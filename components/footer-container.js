@@ -13,7 +13,7 @@ const FooterContainer = (props) => {
             <div className="footer-brand">
               <div className="footer-logo-frame">
                 <img
-                  src="/assets/tp-logotype-horizontal.png"
+                  src="/assets/tp-logotype-horizontal-tight.png"
                   alt="TPANA horizontal logotype"
                   className="footer-logo"
                 />
@@ -118,14 +118,15 @@ const FooterContainer = (props) => {
         }
         .footer-logo-frame {
           width: fit-content;
-          max-width: 100%;
-          padding: 14px 18px;
-          border-radius: 22px;
-          background: linear-gradient(180deg, rgba(13, 19, 28, 0.98), rgba(10, 15, 22, 0.9));
-          border: 1px solid rgba(0, 210, 220, 0.28);
+          max-width: 250px;
+          padding: 8px 8px;
+          border-radius: 10px;
+          background: linear-gradient(180deg, rgba(236, 245, 251, 0.88), rgba(224, 236, 246, 0.82));
+          border: 1px solid rgba(0, 210, 220, 0.24);
           box-shadow:
-            0 18px 42px -30px rgba(3, 12, 20, 0.95),
-            inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            0 10px 22px -20px rgba(3, 12, 20, 0.95),
+            inset 0 1px 0 rgba(255, 255, 255, 0.82);
+          backdrop-filter: blur(2px);
         }
         .footer-logo {
           width: min(210px, 100%);
@@ -222,8 +223,8 @@ const FooterContainer = (props) => {
             padding: 18px 22px 22px;
           }
           .footer-logo-frame {
-            padding: 12px 14px;
-            border-radius: 18px;
+            padding: 3px 5px;
+            border-radius: 8px;
           }
         }
       `}</style>

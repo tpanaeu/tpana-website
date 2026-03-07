@@ -16,7 +16,9 @@ const NavbarContainer = (props) => {
         <div className="navbar-shell">
           <Link href="/">
             <a className="navbar-brand" aria-label="TPANA home" onClick={() => setMenuOpen(false)}>
-              <img alt={props.image_alt} src={props.image_src} className="navbar-logo" />
+              <span className="navbar-logo-frame" aria-hidden="true">
+                <img alt={props.image_alt} src={props.image_src} className="navbar-logo" />
+              </span>
               <span className="navbar-brand-copy">
                 Boutique strategy, product, and engineering leadership
               </span>
@@ -116,9 +118,23 @@ const NavbarContainer = (props) => {
           min-width: 0;
         }
         .navbar-logo {
-          width: clamp(126px, 15vw, 166px);
+          width: clamp(100px, 12vw, 180px);
           height: auto;
+          display: block;
           flex-shrink: 0;
+        }
+        .navbar-logo-frame {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 8px 8px;
+          border-radius: 7px;
+          background: linear-gradient(180deg, rgba(236, 245, 251, 0.88), rgba(224, 236, 246, 0.82));
+          border: 1px solid rgba(0, 210, 220, 0.24);
+          box-shadow:
+            0 8px 18px -18px rgba(0, 0, 0, 0.95),
+            inset 0 1px 0 rgba(255, 255, 255, 0.82);
+          backdrop-filter: blur(2px);
         }
         .navbar-brand-copy {
           max-width: 250px;
@@ -270,7 +286,11 @@ const NavbarContainer = (props) => {
             border-radius: 20px;
           }
           .navbar-logo {
-            width: 118px;
+            width: 110px;
+          }
+          .navbar-logo-frame {
+            padding: 1px 3px;
+            border-radius: 6px;
           }
         }
       `}</style>
@@ -282,7 +302,7 @@ NavbarContainer.defaultProps = {
   rootClassName: '',
   Heading: 'TPANA',
   image_alt: 'TPANA horizontal logotype',
-  image_src: '/assets/tp-logotype-horizontal.png',
+  image_src: '/assets/tp-logotype-horizontal-tight.png',
   link: 'About',
   link1: 'Experience',
   link2: 'Contact',
