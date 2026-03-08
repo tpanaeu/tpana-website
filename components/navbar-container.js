@@ -118,7 +118,7 @@ const NavbarContainer = (props) => {
           min-width: 0;
         }
         .navbar-logo {
-          width: clamp(100px, 12vw, 180px);
+          width: clamp(60px, 8vw, 60px);
           height: auto;
           display: block;
           flex-shrink: 0;
@@ -129,11 +129,7 @@ const NavbarContainer = (props) => {
           justify-content: center;
           padding: 8px 8px;
           border-radius: 7px;
-          background: linear-gradient(180deg, rgba(236, 245, 251, 0.88), rgba(224, 236, 246, 0.82));
-          border: 1px solid rgba(0, 210, 220, 0.24);
-          box-shadow:
-            0 8px 18px -18px rgba(0, 0, 0, 0.95),
-            inset 0 1px 0 rgba(255, 255, 255, 0.82);
+          background: linear-gradient(180deg, rgba(0, 210, 220, 0.24), rgba(0, 210, 220, 0.24));
           backdrop-filter: blur(2px);
         }
         .navbar-brand-copy {
@@ -302,7 +298,7 @@ NavbarContainer.defaultProps = {
   rootClassName: '',
   Heading: 'TPANA',
   image_alt: 'TPANA horizontal logotype',
-  image_src: '/assets/tp-logotype-horizontal-tight.png',
+  image_src: '/assets/tp-mark.png',
   link: 'About',
   link1: 'Experience',
   link2: 'Contact',
