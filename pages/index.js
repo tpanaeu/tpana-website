@@ -25,7 +25,7 @@ const Home = () => {
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.tpana.eu/" />
-          <meta property="og:image" content="https://www.tpana.eu/assets/tp-logotype-horizontal.png" />
+          <meta property="og:image" content="https://www.tpana.eu/assets/light/tp-logotype-horizontal-black.png" />
           <meta name="twitter:card" content="summary_large_image" />
           <link rel="canonical" href="https://www.tpana.eu/" />
         </Head>
@@ -83,6 +83,27 @@ const Home = () => {
                 </div>
                 <div className="home-intro-note">
                   Strategy, delivery, and governance in one senior partner model.
+                </div>
+                <div className="home-rhythm-card">
+                  <span className="home-rhythm-label">Engagement Rhythm</span>
+                  <div className="home-rhythm-list">
+                    <div className="home-rhythm-item">
+                      <span>01</span>
+                      <p>Clarify the decision rights, risks, and release path.</p>
+                    </div>
+                    <div className="home-rhythm-item">
+                      <span>02</span>
+                      <p>Shape the product and platform choices leaders can back.</p>
+                    </div>
+                    <div className="home-rhythm-item">
+                      <span>03</span>
+                      <p>Move delivery into visible, governed increments.</p>
+                    </div>
+                  </div>
+                  <div className="home-rhythm-result">
+                    <strong>10 days</strong>
+                    <span>to a decision-ready operating view</span>
+                  </div>
                 </div>
               </aside>
             </div>
@@ -294,6 +315,75 @@ const Home = () => {
           letter-spacing: 0.18em;
           text-transform: uppercase;
           color: var(--dl-color-neutral-700);
+        }
+        .home-rhythm-card {
+          margin-top: 24px;
+          padding: 22px;
+          border: 1px solid rgba(0, 138, 150, 0.18);
+          border-radius: var(--dl-radius-radius8);
+          background: linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(234, 246, 247, 0.62));
+          box-shadow: 0 20px 42px -36px rgba(17, 24, 39, 0.34);
+        }
+        .home-rhythm-label {
+          display: inline-flex;
+          font-family: var(--dl-font-mono);
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          color: var(--dl-color-primary-500);
+        }
+        .home-rhythm-list {
+          display: grid;
+          gap: 14px;
+          margin-top: 18px;
+        }
+        .home-rhythm-item {
+          display: grid;
+          grid-template-columns: 34px minmax(0, 1fr);
+          gap: 12px;
+          align-items: start;
+        }
+        .home-rhythm-item span {
+          width: 34px;
+          height: 34px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: var(--dl-radius-radius8);
+          background: rgba(0, 138, 150, 0.1);
+          color: var(--dl-color-primary-500);
+          font-family: var(--dl-font-heading);
+          font-size: 0.82rem;
+          font-weight: 800;
+        }
+        .home-rhythm-item p {
+          margin: 0;
+          color: var(--dl-color-neutral-200);
+          font-size: 0.95rem;
+          line-height: 1.55;
+        }
+        .home-rhythm-result {
+          display: grid;
+          gap: 4px;
+          margin-top: 20px;
+          padding-top: 18px;
+          border-top: 1px solid rgba(0, 138, 150, 0.16);
+        }
+        .home-rhythm-result strong {
+          color: var(--dl-color-primary-500);
+          font-family: var(--dl-font-heading);
+          font-size: 1.7rem;
+          line-height: 1;
+        }
+        .home-rhythm-result span {
+          color: var(--dl-color-neutral-500);
+          font-family: var(--dl-font-mono);
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.13em;
+          line-height: 1.45;
+          text-transform: uppercase;
         }
         .home-subheading {
           max-width: 780px;

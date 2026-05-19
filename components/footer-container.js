@@ -13,7 +13,7 @@ const FooterContainer = (props) => {
             <div className="footer-brand">
               <div className="footer-logo-frame">
                 <img
-                  src="/assets/tp-logotype-horizontal.png"
+                  src="/assets/light/tp-logotype-horizontal-black.png"
                   alt="TPANA horizontal logotype"
                   className="footer-logo"
                 />
@@ -98,13 +98,11 @@ const FooterContainer = (props) => {
         }
         .footer-shell {
           width: min(100%, var(--dl-size-size-maxcontent));
-          border-radius: 32px;
+          border-radius: var(--dl-radius-radius8);
           overflow: hidden;
-          background:
-            radial-gradient(circle at top left, rgba(0, 210, 220, 0.15), transparent 38%),
-            linear-gradient(160deg, rgba(14, 17, 23, 0.98), rgba(19, 25, 36, 0.98));
+          background: rgba(255, 255, 255, 0.92);
           color: var(--dl-color-neutral-100);
-          box-shadow: 0 36px 80px -48px rgba(0, 0, 0, 0.76);
+          box-shadow: var(--dl-shadow-soft);
           border: 1px solid var(--dl-border-subtle);
         }
         .footer-top {
@@ -122,10 +120,9 @@ const FooterContainer = (props) => {
         .footer-logo-frame {
           width: fit-content;
           max-width: 250px;
-          padding: 8px 8px;
-          border-radius: 10px;
-          background: linear-gradient(180deg, rgba(0, 210, 220, 0.24), rgba(0, 210, 220, 0.24));
-          backdrop-filter: blur(2px);
+          padding: 0;
+          border-radius: var(--dl-radius-radius8);
+          background: transparent;
         }
         .footer-logo {
           width: min(210px, 100%);
@@ -134,7 +131,7 @@ const FooterContainer = (props) => {
         }
         .footer-copy {
           max-width: 360px;
-          color: var(--dl-color-neutral-200);
+          color: var(--dl-color-neutral-500);
         }
         .footer-label {
           font-family: var(--dl-font-mono);
@@ -142,7 +139,7 @@ const FooterContainer = (props) => {
           font-weight: 500;
           letter-spacing: 0.22em;
           text-transform: uppercase;
-          color: var(--dl-color-accent-500);
+          color: var(--dl-color-primary-500);
           margin-bottom: 6px;
         }
         .footer-link,
@@ -156,10 +153,10 @@ const FooterContainer = (props) => {
         }
         .footer-link:hover,
         .footer-link:focus-visible {
-          color: var(--dl-color-primary-300);
+          color: var(--dl-color-primary-500);
         }
         .footer-meta {
-          color: var(--dl-color-neutral-300);
+          color: var(--dl-color-neutral-500);
         }
         .footer-email {
           font-family: var(--dl-font-mono);
@@ -177,15 +174,15 @@ const FooterContainer = (props) => {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          border-radius: 14px;
-          background: rgba(12, 18, 27, 0.72);
+          border-radius: var(--dl-radius-radius8);
+          background: #f4f8fb;
           border: 1px solid var(--dl-border-subtle);
           transition: transform 140ms ease, background 140ms ease;
         }
         .footer-social:hover,
         .footer-social:focus-visible {
           transform: translateY(-2px);
-          background: rgba(15, 22, 33, 0.95);
+          background: #eaf6f7;
         }
         .footer-social svg {
           width: 18px;
@@ -198,7 +195,7 @@ const FooterContainer = (props) => {
         }
         .footer-bottom-text {
           font-size: 0.9rem;
-          color: var(--dl-color-neutral-300);
+          color: var(--dl-color-neutral-500);
         }
         @media (max-width: 991px) {
           .footer-top {
@@ -211,9 +208,6 @@ const FooterContainer = (props) => {
             padding-inline: 16px;
             padding-bottom: 16px;
           }
-          .footer-shell {
-            border-radius: 26px;
-          }
           .footer-top {
             grid-template-columns: 1fr;
             padding: 28px 22px;
@@ -222,8 +216,7 @@ const FooterContainer = (props) => {
             padding: 18px 22px 22px;
           }
           .footer-logo-frame {
-            padding: 3px 5px;
-            border-radius: 8px;
+            padding: 0;
           }
         }
       `}</style>

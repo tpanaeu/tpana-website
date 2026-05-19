@@ -22,7 +22,7 @@ const Privacy = () => {
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.tpana.eu/privacy" />
-          <meta property="og:image" content="https://www.tpana.eu/assets/tp-logotype-horizontal.png" />
+          <meta property="og:image" content="https://www.tpana.eu/assets/light/tp-logotype-horizontal-black.png" />
           <link rel="canonical" href="https://www.tpana.eu/privacy" />
         </Head>
 

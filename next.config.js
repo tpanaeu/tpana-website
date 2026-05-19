@@ -1,4 +1,6 @@
-const securityHeaders = [
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
+
+const buildSecurityHeaders = (isDev) => [
   {
     key: "Strict-Transport-Security",
     value: "max-age=31536000; includeSubDomains; preload",
@@ -26,7 +28,7 @@ const securityHeaders = [
       "img-src 'self' data: https://c.bing.com",
       "font-src 'self' data:",
       "style-src 'self' 'unsafe-inline'",
-      "script-src 'self' 'unsafe-inline' https://www.clarity.ms",
+      `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.clarity.ms`,
       "connect-src 'self' https://www.clarity.ms https://*.clarity.ms https://c.bing.com",
       "form-action 'self'",
       "upgrade-insecure-requests",
@@ -34,14 +36,18 @@ const securityHeaders = [
   },
 ];
 
-module.exports = {
-  trailingSlash: true,
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: securityHeaders,
-      },
-    ];
-  },
+module.exports = (phase) => {
+  const securityHeaders = buildSecurityHeaders(phase === PHASE_DEVELOPMENT_SERVER);
+
+  return {
+    trailingSlash: true,
+    async headers() {
+      return [
+        {
+          source: "/:path*",
+          headers: securityHeaders,
+        },
+      ];
+    },
+  };
 };

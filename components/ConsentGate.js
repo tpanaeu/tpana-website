@@ -66,10 +66,10 @@ const ConsentBanner = ({ onAccept, onDecline }) => (
         gap: 18px;
         padding: 14px;
         border: 1px solid var(--dl-border-subtle);
-        border-radius: 18px;
-        background: rgba(14, 17, 23, 0.96);
+        border-radius: var(--dl-radius-radius8);
+        background: rgba(255, 255, 255, 0.98);
         color: var(--dl-color-neutral-100);
-        box-shadow: 0 24px 60px -40px rgba(0, 0, 0, 0.75);
+        box-shadow: var(--dl-shadow-card);
       }
       .consent-copy {
         min-width: 0;
@@ -104,17 +104,17 @@ const ConsentBanner = ({ onAccept, onDecline }) => (
         cursor: pointer;
       }
       .consent-primary {
-        color: #071015;
+        color: #ffffff;
         background: var(--dl-color-primary-500);
       }
       .consent-secondary {
         color: var(--dl-color-neutral-100);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--dl-border-strong);
+        background: #ffffff;
       }
       .consent-primary:focus-visible,
       .consent-secondary:focus-visible {
-        outline: 3px solid rgba(0, 210, 220, 0.28);
+        outline: 3px solid rgba(0, 184, 194, 0.28);
         outline-offset: 3px;
       }
       @media (max-width: 640px) {

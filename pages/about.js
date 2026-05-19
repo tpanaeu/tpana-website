@@ -22,7 +22,7 @@ const About = () => {
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.tpana.eu/about" />
-          <meta property="og:image" content="https://www.tpana.eu/assets/tp-logotype-horizontal.png" />
+          <meta property="og:image" content="https://www.tpana.eu/assets/light/tp-logotype-horizontal-black.png" />
           <link rel="canonical" href="https://www.tpana.eu/about" />
         </Head>
 
@@ -55,7 +55,7 @@ const About = () => {
                 <div className="quote-card">
                   <img
                     alt="TPANA vertical logotype"
-                    src="/assets/tp-logotype-vertical.png"
+                    src="/assets/light/tpana-logotype-vertical-black.png"
                     className="about-mark"
                   />
                   <p className="content hero-lead">

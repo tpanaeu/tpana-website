@@ -21,7 +21,7 @@ const Contact = () => {
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.tpana.eu/contact" />
-          <meta property="og:image" content="https://www.tpana.eu/assets/tp-logotype-horizontal.png" />
+          <meta property="og:image" content="https://www.tpana.eu/assets/light/tp-logotype-horizontal-black.png" />
           <link rel="canonical" href="https://www.tpana.eu/contact" />
         </Head>
 
@@ -114,14 +114,15 @@ const Contact = () => {
           min-height: 52px;
           padding: 0.95rem 1.25rem;
           border-radius: 999px;
-          background: rgba(14, 20, 31, 0.96);
-          border: 1px solid rgba(0, 210, 220, 0.28);
+          background: rgba(255, 255, 255, 0.92);
+          border: 1px solid var(--dl-border-strong);
           font-family: var(--dl-font-heading);
           font-size: 0.95rem;
           font-weight: 700;
-          letter-spacing: 0.08em;
+          letter-spacing: 0.04em;
           text-transform: uppercase;
           color: var(--dl-color-neutral-100);
+          box-shadow: var(--dl-shadow-soft);
         }
         .contact-side-label {
           font-family: var(--dl-font-mono);

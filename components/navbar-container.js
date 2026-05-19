@@ -104,12 +104,12 @@ const NavbarContainer = (props) => {
           grid-template-columns: minmax(0, 1fr) auto auto;
           gap: 20px;
           align-items: center;
-          padding: 14px 18px;
-          border-radius: 24px;
-          background: rgba(14, 17, 23, 0.9);
+          padding: 12px 16px;
+          border-radius: var(--dl-radius-radius8);
+          background: rgba(255, 255, 255, 0.92);
           border: 1px solid var(--dl-border-subtle);
-          box-shadow: 0 24px 60px -42px rgba(0, 0, 0, 0.72);
-          backdrop-filter: blur(18px);
+          box-shadow: 0 18px 36px -32px rgba(17, 24, 39, 0.42);
+          backdrop-filter: blur(16px);
         }
         .navbar-brand {
           display: inline-flex;
@@ -118,7 +118,7 @@ const NavbarContainer = (props) => {
           min-width: 0;
         }
         .navbar-logo {
-          width: clamp(60px, 8vw, 60px);
+          width: clamp(132px, 15vw, 164px);
           height: auto;
           display: block;
           flex-shrink: 0;
@@ -127,18 +127,17 @@ const NavbarContainer = (props) => {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 8px 8px;
-          border-radius: 7px;
-          background: linear-gradient(180deg, rgba(0, 210, 220, 0.24), rgba(0, 210, 220, 0.24));
-          backdrop-filter: blur(2px);
+          padding: 0;
+          border-radius: var(--dl-radius-radius8);
+          background: transparent;
         }
         .navbar-brand-copy {
           max-width: 250px;
           font-size: 0.68rem;
           line-height: 1.45;
-          letter-spacing: 0.22em;
+          letter-spacing: 0.16em;
           text-transform: uppercase;
-          color: var(--dl-color-neutral-300);
+          color: var(--dl-color-neutral-500);
         }
         .navbar-links {
           display: flex;
@@ -146,7 +145,7 @@ const NavbarContainer = (props) => {
           gap: 18px;
         }
         .navbar-link {
-          color: var(--dl-color-neutral-100);
+          color: var(--dl-color-neutral-200);
           position: relative;
           padding-bottom: 6px;
         }
@@ -159,7 +158,7 @@ const NavbarContainer = (props) => {
           height: 2px;
           transform: scaleX(0);
           transform-origin: left center;
-          background: linear-gradient(90deg, var(--dl-color-primary-500), var(--dl-color-accent-500));
+          background: var(--dl-color-primary-500);
           transition: transform 140ms ease;
         }
         .navbar-link:hover::after,
@@ -179,9 +178,9 @@ const NavbarContainer = (props) => {
           display: none;
           width: 48px;
           height: 48px;
-          border-radius: 16px;
+          border-radius: var(--dl-radius-radius8);
           border: 1px solid var(--dl-border-subtle);
-          background: rgba(16, 24, 36, 0.92);
+          background: rgba(255, 255, 255, 0.92);
           align-items: center;
           justify-content: center;
           color: var(--dl-color-neutral-100);
@@ -200,7 +199,7 @@ const NavbarContainer = (props) => {
           inset: 0;
           display: none;
           justify-content: flex-end;
-          background: rgba(6, 9, 14, 0.5);
+          background: rgba(17, 24, 39, 0.32);
           backdrop-filter: blur(8px);
         }
         .navbar-mobile-open {
@@ -213,9 +212,9 @@ const NavbarContainer = (props) => {
           display: flex;
           flex-direction: column;
           gap: 28px;
-          background: linear-gradient(180deg, rgba(12, 18, 27, 0.99), rgba(14, 17, 23, 0.99));
+          background: rgba(255, 255, 255, 0.98);
           color: var(--dl-color-neutral-100);
-          box-shadow: -24px 0 60px -36px rgba(0, 0, 0, 0.72);
+          box-shadow: -24px 0 60px -36px rgba(17, 24, 39, 0.42);
           border-left: 1px solid var(--dl-border-subtle);
         }
         .navbar-mobile-top {
@@ -233,7 +232,7 @@ const NavbarContainer = (props) => {
         .navbar-mobile-close {
           width: 44px;
           height: 44px;
-          border-radius: 14px;
+          border-radius: var(--dl-radius-radius8);
           border: 1px solid var(--dl-border-subtle);
           display: inline-flex;
           align-items: center;
@@ -279,14 +278,12 @@ const NavbarContainer = (props) => {
           }
           .navbar-shell {
             padding: 12px 14px;
-            border-radius: 20px;
           }
           .navbar-logo {
-            width: 110px;
+            width: 126px;
           }
           .navbar-logo-frame {
-            padding: 1px 3px;
-            border-radius: 6px;
+            padding: 0;
           }
         }
       `}</style>
@@ -298,7 +295,7 @@ NavbarContainer.defaultProps = {
   rootClassName: '',
   Heading: 'TPANA',
   image_alt: 'TPANA horizontal logotype',
-  image_src: '/assets/tp-mark.png',
+  image_src: '/assets/light/tp-logotype-horizontal-tight-black.png',
   link: 'About',
   link1: 'Experience',
   link2: 'Contact',
