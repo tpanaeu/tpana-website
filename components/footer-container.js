@@ -35,6 +35,9 @@ const FooterContainer = (props) => {
               <Link href="/contact">
                 <a className="footer-link">Contact</a>
               </Link>
+              <Link href="/privacy">
+                <a className="footer-link">Privacy</a>
+              </Link>
             </div>
 
             <div className="footer-column">

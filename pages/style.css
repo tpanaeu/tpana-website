@@ -45,9 +45,9 @@
   --dl-size-size-maxcontent: 1180px;
   --dl-shadow-soft: 0 26px 56px -40px rgba(0, 0, 0, 0.7);
   --dl-shadow-card: 0 40px 88px -56px rgba(0, 0, 0, 0.9);
-  --dl-font-heading: 'DM Sans', 'Segoe UI', sans-serif;
-  --dl-font-body: 'DM Sans', 'Segoe UI', sans-serif;
-  --dl-font-mono: 'DM Mono', 'SFMono-Regular', Menlo, monospace;
+  --dl-font-heading: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
+  --dl-font-body: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
+  --dl-font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
   --dl-border-subtle: rgba(255, 255, 255, 0.055);
   --dl-cyan-ghost: rgba(0, 210, 220, 0.08);
 }

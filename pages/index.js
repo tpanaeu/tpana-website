@@ -19,6 +19,15 @@ const Home = () => {
             property="og:title"
             content="TPANA | Strategy, Product, and Engineering Leadership"
           />
+          <meta
+            property="og:description"
+            content="TPANA helps regulated and high-trust organisations modernise products, platforms, and delivery with senior strategy and engineering leadership."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.tpana.eu/" />
+          <meta property="og:image" content="https://www.tpana.eu/assets/tp-logotype-horizontal.png" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <link rel="canonical" href="https://www.tpana.eu/" />
         </Head>
 
         <NavbarContainer />

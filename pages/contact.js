@@ -15,6 +15,14 @@ const Contact = () => {
             content="Contact TPANA to discuss platform modernisation, product strategy, or embedded engineering and delivery leadership."
           />
           <meta property="og:title" content="Contact TPANA" />
+          <meta
+            property="og:description"
+            content="Contact TPANA to discuss platform modernisation, product strategy, or embedded engineering and delivery leadership."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.tpana.eu/contact" />
+          <meta property="og:image" content="https://www.tpana.eu/assets/tp-logotype-horizontal.png" />
+          <link rel="canonical" href="https://www.tpana.eu/contact" />
         </Head>
 
         <NavbarContainer />

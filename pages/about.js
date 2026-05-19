@@ -16,6 +16,14 @@ const About = () => {
             content="Learn how TPANA combines product strategy, architecture, and delivery leadership to help organisations modernise responsibly."
           />
           <meta property="og:title" content="About TPANA" />
+          <meta
+            property="og:description"
+            content="Learn how TPANA combines product strategy, architecture, and delivery leadership to help organisations modernise responsibly."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.tpana.eu/about" />
+          <meta property="og:image" content="https://www.tpana.eu/assets/tp-logotype-horizontal.png" />
+          <link rel="canonical" href="https://www.tpana.eu/about" />
         </Head>
 
         <NavbarContainer />

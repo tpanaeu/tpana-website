@@ -11,6 +11,8 @@ class CustomDocument extends Document {
           ></meta>
           <meta charSet="utf-8"></meta>
           <meta property="twitter:card" content="summary_large_image"></meta>
+          <link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
+          <link rel="apple-touch-icon" href="/assets/light/tpana-app-icon-black.png"></link>
           <style
             dangerouslySetInnerHTML={{
               __html:
@@ -25,23 +27,10 @@ class CustomDocument extends Document {
             }}
             data-tag="default-style-sheet"
           ></style>
-          <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
-            data-tag="font"
-          ></link>
         </Head>
         <body>
           <Main></Main>
           <NextScript></NextScript>
-          <div
-            dangerouslySetInnerHTML={{
-              __html:
-                "<script src='https://unpkg.com/@teleporthq/teleport-custom-scripts'></script>",
-            }}
-          ></div>
         </body>
       </Html>
     )

@@ -16,6 +16,14 @@ const Experience = () => {
             content="See how TPANA helps organisations modernise platforms, redesign services, and improve delivery outcomes in high-trust sectors."
           />
           <meta property="og:title" content="TPANA Experience" />
+          <meta
+            property="og:description"
+            content="See how TPANA helps organisations modernise platforms, redesign services, and improve delivery outcomes in high-trust sectors."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.tpana.eu/experience" />
+          <meta property="og:image" content="https://www.tpana.eu/assets/tp-logotype-horizontal.png" />
+          <link rel="canonical" href="https://www.tpana.eu/experience" />
         </Head>
 
         <NavbarContainer />
