@@ -1,178 +1,67 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
-const CONSENT_COOKIE_NAME = "tpana_marketing_consent";
-const CONSENT_GRANTED_VALUE = "granted";
-const CONSENT_DENIED_VALUE = "denied";
-const CONSENT_MAX_AGE_SECONDS = 60 * 60 * 24 * 180; // 180 days
+const CONSENT_COOKIE_NAME = 'tpana_marketing_consent'
+const CONSENT_GRANTED_VALUE = 'granted'
+const CONSENT_DENIED_VALUE = 'denied'
+const CONSENT_MAX_AGE_SECONDS = 60 * 60 * 24 * 180
 
-const parseConsentCookie = () => {
-  if (typeof document === "undefined") {
-    return null;
-  }
-
-  const cookieMatch = document.cookie
-    .split(";")
-    .map((entry) => entry.trim())
-    .find((entry) => entry.startsWith(`${CONSENT_COOKIE_NAME}=`));
-
-  if (!cookieMatch) {
-    return null;
-  }
-
-  const [, value] = cookieMatch.split("=");
-  return value || null;
-};
-
-const setConsentCookie = (value) => {
-  if (typeof document === "undefined") {
-    return;
-  }
-
-  if (!value) {
-    document.cookie = `${CONSENT_COOKIE_NAME}=; Max-Age=0; Path=/; SameSite=Lax`;
-    return;
-  }
-
-  const secureFlag = window.location.protocol === "https:" ? "; Secure" : "";
-  document.cookie = `${CONSENT_COOKIE_NAME}=${value}; Max-Age=${CONSENT_MAX_AGE_SECONDS}; Path=/; SameSite=Lax${secureFlag}`;
-};
-
-const ConsentBanner = ({ onAccept, onDecline }) => (
-  <div className="consent-banner" role="region" aria-label="Cookie consent">
-    <div className="consent-copy">
-      <strong>Optional analytics</strong>
-      <span>
-        TPANA works without tracking. Microsoft Clarity is loaded only if you allow
-        analytics cookies.
-      </span>
-    </div>
-    <div className="consent-actions">
-      <button type="button" className="consent-secondary" onClick={onDecline}>
-        Decline
-      </button>
-      <button type="button" className="consent-primary" onClick={onAccept}>
-        Allow analytics
-      </button>
-    </div>
-    <style jsx>{`
-      .consent-banner {
-        position: fixed;
-        right: 16px;
-        bottom: 16px;
-        z-index: 140;
-        width: min(calc(100% - 32px), 520px);
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        padding: 14px;
-        border: 1px solid var(--dl-border-subtle);
-        border-radius: var(--dl-radius-radius8);
-        background: rgba(255, 255, 255, 0.98);
-        color: var(--dl-color-neutral-100);
-        box-shadow: var(--dl-shadow-card);
-      }
-      .consent-copy {
-        min-width: 0;
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        gap: 4px;
-      }
-      .consent-copy strong {
-        font-family: var(--dl-font-heading);
-        font-size: 0.95rem;
-        line-height: 1.2;
-      }
-      .consent-copy span {
-        color: var(--dl-color-neutral-200);
-        font-size: 0.88rem;
-        line-height: 1.45;
-      }
-      .consent-actions {
-        display: flex;
-        flex-shrink: 0;
-        gap: 8px;
-      }
-      .consent-primary,
-      .consent-secondary {
-        min-height: 40px;
-        padding: 0.65rem 0.9rem;
-        border-radius: 999px;
-        font-family: var(--dl-font-heading);
-        font-size: 0.82rem;
-        font-weight: 700;
-        cursor: pointer;
-      }
-      .consent-primary {
-        color: #ffffff;
-        background: var(--dl-color-primary-500);
-      }
-      .consent-secondary {
-        color: var(--dl-color-neutral-100);
-        border: 1px solid var(--dl-border-strong);
-        background: #ffffff;
-      }
-      .consent-primary:focus-visible,
-      .consent-secondary:focus-visible {
-        outline: 3px solid rgba(0, 184, 194, 0.28);
-        outline-offset: 3px;
-      }
-      @media (max-width: 640px) {
-        .consent-banner {
-          left: 16px;
-          right: 16px;
-          flex-direction: column;
-          align-items: stretch;
-        }
-        .consent-actions {
-          justify-content: flex-end;
-        }
-      }
-    `}</style>
-  </div>
-);
-
-const ConsentGate = ({ children, onMarketingConsent, onMarketingRevoke }) => {
-  const [consentState, setConsentState] = useState(null);
+export default function ConsentGate({ children, enabled, onChange }) {
+  const [showBanner, setShowBanner] = useState(false)
+  const [hasConsent, setHasConsent] = useState(false)
 
   useEffect(() => {
-    setConsentState(parseConsentCookie());
-  }, []);
+    if (!enabled) return undefined
 
-  useEffect(() => {
-    if (!consentState) {
-      return;
+    const saved = document.cookie.split(';').map((entry) => entry.trim())
+      .find((entry) => entry.startsWith(`${CONSENT_COOKIE_NAME}=`))?.split('=')[1]
+
+    if (saved === CONSENT_GRANTED_VALUE || saved === CONSENT_DENIED_VALUE) {
+      const granted = saved === CONSENT_GRANTED_VALUE
+      setHasConsent(granted)
+      onChange(granted)
+    } else {
+      setShowBanner(true)
     }
 
-    setConsentCookie(consentState);
-
-    if (
-      consentState === CONSENT_GRANTED_VALUE &&
-      typeof onMarketingConsent === "function"
-    ) {
-      onMarketingConsent();
+    const showSettings = () => {
+      setShowBanner(true)
+      window.requestAnimationFrame(() => document.getElementById('analytics-decline')?.focus())
     }
+    window.addEventListener('tpana:analytics-settings', showSettings)
+    return () => window.removeEventListener('tpana:analytics-settings', showSettings)
+  }, [enabled, onChange])
 
-    if (
-      consentState === CONSENT_DENIED_VALUE &&
-      typeof onMarketingRevoke === "function"
-    ) {
-      onMarketingRevoke();
+  function choose(granted) {
+    const value = granted ? CONSENT_GRANTED_VALUE : CONSENT_DENIED_VALUE
+    const secure = window.location.protocol === 'https:' ? '; Secure' : ''
+    document.cookie = `${CONSENT_COOKIE_NAME}=${value}; Max-Age=${CONSENT_MAX_AGE_SECONDS}; Path=/; SameSite=Lax${secure}`
+    if (!granted && hasConsent) {
+      try {
+        window.clarity?.('consent', false)
+      } finally {
+        window.location.reload()
+      }
+      return
     }
-  }, [consentState, onMarketingConsent, onMarketingRevoke]);
+    setHasConsent(granted)
+    onChange(granted)
+    setShowBanner(false)
+    document.getElementById('analytics-preference')?.focus()
+  }
 
   return (
     <>
       {children}
-      {!consentState ? (
-        <ConsentBanner
-          onAccept={() => setConsentState(CONSENT_GRANTED_VALUE)}
-          onDecline={() => setConsentState(CONSENT_DENIED_VALUE)}
-        />
-      ) : null}
+      {showBanner && (
+        <section className="consent-banner" aria-label="Analytics preferences">
+          <strong>Optional analytics</strong>
+          <p>Allow Microsoft Clarity to help us understand how visitors use the site. You can change your choice on the privacy page.</p>
+          <div className="consent-actions">
+            <button type="button" id="analytics-decline" className="button button-outline" onClick={() => choose(false)}>Decline</button>
+            <button type="button" className="button" onClick={() => choose(true)}>Allow analytics</button>
+          </div>
+        </section>
+      )}
     </>
-  );
-};
-
-export default ConsentGate;
-export { CONSENT_GRANTED_VALUE, CONSENT_COOKIE_NAME, CONSENT_DENIED_VALUE };
+  )
+}
